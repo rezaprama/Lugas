@@ -1,6 +1,6 @@
-# Contributing to RhetoriLex
+# Contributing to Lugas
 
-RhetoriLex welcomes code, rhetorical patterns, corrections, corpus evidence,
+Lugas welcomes code, rhetorical patterns, corrections, corpus evidence,
 benchmarks, documentation, translations, and integrations. Small, reviewable changes
 with explicit provenance are easiest to merge.
 
@@ -44,7 +44,7 @@ notes: State when to use it and when not to use it
 risk: medium
 provenance:
   method: original_editorial
-  author: RhetoriLex contributors
+  author: Lugas contributors
   source_reuse: false
 version: 1
 ```

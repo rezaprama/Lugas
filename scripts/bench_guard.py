@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Score the meaning guard against the frozen meaning-guard benchmark.
 
-Compares the current guard (src/rhetorilex/guard.py) with a faithful Python port of
+Compares the current guard (src/lugas/guard.py) with a faithful Python port of
 the v0.2.0 workbench check (English regex invariants, max 40 items, substring match).
 Writes a JSON report; prints a short table.
 """
@@ -17,7 +17,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from rhetorilex.guard import check  # noqa: E402
+from lugas.guard import check  # noqa: E402
 
 
 def legacy_invariants(source: str) -> list[str]:

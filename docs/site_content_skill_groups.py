@@ -5,7 +5,7 @@ GROUP_PAGES = {
         "en": {
             "kind": "skill_group",
             "group_id": "research-framing",
-            "title": "Research Framing Writing Skills | RhetoriLex",
+            "title": "Research Framing Writing Skills | Lugas",
             "description": "Definitions, examples, and evidence warnings for writing research contexts, problems, gaps, aims, questions, scope, and contributions.",
             "h1": "Research framing writing skills",
             "lede": "Move from a documented context to a specific problem, answerable question, bounded aim, and defensible contribution.",
@@ -17,7 +17,7 @@ GROUP_PAGES = {
         "id": {
             "kind": "skill_group",
             "group_id": "research-framing",
-            "title": "Skill Perumusan Riset | RhetoriLex",
+            "title": "Skill Perumusan Riset | Lugas",
             "description": "Definisi, contoh, dan peringatan bukti untuk menulis konteks, masalah, kesenjangan, tujuan, pertanyaan, cakupan, dan kontribusi riset.",
             "h1": "Skill penulisan untuk perumusan riset",
             "lede": "Bergerak dari konteks terdokumentasi menuju masalah spesifik, pertanyaan yang dapat dijawab, tujuan terbatasi, dan kontribusi defensif.",
@@ -31,7 +31,7 @@ GROUP_PAGES = {
         "en": {
             "kind": "skill_group",
             "group_id": "literature-writing",
-            "title": "Literature Writing and Synthesis Skills | RhetoriLex",
+            "title": "Literature Writing and Synthesis Skills | Lugas",
             "description": "Writing skills for defining a literature scope, grouping sources, comparing evidence, synthesising findings, and identifying uncertainty.",
             "h1": "Literature writing and synthesis skills",
             "lede": "Organise sources around analytical relations so the review explains knowledge rather than listing papers.",
@@ -43,7 +43,7 @@ GROUP_PAGES = {
         "id": {
             "kind": "skill_group",
             "group_id": "literature-writing",
-            "title": "Skill Penulisan dan Sintesis Literatur | RhetoriLex",
+            "title": "Skill Penulisan dan Sintesis Literatur | Lugas",
             "description": "Skill untuk menentukan cakupan literatur, mengelompokkan sumber, membandingkan bukti, menyintesis temuan, dan mengenali ketidakpastian.",
             "h1": "Skill penulisan dan sintesis literatur",
             "lede": "Atur sumber berdasarkan relasi analitik agar tinjauan menjelaskan pengetahuan, bukan mendaftar tulisan.",
@@ -57,7 +57,7 @@ GROUP_PAGES = {
         "en": {
             "kind": "skill_group",
             "group_id": "argumentation",
-            "title": "Academic Argumentation Writing Skills | RhetoriLex",
+            "title": "Academic Argumentation Writing Skills | Lugas",
             "description": "Writing skills for claims, reasons, evidence, counterarguments, warrants, concessions, transitions, and bounded conclusions.",
             "h1": "Academic argumentation writing skills",
             "lede": "Connect claims to reasons and evidence while making assumptions, alternatives, and scope visible.",
@@ -69,7 +69,7 @@ GROUP_PAGES = {
         "id": {
             "kind": "skill_group",
             "group_id": "argumentation",
-            "title": "Skill Argumentasi Akademik | RhetoriLex",
+            "title": "Skill Argumentasi Akademik | Lugas",
             "description": "Skill untuk klaim, alasan, bukti, kontraargumen, warrant, konsesi, transisi, dan simpulan yang terbatasi.",
             "h1": "Skill penulisan argumentasi akademik",
             "lede": "Hubungkan klaim, alasan, dan bukti sambil menampilkan asumsi, alternatif, serta cakupan.",
@@ -83,7 +83,7 @@ GROUP_PAGES = {
         "en": {
             "kind": "skill_group",
             "group_id": "thesis-and-dissertation",
-            "title": "Thesis and Dissertation Writing Skills | RhetoriLex",
+            "title": "Thesis and Dissertation Writing Skills | Lugas",
             "description": "Writing skills for thesis architecture, chapter purpose, research questions, cross-chapter coherence, contribution, abstracts, and defence.",
             "h1": "Thesis and dissertation writing skills",
             "lede": "Maintain one traceable argument across chapters while giving each chapter a distinct rhetorical job.",
@@ -95,7 +95,7 @@ GROUP_PAGES = {
         "id": {
             "kind": "skill_group",
             "group_id": "thesis-and-dissertation",
-            "title": "Skill Penulisan Tesis dan Disertasi | RhetoriLex",
+            "title": "Skill Penulisan Tesis dan Disertasi | Lugas",
             "description": "Skill untuk arsitektur tesis, fungsi bab, pertanyaan riset, koherensi lintas bab, kontribusi, abstrak, dan pertahanan.",
             "h1": "Skill penulisan tesis dan disertasi",
             "lede": "Pertahankan satu argumen yang dapat ditelusuri sambil memberi setiap bab pekerjaan retoris berbeda.",
@@ -109,7 +109,7 @@ GROUP_PAGES = {
         "en": {
             "kind": "skill_group",
             "group_id": "publication-writing",
-            "title": "Publication and Reviewer Response Writing Skills | RhetoriLex",
+            "title": "Publication and Reviewer Response Writing Skills | Lugas",
             "description": "Writing skills for titles, abstracts, cover letters, journal fit, reporting statements, reviewer responses, and revision records.",
             "h1": "Publication and reviewer response skills",
             "lede": "Present the manuscript accurately, document revisions, and keep every publication claim traceable.",
@@ -121,7 +121,7 @@ GROUP_PAGES = {
         "id": {
             "kind": "skill_group",
             "group_id": "publication-writing",
-            "title": "Skill Penulisan Publikasi dan Tanggapan Reviewer | RhetoriLex",
+            "title": "Skill Penulisan Publikasi dan Tanggapan Reviewer | Lugas",
             "description": "Skill untuk judul, abstrak, surat pengantar, kesesuaian jurnal, pernyataan pelaporan, tanggapan reviewer, dan catatan revisi.",
             "h1": "Skill publikasi dan tanggapan reviewer",
             "lede": "Sajikan naskah secara akurat, catat revisi, dan jaga setiap klaim publikasi dapat ditelusuri.",
@@ -135,7 +135,7 @@ GROUP_PAGES = {
         "en": {
             "kind": "skill_group",
             "group_id": "scientific-study-framing",
-            "title": "Scientific Study Framing Skills | RhetoriLex",
+            "title": "Scientific Study Framing Skills | Lugas",
             "description": "Writing skills for scientific rationale, hypotheses, estimands, study objectives, design fit, populations, and outcomes.",
             "h1": "Scientific study framing skills",
             "lede": "Define the target question, population, contrast, outcome, time, and design before interpreting evidence.",
@@ -147,7 +147,7 @@ GROUP_PAGES = {
         "id": {
             "kind": "skill_group",
             "group_id": "scientific-study-framing",
-            "title": "Skill Perumusan Studi Ilmiah | RhetoriLex",
+            "title": "Skill Perumusan Studi Ilmiah | Lugas",
             "description": "Skill untuk rasional ilmiah, hipotesis, estimand, tujuan studi, kesesuaian desain, populasi, dan outcome.",
             "h1": "Skill perumusan studi ilmiah",
             "lede": "Tentukan pertanyaan target, populasi, kontras, outcome, waktu, dan desain sebelum menafsirkan bukti.",
@@ -161,7 +161,7 @@ GROUP_PAGES = {
         "en": {
             "kind": "skill_group",
             "group_id": "methods-writing",
-            "title": "Scientific Methods Writing Skills | RhetoriLex",
+            "title": "Scientific Methods Writing Skills | Lugas",
             "description": "Writing skills for study design, sampling, materials, measures, procedures, exclusions, models, missing data, ethics, and reproducibility.",
             "h1": "Scientific methods writing skills",
             "lede": "Document the decisions readers need to understand, evaluate, and reproduce the analysis.",
@@ -173,7 +173,7 @@ GROUP_PAGES = {
         "id": {
             "kind": "skill_group",
             "group_id": "methods-writing",
-            "title": "Skill Penulisan Metode Ilmiah | RhetoriLex",
+            "title": "Skill Penulisan Metode Ilmiah | Lugas",
             "description": "Skill untuk desain, sampling, bahan, ukuran, prosedur, eksklusi, model, data hilang, etika, dan reproduksibilitas.",
             "h1": "Skill penulisan metode ilmiah",
             "lede": "Catat keputusan yang diperlukan pembaca untuk memahami, menilai, dan mereproduksi analisis.",
@@ -187,7 +187,7 @@ GROUP_PAGES = {
         "en": {
             "kind": "skill_group",
             "group_id": "results-writing",
-            "title": "Scientific Results Writing Skills | RhetoriLex",
+            "title": "Scientific Results Writing Skills | Lugas",
             "description": "Writing skills for participant flow, descriptive results, estimates, intervals, comparisons, null findings, sensitivity analyses, tables, and figures.",
             "h1": "Scientific results writing skills",
             "lede": "Report the comparison, estimate, direction, unit, uncertainty, and analysis population without interpretive drift.",
@@ -199,7 +199,7 @@ GROUP_PAGES = {
         "id": {
             "kind": "skill_group",
             "group_id": "results-writing",
-            "title": "Skill Penulisan Hasil Ilmiah | RhetoriLex",
+            "title": "Skill Penulisan Hasil Ilmiah | Lugas",
             "description": "Skill untuk alur peserta, hasil deskriptif, estimasi, interval, perbandingan, hasil nol, sensitivitas, tabel, dan gambar.",
             "h1": "Skill penulisan hasil ilmiah",
             "lede": "Laporkan perbandingan, estimasi, arah, satuan, ketidakpastian, dan populasi analisis tanpa pergeseran interpretasi.",
@@ -213,7 +213,7 @@ GROUP_PAGES = {
         "en": {
             "kind": "skill_group",
             "group_id": "discussion-writing",
-            "title": "Scientific Discussion Writing Skills | RhetoriLex",
+            "title": "Scientific Discussion Writing Skills | Lugas",
             "description": "Writing skills for interpreting findings, comparing studies, alternatives, mechanisms, limitations, implications, generalisability, and future work.",
             "h1": "Scientific discussion writing skills",
             "lede": "Interpret findings through study design, prior evidence, credible alternatives, meaningful limits, and bounded implications.",
@@ -225,7 +225,7 @@ GROUP_PAGES = {
         "id": {
             "kind": "skill_group",
             "group_id": "discussion-writing",
-            "title": "Skill Penulisan Diskusi Ilmiah | RhetoriLex",
+            "title": "Skill Penulisan Diskusi Ilmiah | Lugas",
             "description": "Skill untuk interpretasi, perbandingan studi, alternatif, mekanisme, keterbatasan, implikasi, generalisasi, dan riset lanjutan.",
             "h1": "Skill penulisan diskusi ilmiah",
             "lede": "Tafsirkan temuan melalui desain, bukti terdahulu, alternatif, batas bermakna, dan implikasi terbatasi.",
@@ -239,7 +239,7 @@ GROUP_PAGES = {
         "en": {
             "kind": "skill_group",
             "group_id": "scientific-claim-control",
-            "title": "Scientific Claim Control Skills | RhetoriLex",
+            "title": "Scientific Claim Control Skills | Lugas",
             "description": "Writing skills for claim strength, uncertainty, association, causation, scope, null findings, limitations, and evidence alignment.",
             "h1": "Scientific claim control skills",
             "lede": "Match every descriptive, comparative, explanatory, and causal claim to the design and evidence that support it.",
@@ -251,7 +251,7 @@ GROUP_PAGES = {
         "id": {
             "kind": "skill_group",
             "group_id": "scientific-claim-control",
-            "title": "Skill Kontrol Klaim Ilmiah | RhetoriLex",
+            "title": "Skill Kontrol Klaim Ilmiah | Lugas",
             "description": "Skill untuk kekuatan klaim, ketidakpastian, asosiasi, kausalitas, cakupan, hasil nol, keterbatasan, dan keselarasan bukti.",
             "h1": "Skill kontrol klaim ilmiah",
             "lede": "Cocokkan klaim deskriptif, komparatif, eksplanatif, dan kausal dengan desain serta bukti.",
@@ -265,7 +265,7 @@ GROUP_PAGES = {
         "en": {
             "kind": "skill_group",
             "group_id": "paraphrasing",
-            "title": "Meaning-Preserving Paraphrasing Skills | RhetoriLex",
+            "title": "Meaning-Preserving Paraphrasing Skills | Lugas",
             "description": "Paraphrasing skills for citations, numbers, units, negation, comparison, scope, technical terms, uncertainty, and causal force.",
             "h1": "Meaning-preserving paraphrasing skills",
             "lede": "Change wording while keeping evidence, logic, scope, and inferential force invariant.",
@@ -277,7 +277,7 @@ GROUP_PAGES = {
         "id": {
             "kind": "skill_group",
             "group_id": "paraphrasing",
-            "title": "Skill Parafrasa yang Mempertahankan Makna | RhetoriLex",
+            "title": "Skill Parafrasa yang Mempertahankan Makna | Lugas",
             "description": "Skill parafrasa untuk sitasi, angka, satuan, negasi, perbandingan, cakupan, istilah teknis, ketidakpastian, dan daya kausal.",
             "h1": "Skill parafrasa yang mempertahankan makna",
             "lede": "Ubah kata sambil menjaga bukti, logika, cakupan, dan daya inferensi tetap sama.",

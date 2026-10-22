@@ -3,15 +3,15 @@ requires = ["setuptools>=68"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "rhetorilex"
-version = "0.2.0"
-description = "Free local academic paraphrase skill and evidence-safe writing workbench"
+name = "lugas"
+version = "0.3.0"
+description = "Lugas (formerly RhetoriLex): free, local, meaning-safe academic paraphrase and editing skill for Indonesian and English"
 requires-python = ">=3.10"
 dependencies = []
 readme = "README.md"
 license = { text = "Apache-2.0" }
 authors = [{ name = "Reza Prama Arviandi" }]
-keywords = ["academic-paraphrase", "paraphrasing-tool", "academic-writing", "scientific-writing", "research-writing", "academic-english", "phrasebank", "local-first", "pwa", "agent-skills", "codex", "evidence-calibration", "offline"]
+keywords = ["lugas", "rhetorilex", "indonesian", "bahasa-indonesia", "eyd", "academic-paraphrase", "paraphrasing-tool", "academic-writing", "scientific-writing", "research-writing", "academic-english", "phrasebank", "local-first", "pwa", "agent-skills", "codex", "evidence-calibration", "offline"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Environment :: Console",
@@ -23,14 +23,15 @@ classifiers = [
 ]
 
 [project.urls]
-Homepage = "https://rezaprama.github.io/RhetoriLex/"
-Repository = "https://github.com/rezaprama/RhetoriLex"
-Documentation = "https://rezaprama.github.io/RhetoriLex/"
-Research = "https://github.com/rezaprama/RhetoriLex/blob/main/docs/discovery-research.md"
-Changelog = "https://github.com/rezaprama/RhetoriLex/blob/main/CHANGELOG.md"
+Homepage = "https://rezaprama.github.io/Lugas/"
+Repository = "https://github.com/rezaprama/Lugas"
+Documentation = "https://rezaprama.github.io/Lugas/"
+Research = "https://github.com/rezaprama/Lugas/blob/main/docs/discovery-research.md"
+Changelog = "https://github.com/rezaprama/Lugas/blob/main/CHANGELOG.md"
 
 [project.scripts]
-rhetorilex = "rhetorilex.cli:main"
+lugas = "lugas.cli:main"
+rhetorilex = "lugas.cli:main"
 
 [tool.setuptools]
 package-dir = { "" = "src" }
@@ -40,7 +41,7 @@ include-package-data = true
 where = ["src"]
 
 [tool.setuptools.package-data]
-rhetorilex = ["resources/*.json"]
+lugas = ["resources/*.json"]
 
 [tool.unittest]
 start-directory = "tests"

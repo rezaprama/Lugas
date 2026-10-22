@@ -13,7 +13,7 @@ prove that a rewrite is faithful, natural, original, or free of plagiarism; a
 finding is a prompt for the author to look again.
 
 This file has no third-party dependencies and is copied verbatim into the
-bundled Agent Skill (``scripts/guard.py``). Edit ``src/rhetorilex/guard.py`` and
+bundled Agent Skill (``scripts/guard.py``). Edit ``src/lugas/guard.py`` and
 rebuild; do not edit the copy.
 
 Usage:

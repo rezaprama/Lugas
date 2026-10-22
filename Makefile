@@ -1,6 +1,6 @@
 PYTHON ?= python
 DIST_DIR ?= dist
-PLUGIN_ZIP ?= $(DIST_DIR)/rhetorilex-plugin.zip
+PLUGIN_ZIP ?= $(DIST_DIR)/lugas-plugin.zip
 
 .DEFAULT_GOAL := help
 
@@ -31,7 +31,7 @@ test:
 	$(PYTHON) -m unittest discover -s tests -v
 
 skill-check:
-	$(PYTHON) .github/scripts/validate_skill.py skills/rhetorilex
+	$(PYTHON) .github/scripts/validate_skill.py skills/lugas
 
 restricted-check:
 	$(PYTHON) .github/scripts/check_tracked_files.py

@@ -3,7 +3,7 @@
 PAGES_EN = {
     "research_gap": {
         "kind": "article",
-        "title": "How to Write a Research Gap Without Overclaiming | RhetoriLex",
+        "title": "How to Write a Research Gap Without Overclaiming | Lugas",
         "description": "Define and write a specific research gap from reviewed evidence without claiming that no prior research exists.",
         "h1": "Write a research gap that the literature can support",
         "lede": "A defensible gap names a precise unresolved issue, its scope, and the evidence used to establish it.",
@@ -32,7 +32,7 @@ PAGES_EN = {
     },
     "literature_review": {
         "kind": "article",
-        "title": "How to Write a Literature Review That Synthesises | RhetoriLex",
+        "title": "How to Write a Literature Review That Synthesises | Lugas",
         "description": "Write a literature review that organises, compares, and evaluates evidence instead of listing one study at a time.",
         "h1": "A literature review should synthesise, not inventory",
         "lede": "Organise sources around a question and make the basis of comparison visible to the reader.",
@@ -61,7 +61,7 @@ PAGES_EN = {
     },
     "thesis": {
         "kind": "article",
-        "title": "Thesis Writing: Argument, Chapters, and Contribution | RhetoriLex",
+        "title": "Thesis Writing: Argument, Chapters, and Contribution | Lugas",
         "description": "Plan and revise a thesis as one evidence-linked argument across introduction, literature review, methods, results, and discussion.",
         "h1": "Write a thesis as one traceable argument",
         "lede": "Every chapter should advance the same research problem while making its own rhetorical contribution.",
@@ -90,7 +90,7 @@ PAGES_EN = {
     },
     "methods": {
         "kind": "article",
-        "title": "How to Write a Reproducible Methods Section | RhetoriLex",
+        "title": "How to Write a Reproducible Methods Section | Lugas",
         "description": "Write a methods section that makes design, sample, measures, procedures, exclusions, and analysis choices traceable.",
         "h1": "Methods writing makes analytical decisions visible",
         "lede": "A clear methods section lets readers understand what was done, why it was done, and how choices shape interpretation.",
@@ -118,7 +118,7 @@ PAGES_EN = {
     },
     "results": {
         "kind": "article",
-        "title": "How to Write Results With Estimates and Uncertainty | RhetoriLex",
+        "title": "How to Write Results With Estimates and Uncertainty | Lugas",
         "description": "Write a results section that reports comparison, magnitude, direction, uncertainty, and missingness without causal overclaiming.",
         "h1": "Results writing reports what the analysis estimated",
         "lede": "Lead with the comparison and estimate, preserve uncertainty, and keep interpretation proportional to the design.",
@@ -146,7 +146,7 @@ PAGES_EN = {
     },
     "discussion": {
         "kind": "article",
-        "title": "How to Write a Discussion Without Overclaiming | RhetoriLex",
+        "title": "How to Write a Discussion Without Overclaiming | Lugas",
         "description": "Write a research discussion that answers the question, relates prior evidence, considers explanations, and states meaningful limits.",
         "h1": "A discussion interprets findings within their limits",
         "lede": "Answer the research question first, then explain relation, uncertainty, alternatives, implications, and scope.",
@@ -174,7 +174,7 @@ PAGES_EN = {
     },
     "hedging": {
         "kind": "article",
-        "title": "Academic Hedging: Calibrate Claims to Evidence | RhetoriLex",
+        "title": "Academic Hedging: Calibrate Claims to Evidence | Lugas",
         "description": "Use academic hedging to express uncertainty, scope, frequency, and alternative explanations without making prose vague.",
         "h1": "Academic hedging calibrates a claim",
         "lede": "Choose a hedge for a specific evidential reason, then place it where it modifies the intended proposition.",
@@ -203,7 +203,7 @@ PAGES_EN = {
     },
     "reviewer_response": {
         "kind": "article",
-        "title": "How to Write a Clear Reviewer Response | RhetoriLex",
+        "title": "How to Write a Clear Reviewer Response | Lugas",
         "description": "Write reviewer responses that identify the issue, document the revision, cite its location, and disagree with evidence when needed.",
         "h1": "A reviewer response should make revision traceable",
         "lede": "Address the substance, state what changed, point to the location, and explain the reasoning without inventing work.",
@@ -231,7 +231,7 @@ PAGES_EN = {
     },
     "association_vs_causation": {
         "kind": "article",
-        "title": "Association vs Causation in Scientific Writing | RhetoriLex",
+        "title": "Association vs Causation in Scientific Writing | Lugas",
         "description": "Distinguish association from causation and choose verbs that match observational, experimental, and causal evidence.",
         "h1": "Association and causation make different claims",
         "lede": "An association describes a relation in observed data. A causal claim describes what would change under an intervention.",
@@ -259,7 +259,7 @@ PAGES_EN = {
     },
     "preserve_claim_strength": {
         "kind": "article",
-        "title": "Preserve Claim Strength When Rewriting Research | RhetoriLex",
+        "title": "Preserve Claim Strength When Rewriting Research | Lugas",
         "description": "Preserve tentative, bounded, assertive, and causal force when paraphrasing, editing, summarising, or translating research claims.",
         "h1": "Preserve claim strength when wording changes",
         "lede": "A rewrite is faithful only when it retains what the source commits to and what it leaves uncertain.",

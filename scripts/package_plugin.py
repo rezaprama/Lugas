@@ -1,4 +1,4 @@
-"""Build and verify a deterministic, self-checking RhetoriLex plugin archive."""
+"""Build and verify a deterministic, self-checking Lugas plugin archive."""
 
 from __future__ import annotations
 

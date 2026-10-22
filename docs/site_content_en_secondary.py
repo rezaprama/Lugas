@@ -1,9 +1,9 @@
-"""Additional English content for the generated RhetoriLex site."""
+"""Additional English content for the generated Lugas site."""
 
 PAGES_EN = {
     "rhetorical_moves": {
         "kind": "article",
-        "title": "Rhetorical Moves for Research Writing | RhetoriLex",
+        "title": "Rhetorical Moves for Research Writing | Lugas",
         "description": "Plan research paragraphs through rhetorical moves for context, gaps, methods, findings, interpretation, limitations, and contribution.",
         "h1": "Rhetorical moves turn a draft into an argument",
         "lede": "A move names what a passage does for the reader. Phrase choice comes after that function is clear.",
@@ -36,7 +36,7 @@ PAGES_EN = {
     },
     "research_writing_guides": {
         "kind": "article",
-        "title": "Research Writing Guides for Every Manuscript Section | RhetoriLex",
+        "title": "Research Writing Guides for Every Manuscript Section | Lugas",
         "description": "Focused research writing guides for literature reviews, introductions, methods, results, discussions, conclusions, and reviewer responses.",
         "h1": "Research writing guides organised around decisions",
         "lede": "Choose the section you are writing, identify its main decision, and apply the checks that protect meaning.",
@@ -68,16 +68,16 @@ PAGES_EN = {
     },
     "agent_skills": {
         "kind": "article",
-        "title": "RhetoriLex Agent Skill and Local Paraphrase App | RhetoriLex",
-        "description": "Install and use RhetoriLex as a free local academic paraphrase skill, static web app, CLI, or BYO-endpoint writing workbench.",
-        "h1": "Use RhetoriLex as a local paraphrase skill",
+        "title": "Lugas Agent Skill and Local Paraphrase App | Lugas",
+        "description": "Install and use Lugas as a free local academic paraphrase skill, static web app, CLI, or BYO-endpoint writing workbench.",
+        "h1": "Use Lugas as a local paraphrase skill",
         "lede": "Run prompt-first paraphrasing, local phrase retrieval, and evidence checks without depending on a paid paraphrase SaaS.",
         "body": """
 <section>
   <h2>Install from the repository</h2>
   <p>The skill package includes instructions, a deterministic retrieval script, and the released catalog. Core search works locally and does not require manuscript upload. Review the repository and permissions before installing any agent extension.</p>
-  <pre><code>$skill-installer https://github.com/rezaprama/RhetoriLex/tree/main/skills/rhetorilex</code></pre>
-  <p>You can also clone the repository and point your agent to <code>skills/rhetorilex/SKILL.md</code>. The Python command-line interface supports the same catalog for reproducible searches.</p>
+  <pre><code>$skill-installer https://github.com/rezaprama/Lugas/tree/main/skills/lugas</code></pre>
+  <p>You can also clone the repository and point your agent to <code>skills/lugas/SKILL.md</code>. The Python command-line interface supports the same catalog for reproducible searches.</p>
 </section>
 <section>
   <h2>Use the installable web app</h2>
@@ -101,8 +101,8 @@ PAGES_EN = {
 <section>
   <h2>Keep searches reproducible</h2>
   <p>Record the catalog version or commit, query, filters, and selected pattern ID when the wording decision matters. The command-line interface can return stable IDs for this purpose. Search is deterministic, so the same catalog and query produce an auditable result order.</p>
-  <pre><code>rhetorilex search "cautious interpretation" --limit 3
-rhetorilex show RLX-DISCUSS-INTERPRET-001</code></pre>
+  <pre><code>lugas search "cautious interpretation" --limit 3
+lugas explain RLX-QUA-001</code></pre>
 </section>
 <aside class="article-note">
   <h2>Privacy boundary</h2>
@@ -112,25 +112,25 @@ rhetorilex show RLX-DISCUSS-INTERPRET-001</code></pre>
     },
     "about": {
         "kind": "article",
-        "title": "About RhetoriLex: Originality, Provenance, and Licensing",
-        "description": "Learn how RhetoriLex maintains an original clean-room academic phrase catalog, evidence safeguards, open licensing, and project governance.",
-        "h1": "RhetoriLex is an original rhetorical pattern index",
+        "title": "About Lugas: Originality, Provenance, and Licensing",
+        "description": "Learn how Lugas maintains an original clean-room academic phrase catalog, evidence safeguards, open licensing, and project governance.",
+        "h1": "Lugas is an original rhetorical pattern index",
         "lede": "The project helps writers choose language by purpose and evidence without redistributing restricted phrasebank content.",
         "body": """
 <section>
   <h2>What the project provides</h2>
-  <p>RhetoriLex is a structured catalog of independently authored English patterns for academic and scientific writing. Each record links a rhetorical function to a template, manuscript stage, claim strength, evidence requirement, risk level, and review notes. The web explorer, Python interface, command-line tool, and Agent Skill consume the same released data.</p>
+  <p>Lugas is a structured catalog of independently authored English patterns for academic and scientific writing. Each record links a rhetorical function to a template, manuscript stage, claim strength, evidence requirement, risk level, and review notes. The web explorer, Python interface, command-line tool, and Agent Skill consume the same released data.</p>
   <p>The catalog is a writing aid, not an authority on whether a scientific claim is true. Writers remain responsible for source accuracy, disciplinary conventions, research integrity, and the fit between wording and evidence.</p>
 </section>
 <section>
   <h2>Clean-room authorship and provenance</h2>
   <p>Released patterns are original editorial work. Restricted local source inventories are excluded from the repository and release artifacts. The project does not import, reproduce, or lightly rewrite the Manchester Academic Phrasebank inventory. External resources may inform concepts, taxonomy, or aggregate validation only when their role and license are documented.</p>
-  <p>Build checks scan tracked and packaged content for restricted filenames and other leakage indicators. Provenance records state what was considered, what was excluded, and why. Read the complete <a href="https://github.com/rezaprama/RhetoriLex/blob/main/PROVENANCE.md">provenance policy</a> before proposing a new corpus source.</p>
+  <p>Build checks scan tracked and packaged content for restricted filenames and other leakage indicators. Provenance records state what was considered, what was excluded, and why. Read the complete <a href="https://github.com/rezaprama/Lugas/blob/main/PROVENANCE.md">provenance policy</a> before proposing a new corpus source.</p>
 </section>
 <section>
   <h2>Licensing and attribution</h2>
   <p>Original editorial data and human-facing documentation are released under Creative Commons Attribution 4.0. Software and Agent Skill instructions are released under Apache License 2.0. Third-party material, if accepted in the future, must retain its own notice and may not be covered by either project license.</p>
-  <p>Created by Reza Prama Arviandi. Contributors are credited through repository history and release records. See the <a href="https://github.com/rezaprama/RhetoriLex/blob/main/LICENSE">software license</a>, <a href="https://github.com/rezaprama/RhetoriLex/blob/main/LICENSES/CC-BY-4.0.txt">data license</a>, and <a href="https://github.com/rezaprama/RhetoriLex/blob/main/GOVERNANCE.md">governance policy</a>.</p>
+  <p>Created by Reza Prama Arviandi. Contributors are credited through repository history and release records. See the <a href="https://github.com/rezaprama/Lugas/blob/main/LICENSE">software license</a>, <a href="https://github.com/rezaprama/Lugas/blob/main/LICENSES/CC-BY-4.0.txt">data license</a>, and <a href="https://github.com/rezaprama/Lugas/blob/main/GOVERNANCE.md">governance policy</a>.</p>
 </section>
 <section>
   <h2>How to contribute responsibly</h2>
@@ -139,7 +139,7 @@ rhetorilex show RLX-DISCUSS-INTERPRET-001</code></pre>
 </section>
 <aside class="article-note">
   <h2>Scope</h2>
-  <p>RhetoriLex does not generate evidence, verify every citation, replace domain review, or guarantee publication. It makes wording decisions more explicit and auditable.</p>
+  <p>Lugas does not generate evidence, verify every citation, replace domain review, or guarantee publication. It makes wording decisions more explicit and auditable.</p>
 </aside>
 """,
     },

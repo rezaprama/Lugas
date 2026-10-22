@@ -14,7 +14,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
-from rhetorilex.guard import check, lint_id  # noqa: E402
+from lugas.guard import check, lint_id  # noqa: E402
 
 RUNS = ROOT / "benchmarks" / "model-runs"
 

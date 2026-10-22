@@ -1,104 +1,80 @@
-# RhetoriLex
+# Lugas
 
-**Skill parafrasa akademik lokal gratis dan workbench penulisan aman-bukti untuk peneliti, pelajar, editor, dan agen AI.**
+**Tulisan jernih, makna tetap.** Skill gratis dan lokal untuk memparafrasekan, menyunting, mengoreksi, dan menerjemahkan naskah ilmiah serta teknis **berbahasa Indonesia dan Inggris** tanpa mengubah angka, sitasi, negasi, atau kekuatan klaim.
 
-[![CI](https://github.com/rezaprama/RhetoriLex/actions/workflows/ci.yml/badge.svg)](https://github.com/rezaprama/RhetoriLex/actions/workflows/ci.yml)
-[![Pages](https://github.com/rezaprama/RhetoriLex/actions/workflows/pages.yml/badge.svg)](https://github.com/rezaprama/RhetoriLex/actions/workflows/pages.yml)
-[![Lisensi kode: Apache-2.0](https://img.shields.io/badge/kode-Apache--2.0-0f766e.svg)](LICENSE)
-[![Lisensi data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-0f766e.svg)](LICENSES/CC-BY-4.0.txt)
+*Sampai v0.2, Lugas bernama **RhetoriLex**. Tautan lama, perintah `rhetorilex`, `import rhetorilex`, dan ID stabil `RLX-*` tetap berfungsi; lihat [Migrasi](#migrasi-dari-rhetorilex).*
 
-[Buka workbench](https://rezaprama.github.io/RhetoriLex/id/alat-parafrasa/) · [Buka katalog](https://rezaprama.github.io/RhetoriLex/) · [English](README.md) · [Agent Skill](skills/rhetorilex/SKILL.md) · [Riset](docs/discovery-research.md) · [Provenance](PROVENANCE.md)
+[![CI](https://github.com/rezaprama/Lugas/actions/workflows/ci.yml/badge.svg)](https://github.com/rezaprama/Lugas/actions/workflows/ci.yml)
+[![Pages](https://github.com/rezaprama/Lugas/actions/workflows/pages.yml/badge.svg)](https://github.com/rezaprama/Lugas/actions/workflows/pages.yml)
+[![Lisensi: Apache-2.0](https://img.shields.io/badge/kode-Apache--2.0-0f766e.svg)](LICENSE)
+[![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-0f766e.svg)](LICENSES/CC-BY-4.0.txt)
 
-RhetoriLex membantu penulis memparafrasakan, mengaudit, dan merevisi prosa akademik atau teknis berdasarkan tujuan komunikasi dan bukti,
-bukan sekadar kesan akademik. Versi 0.2.0 berisi 96 pola yang ditulis mandiri untuk 24
-fungsi retoris, dengan tingkat klaim, kebutuhan bukti, guard desain kausal, risiko, slot
-bernama, dan provenance yang eksplisit.
+[Alat parafrasa](https://rezaprama.github.io/Lugas/id/alat-parafrasa/) · [English](README.md) · [Agent Skill](skills/lugas/SKILL.md) · [Benchmark](docs/benchmarks.md) · [Provenans](PROVENANCE.md)
 
-Versi 0.2.0 juga mengindeks 144 keterampilan menulis original: 64 akademik, 66 ilmiah,
-dan 14 parafrasa. Situs bilingual menerbitkan 62 rute terlokalisasi: 31 Inggris dan 31
-Indonesia, termasuk workbench parafrasa local-first yang bisa dipasang.
+*Lugas* berarti jelas, langsung, dan tidak bertele-tele. Begitu pula cara kerjanya: pahami tujuan, periksa bukti, baru pilih kata.
 
-RhetoriLex tidak membuat bukti atau sitasi. RhetoriLex juga tidak mengubah asosiasi
-menjadi sebab-akibat. Pemeriksaan akhir sebelum dikumpulkan tetap menjadi tanggung jawab penulis.
+## Yang dikerjakan
 
-## Mengapa berbeda
+| Pekerjaan | Contoh permintaan | Yang dijaga tetap |
+| --- | --- | --- |
+| Koreksi | "Koreksi ejaan saja" | susunan kalimat, pilihan kata yang sudah benar |
+| Sunting | "Rapikan bahasanya" | klaim, urutan argumen, istilah teknis |
+| Parafrase | "Parafrasekan untuk tinjauan pustaka" | fakta, angka, sitasi, kekuatan klaim |
+| Terjemah ID↔EN | "Terjemahkan ke bahasa Inggris akademik" | semuanya, kecuali koma↔titik desimal |
+| Ringkas | "Ringkas untuk abstrak" | fakta yang dipertahankan, kontras, dan batasan |
 
-- **Bukti lebih dulu.** Setiap pola menyatakan bukti minimum dan klaim terkuat yang
-  kompatibel.
-- **Makna terlindungi.** Agent Skill menjaga sitasi, angka, unit, populasi, negasi,
-  ketidakpastian, dan status kausal saat menulis ulang.
-- **Katalog clean-room.** Semua pola rilis merupakan karya editorial original dengan
-  `source_reuse: false`; inventaris sumber terbatas dikecualikan.
-- **Core offline.** Pencarian, filter, validasi, build, dan helper Skill hanya memakai
-  pustaka standar Python.
-- **Satu sumber data.** JSONL kanonis membangun JSON, CSV, SQLite, Markdown, resource
-  paket, aset Skill, dan checksum secara deterministik.
-- **Workbench web yang bisa dipasang.** PWA dapat membuat prompt aman tanpa AI, atau memanggil endpoint OpenAI-compatible atau Gemini-compatible milik pengguna dengan batas harian 3 call di browser.
-- **Lima cara pakai.** Gunakan API/CLI Python, Agent Skill/plugin portabel, explorer web
-  statis, workbench parafrasa local-first, atau artefak data hasil build.
+Lugas tidak mengarang data atau rujukan, tidak mengubah hubungan menjadi sebab-akibat atau "tidak signifikan" menjadi "tidak berpengaruh", dan tidak menjanjikan lolos uji kemiripan atau detektor AI. Penulis tetap bertanggung jawab atas teks akhir.
 
-## Coba cepat
+## Tiga cara memakai
 
-Buka workbench statis di <https://rezaprama.github.io/RhetoriLex/id/alat-parafrasa/>.
-Gunakan mode prompt saja tanpa panggilan AI remote, atau masukkan endpoint dan token lokal/provider milik sendiri.
-Token diproses di browser dan disimpan hanya bila Anda memilih mengingat pengaturan.
+**1. Agent Skill (produk utama).** Salin `skills/lugas` ke `.agents/skills/lugas` (satu proyek) atau `~/.codex/skills/lugas` (semua proyek), atau pasang dengan:
+
+```text
+$skill-installer https://github.com/rezaprama/Lugas/tree/main/skills/lugas
+```
+
+Skill memuat sekitar 5,9 KB instruksi, ditambah rujukan bahasa Indonesia (5,6 KB) hanya untuk naskah Indonesia. Skill memilih jenis pekerjaan, mengunci elemen yang dilindungi, lalu menutup dengan pemeriksaan lokal.
+
+**2. Pemeriksa makna luring (tanpa model, tanpa internet).** Bisa dipakai untuk keluaran model apa pun, termasuk model lokal:
 
 ```bash
-git clone https://github.com/rezaprama/RhetoriLex.git
-cd RhetoriLex
+python skills/lugas/scripts/guard.py check sumber.txt hasil.txt      # --translation / --summary
+python skills/lugas/scripts/guard.py lint naskah.txt                 # petunjuk EYD V/KBBI dan kalke Inggris
+```
+
+Pemeriksa membandingkan angka (paham koma desimal), statistik, sitasi, kutipan, negasi (*tidak, bukan, belum, tanpa*), hedging, hubungan vs sebab-akibat, arah, cakupan, dan ketidaksignifikanan. Kode keluar 1 berarti ada temuan `high`. Ini penyaring leksikal, bukan bukti makna terjaga.
+
+**3. Alat web (PWA).** [Alat parafrasa](https://rezaprama.github.io/Lugas/id/alat-parafrasa/). Pilih pekerjaan dan bahasa keluaran, buat prompt ringkas untuk model mana pun, tempel jawabannya, lalu jalankan pemeriksaan makna yang sama di browser. Opsional: panggil endpoint OpenAI-compatible atau Gemini milik Anda (batas 90 detik, tombol batal, peringatan jawaban terpotong). Tidak ada teks yang dikirim kecuali Anda mengisi endpoint; situs ini tanpa backend, akun, atau analytics.
+
+## CLI dan API Python
+
+```bash
+git clone https://github.com/rezaprama/Lugas.git && cd Lugas
 python -m pip install -e .
-rhetorilex search "cautious interpretation" --stage discussion --limit 3
+lugas check sumber.txt hasil.txt
+lugas lint naskah.txt
+lugas search "cautious interpretation" --stage discussion --limit 3
+lugas explain RLX-QUA-001
 ```
-
-Output machine-readable dan filter bukti ketat:
-
-```bash
-rhetorilex --json search "observational result" \
-  --evidence observational \
-  --max-claim-strength bounded \
-  --risk low
-```
-
-Periksa satu pola atau kesehatan kontrak lengkap:
-
-```bash
-rhetorilex explain RLX-QUA-001
-rhetorilex inspect --validate
-rhetorilex taxonomy
-```
-
-API Python:
 
 ```python
-from rhetorilex import Catalog
+from lugas import Catalog, check_rewrite
 
-catalog = Catalog.load()
-results = catalog.search(
-    "state a limitation",
-    stage="discussion",
-    max_claim_strength="bounded",
-    limit=3,
-)
-
-for result in results:
-    print(result.entry.template, result.entry.evidence_requirement)
+for temuan in check_rewrite("Responden belum pernah dilatih.", "Responden sudah pernah dilatih."):
+    print(temuan.severity, temuan.code)          # high negation-lost
 ```
 
-## Pasang sebagai Agent Skill
+Katalog pencarian berisi 96 pola bahasa Inggris orisinal untuk 24 fungsi retoris dan 144 writing skill (64 akademik, 66 ilmiah, 14 parafrasa) dengan deskripsi berbahasa Indonesia. Pola adalah kandidat, bukan otoritas.
 
-Untuk satu repo, salin `skills/rhetorilex` ke `.agents/skills/rhetorilex`. Untuk pemakaian
-pribadi lintas proyek, salin ke `~/.codex/skills/rhetorilex`.
+## Bukti (diukur 22 Oktober 2026)
 
-Contoh permintaan:
+Metode, fixture, dan batasan lengkap: [docs/benchmarks.md](docs/benchmarks.md).
 
-- “Berikan tiga cara hati-hati untuk menafsirkan hasil observasional ini.”
-- “Tulis ulang paragraf ini tanpa mengubah sitasi, angka, atau kekuatan klaim.”
-- “Bandingkan pilihan untuk menyatakan research gap yang terbatas.”
-- “Audit kalimat ini untuk causal overclaim.”
+- **Pemeriksa makna vs pemeriksaan v0.2** pada set uji yang ditulis terpisah (24 kasus, 47 hasil keliru): pemeriksaan substring v0.2 menangkap 49% dengan 25% alarm palsu; pemeriksa baru menangkap 81% dengan 29% alarm palsu sebelum penyesuaian, dan 85% dengan 0% setelah perbaikan yang dipandu set itu (angka kedua cenderung optimistis).
+- **Uji model** (satu model Claude frontier, 16 tugas ID/EN, juri LLM buta): kesalahan makna 3 dengan prompt biasa, 0 dengan skill v0.2, 0 dengan Lugas v0.3. Kealamian setara (4,6–4,8 dari 5). Lugas **belum** menghemat token dibanding v0.2 pada model ini (sekitar 11 KB instruksi masing-masing); Lugas menambah kaidah Indonesia dengan biaya yang sama.
+- **Prompt alat web** turun dari 788 ke 576 karakter per permintaan (−27%) sambil menambah kendali bahasa keluaran dan perlindungan injeksi.
 
-Skill sengaja menolak fabrikasi sitasi, penyamaran plagiarisme, synonym spinning,
-pengelakan detektor, dan peningkatan klaim tanpa dukungan. Arsip plugin siap rilis dapat
-dibangun dari [.codex-plugin/plugin.json](.codex-plugin/plugin.json).
+Belum diukur: model kecil/lokal, latensi dan biaya per provider, penilaian pakar manusia, data lapangan Lighthouse.
 
 ## Model katalog
 
@@ -142,7 +118,7 @@ nilainya dicatat sebagai `null`; tidak ada volume proxy yang dikarang.
 python scripts/validate_data.py
 python scripts/build_data.py
 python -m unittest discover -s tests -v
-python scripts/package_plugin.py --output dist/rhetorilex-plugin.zip
+python scripts/package_plugin.py --output dist/lugas-plugin.zip
 ```
 
 Test suite memeriksa schema, provenance, kesamaan slot, kebutuhan bukti, guard kausal,
@@ -155,8 +131,8 @@ keamanan kontrak. Continuous integration mengulang build dan membandingkan check
 data/canonical/catalog.v1.jsonl
           |
           +--> data/dist/*                    artefak data portabel
-          +--> src/rhetorilex/resources/*     paket Python
-          +--> skills/rhetorilex/assets/*     Agent Skill offline
+          +--> src/lugas/resources/*          paket Python
+          +--> skills/lugas/assets/*     Agent Skill offline
           +--> docs/data/phrases.json          artefak Pages hasil assembly
 
 taxonomy + JSON Schema + kontrak bukti
@@ -164,7 +140,7 @@ taxonomy + JSON Schema + kontrak bukti
           +--> validator --> tests --> gate rilis deterministik
 ```
 
-Explorer browser dan workbench parafrasa berupa HTML, CSS, dan JavaScript statis. Tidak ada akun, backend, dependensi CDN, telemetry, atau database naskah RhetoriLex. Panggilan endpoint berjalan langsung dari browser pengguna ke endpoint yang dimasukkan. Layanan hosted dengan shared key di masa depan membutuhkan backend dengan secret di server, penyimpanan kuota, perlindungan abuse, dan logging naskah mati secara default.
+Explorer browser dan workbench parafrasa berupa HTML, CSS, dan JavaScript statis. Tidak ada akun, backend, dependensi CDN, telemetry, atau database naskah Lugas. Panggilan endpoint berjalan langsung dari browser pengguna ke endpoint yang dimasukkan. Layanan hosted dengan shared key di masa depan membutuhkan backend dengan secret di server, penyimpanan kuota, perlindungan abuse, dan logging naskah mati secara default.
 
 ## Batas sumber dan hak penggunaan
 
@@ -192,9 +168,22 @@ Masalah keamanan, draft rahasia, provenance, dan hak penggunaan dilaporkan lewat
 privat di [SECURITY.md](SECURITY.md). Keputusan proyek dicatat di
 [GOVERNANCE.md](GOVERNANCE.md) dan [IMPLEMENTATION_LOG.md](IMPLEMENTATION_LOG.md).
 
+## Migrasi dari RhetoriLex
+
+| Lama | Baru | Status |
+| --- | --- | --- |
+| `github.com/rezaprama/RhetoriLex` | `github.com/rezaprama/Lugas` | GitHub meneruskan URL repo dan git lama |
+| `rezaprama.github.io/RhetoriLex/...` | `rezaprama.github.io/Lugas/...` | halaman pengalih per rute; service worker lama dicabut |
+| perintah `rhetorilex`, `python -m rhetorilex` | `lugas` | alias dipertahankan di seri 0.x |
+| `import rhetorilex` | `import lugas` | alias dengan `DeprecationWarning` |
+| `skills/rhetorilex`, `$rhetorilex` | `skills/lugas`, `$lugas` | skill menjawab kedua nama |
+| ID `RLX-*`, berkas data `rhetorilex-v0.2.*`, ID format | tidak berubah | pengenal stabil |
+
+Untuk membatalkan: ubah nama repo kembali ke `RhetoriLex` dan deploy ulang commit `f3fd63d`; data dan ID tidak berubah.
+
 ## Proyek dan pembuat
 
-RhetoriLex dibuat dan dikelola oleh
+Lugas dibuat dan dikelola oleh
 [Reza Prama Arviandi](https://rezaprama.com). Riwayat rilis tersedia di
 [CHANGELOG.md](CHANGELOG.md); rencana publik tersedia di [ROADMAP.md](ROADMAP.md).
 
@@ -205,5 +194,5 @@ benchmark, aset, dan dokumentasi memakai CC BY 4.0. Pemetaan path machine-readab
 tersedia di [REUSE.toml](REUSE.toml); status pihak ketiga tersedia di
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-Metadata sitasi versi 0.2.0 tersedia di [CITATION.cff](CITATION.cff). Dokumen lisensi
+Metadata sitasi versi 0.3.0 tersedia di [CITATION.cff](CITATION.cff). Dokumen lisensi
 menyatakan kebijakan proyek, bukan nasihat hukum.

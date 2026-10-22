@@ -1,46 +1,46 @@
 {
-  "name": "rhetorilex",
-  "version": "0.2.0",
-  "description": "Free local academic paraphrase skill and evidence-safe writing workbench.",
+  "name": "lugas",
+  "version": "0.3.0",
+  "description": "Lugas (formerly RhetoriLex): free, local, meaning-safe paraphrase and editing skill for Indonesian and English academic writing.",
   "author": {
     "name": "Reza Prama Arviandi",
     "url": "https://rezaprama.com"
   },
-  "homepage": "https://rezaprama.github.io/RhetoriLex/",
-  "repository": "https://github.com/rezaprama/RhetoriLex",
+  "homepage": "https://rezaprama.github.io/Lugas/",
+  "repository": "https://github.com/rezaprama/Lugas",
   "license": "Apache-2.0",
   "keywords": [
+    "lugas",
+    "rhetorilex",
     "academic-writing",
-    "scientific-writing",
-    "research-writing",
-    "phrasebank",
+    "indonesian",
+    "bahasa-indonesia",
     "paraphrasing-tool",
-    "literature-review",
-    "agent-skills",
+    "scientific-writing",
     "evidence-preservation",
-    "rhetorical-moves"
+    "agent-skills"
   ],
   "skills": "./skills/",
   "interface": {
-    "displayName": "RhetoriLex",
-    "shortDescription": "Free local academic paraphrase",
-    "longDescription": "Paraphrase and revise academic, scientific, technical, and Indonesian-English writing with local-first controls, original patterns, protected citations, uncertainty, scope, and scientific claim strength.",
+    "displayName": "Lugas",
+    "shortDescription": "Meaning-safe paraphrase & editing (ID/EN)",
+    "longDescription": "Edit, paraphrase, correct, and translate academic and technical Indonesian and English without changing numbers, citations, negation, hedges, or claim strength. Includes an offline meaning guard and EYD V lint. Formerly RhetoriLex.",
     "developerName": "Reza Prama Arviandi",
     "category": "Productivity",
     "capabilities": [],
-    "websiteURL": "https://rezaprama.github.io/RhetoriLex/en/paraphrase-workbench/",
+    "websiteURL": "https://rezaprama.github.io/Lugas/id/alat-parafrasa/",
     "defaultPrompt": [
-      "Paraphrase this paragraph without changing citations, numbers, or claim strength.",
-      "Give three cautious ways to state this research gap.",
+      "Parafrasekan paragraf ini tanpa mengubah angka, sitasi, atau kekuatan klaim.",
+      "Rapikan bahasa bab metode ini sesuai EYD V.",
       "Check whether this paraphrase preserves the evidence.",
-      "Compare wording for association, prediction, and causation.",
-      "Plan rhetorical moves for a reviewer response."
+      "Translate this abstract into academic English; keep every number and citation.",
+      "Give three cautious ways to state this research gap."
     ],
     "brandColor": "#164F7A",
     "composerIcon": "./assets/icon.svg",
     "logo": "./assets/logo.svg",
     "screenshots": [
-      "./assets/rhetorilex-hero.png"
+      "./assets/lugas-hero.png"
     ]
   }
 }

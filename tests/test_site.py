@@ -14,7 +14,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-BASE_URL = "https://rezaprama.github.io/RhetoriLex"
+BASE_URL = "https://rezaprama.github.io/Lugas"
 
 ROUTE_PAIRS = [
     ("", ""),
@@ -247,11 +247,11 @@ class StaticSiteTests(unittest.TestCase):
         id_page = parse_page(DOCS / "id" / "index.html")
         self.assertEqual(
             en.h1,
-            "Free local academic paraphrase skill for researchers.",
+            "Clear writing. Same meaning.",
         )
         self.assertEqual(
             id_page.h1,
-            "Skill parafrasa akademik lokal dan gratis.",
+            "Tulisan jernih, makna tetap.",
         )
         for phrase in ("Explore writing skills", "Search phrases", "View on GitHub"):
             self.assertIn(phrase, en.visible_text)
@@ -281,9 +281,9 @@ class StaticSiteTests(unittest.TestCase):
                 self.assertEqual(parser.meta.get("og:url"), expected_url)
                 self.assertEqual(parser.meta.get("twitter:card"), "summary_large_image")
                 expected_alt = (
-                    "RhetoriLex academic writing reference"
+                    "Lugas academic writing reference"
                     if locale == "en"
-                    else "Referensi penulisan akademik RhetoriLex"
+                    else "Referensi penulisan akademik Lugas"
                 )
                 self.assertEqual(parser.meta.get("og:image:alt"), expected_alt)
                 self.assertEqual(len(parser.schemas), 1)
@@ -451,7 +451,7 @@ class StaticSiteTests(unittest.TestCase):
         ]
         dist_payload = json.loads((ROOT / "data" / "dist" / "phrases.json").read_text(encoding="utf-8"))
         bundled_payload = json.loads(
-            (ROOT / "skills" / "rhetorilex" / "assets" / "patterns.json").read_text(encoding="utf-8")
+            (ROOT / "skills" / "lugas" / "assets" / "patterns.json").read_text(encoding="utf-8")
         )
         dist = dist_payload["entries"]
         bundled = (

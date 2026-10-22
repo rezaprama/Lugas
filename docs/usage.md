@@ -7,10 +7,10 @@ Use **search** when you know the writing intent. Use **suggest** when you know o
 ## Search examples
 
 ```bash
-rhetorilex search "bounded research gap" --stage introduction
-rhetorilex search "interpret estimate" --evidence observational --max-claim-strength bounded
-rhetorilex search "causal effect" --function causal_claim --risk high
-rhetorilex --json search "state limitation" --discipline health_sciences
+lugas search "bounded research gap" --stage introduction
+lugas search "interpret estimate" --evidence observational --max-claim-strength bounded
+lugas search "causal effect" --function causal_claim --risk high
+lugas --json search "state limitation" --discipline health_sciences
 ```
 
 Filters are hard constraints. Ranking is a retrieval signal, not a scientific-validity score.

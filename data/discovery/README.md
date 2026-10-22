@@ -1,13 +1,13 @@
 # Discovery datasets
 
 This directory stores reproducible discovery and repository-landscape observations.
-It contains public metadata and RhetoriLex annotations only. No third-party repository
+It contains public metadata and Lugas annotations only. No third-party repository
 content, prompts, skills, templates, or README prose is copied here.
 
 ## Files
 
 - `github-landscape-2026-08-19.json`: one timestamped GitHub REST API snapshot for the
-  three requested comparison repositories, four context repositories, and RhetoriLex.
+  three requested comparison repositories, four context repositories, and Lugas.
 - `github-skill-files-2026-08-19.json`: commit-pinned recursive-tree counts of `SKILL.md`
   files for six relevant repositories; file count is not capability or quality.
 - `discovery-signals-2026-08-19.json`: topic counts, keyword-query counts, and explicit

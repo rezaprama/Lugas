@@ -1,104 +1,81 @@
-# RhetoriLex
+# Lugas
 
-**Free local academic paraphrase skill and evidence-safe writing workbench for researchers, students, editors, and AI agents.**
+**Clear writing. Same meaning.** A free, local skill for paraphrasing, editing, correcting, and translating academic and technical writing in **Indonesian and English** without changing numbers, citations, negation, or claim strength.
 
-[![CI](https://github.com/rezaprama/RhetoriLex/actions/workflows/ci.yml/badge.svg)](https://github.com/rezaprama/RhetoriLex/actions/workflows/ci.yml)
-[![Pages](https://github.com/rezaprama/RhetoriLex/actions/workflows/pages.yml/badge.svg)](https://github.com/rezaprama/RhetoriLex/actions/workflows/pages.yml)
+*Lugas was called **RhetoriLex** until v0.2. Old links, the `rhetorilex` command, `import rhetorilex`, and stable `RLX-*` IDs keep working; see [Migration](#migration-from-rhetorilex).*
+
+[![CI](https://github.com/rezaprama/Lugas/actions/workflows/ci.yml/badge.svg)](https://github.com/rezaprama/Lugas/actions/workflows/ci.yml)
+[![Pages](https://github.com/rezaprama/Lugas/actions/workflows/pages.yml/badge.svg)](https://github.com/rezaprama/Lugas/actions/workflows/pages.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/code-Apache--2.0-0f766e.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-0f766e.svg)](LICENSES/CC-BY-4.0.txt)
 
-[Open the workbench](https://rezaprama.github.io/RhetoriLex/en/paraphrase-workbench/) · [Explore the catalog](https://rezaprama.github.io/RhetoriLex/) · [Bahasa Indonesia](README.id.md) · [Agent Skill](skills/rhetorilex/SKILL.md) · [Research](docs/discovery-research.md) · [Provenance](PROVENANCE.md)
+[Workbench (ID)](https://rezaprama.github.io/Lugas/id/alat-parafrasa/) · [Workbench (EN)](https://rezaprama.github.io/Lugas/en/paraphrase-workbench/) · [Bahasa Indonesia](README.id.md) · [Agent Skill](skills/lugas/SKILL.md) · [Benchmarks](docs/benchmarks.md) · [Provenance](PROVENANCE.md)
 
-RhetoriLex helps writers paraphrase, audit, and revise academic or technical prose from communicative purpose and evidence, not
-from how academic it sounds. Version 0.2.0 contains 96 independently authored patterns
-across 24 rhetorical functions, with explicit claim strength, evidence requirements,
-causal-design guards, risk, named slots, and provenance.
+*Lugas* is Indonesian for plain, direct, and to the point: prose without padding. The tool's job is the same: understand the purpose, check the evidence, then choose the words.
 
-Version 0.2.0 also indexes 144 original writing skills: 64 academic, 66 scientific,
-and 14 paraphrasing. The bilingual site publishes 62 localized routes: 31 English and
-31 Indonesian, including an installable local-first paraphrase workbench.
+## What it does
 
-It does not write evidence for you. It does not invent citations. It does not turn an
-association into a cause. Final submission checks remain the writer's responsibility.
+| Job | Example request | What Lugas keeps fixed |
+| --- | --- | --- |
+| Correct (*koreksi*) | "Koreksi ejaan saja" | sentence structure, correct word choices |
+| Edit (*sunting*) | "Rapikan bahasanya" | claims, argument order, technical terms |
+| Paraphrase (*parafrase*) | "Parafrasekan untuk tinjauan pustaka" | facts, numbers, citations, claim strength |
+| Translate ID↔EN | "Terjemahkan ke bahasa Inggris akademik" | everything except decimal comma↔point |
+| Summarise (*ringkas*) | "Ringkas untuk abstrak" | kept facts exact, contrasts and limitations |
 
-## Why it is different
+It does not invent data or references, does not turn association into causation or "not significant" into "no effect", and does not promise to pass plagiarism or AI detectors. The author stays responsible for the final text.
 
-- **Evidence before polish.** Every pattern declares the minimum evidence and strongest
-  compatible claim.
-- **Meaning-preserving.** The Agent Skill protects citations, numbers, units,
-  populations, negation, uncertainty, and causal status during rewriting.
-- **Clean-room catalog.** Released wording is original editorial work with
-  `source_reuse: false`; restricted source inventories are excluded.
-- **Offline core.** Search, filters, validation, builds, and the Skill helper use only
-  Python's standard library.
-- **One source of truth.** Canonical JSONL deterministically produces JSON, CSV, SQLite,
-  Markdown, package resources, Skill assets, and checksums.
-- **Installable web workbench.** The PWA can build safe prompts without AI, or call a user-supplied OpenAI-compatible or Gemini-compatible endpoint with a browser-side 3-call daily guard.
-- **Five useful surfaces.** Use the Python API/CLI, portable Agent Skill/plugin, static
-  browser explorer, local-first paraphrase workbench, or generated data artifacts.
+## Three ways to use it
 
-## Try it
+**1. Agent Skill (main product).** Copy `skills/lugas` to `.agents/skills/lugas` (one project) or `~/.codex/skills/lugas` (all projects), or install with:
 
-Open the static workbench at <https://rezaprama.github.io/RhetoriLex/en/paraphrase-workbench/>.
-Use prompt-only mode for no remote AI call, or enter your own local/provider endpoint and token.
-The token is handled in the browser and stored only if you choose to remember settings.
+```text
+$skill-installer https://github.com/rezaprama/Lugas/tree/main/skills/lugas
+```
+
+The skill loads about 5.9 KB of instructions, plus the Indonesian reference (5.6 KB) only for Indonesian work. It routes by job, locks protected elements, and ends with a local check.
+
+**2. Offline meaning guard (no model, no network).** Works with any model's output, including local models:
 
 ```bash
-git clone https://github.com/rezaprama/RhetoriLex.git
-cd RhetoriLex
+python skills/lugas/scripts/guard.py check source.txt rewrite.txt     # --translation / --summary
+python skills/lugas/scripts/guard.py lint draft.txt                   # EYD V/KBBI and translationese hints
+```
+
+It compares numbers (decimal comma aware), statistics, citations, quotations, negation (*tidak, bukan, belum, tanpa* / not, no, without), hedges, association vs causation, direction, scope, and non-significance. Exit code 1 means a `high` finding. It is a lexical screen, not proof of meaning.
+
+**3. Web workbench (PWA).** [Indonesian](https://rezaprama.github.io/Lugas/id/alat-parafrasa/) / [English](https://rezaprama.github.io/Lugas/en/paraphrase-workbench/). Choose a job and output language, build a compact prompt for any model, paste the answer back, and run the same meaning check in the browser. Optionally call your own OpenAI-compatible or Gemini endpoint (90 s timeout, cancel, truncation warning). Nothing is sent anywhere unless you enter an endpoint; the site has no backend, account, or analytics.
+
+## Python CLI and API
+
+```bash
+git clone https://github.com/rezaprama/Lugas.git && cd Lugas
 python -m pip install -e .
-rhetorilex search "cautious interpretation" --stage discussion --limit 3
+lugas check source.txt rewrite.txt
+lugas lint draft.txt
+lugas search "cautious interpretation" --stage discussion --limit 3
+lugas explain RLX-QUA-001
 ```
-
-Machine-readable output and hard evidence filters:
-
-```bash
-rhetorilex --json search "observational result" \
-  --evidence observational \
-  --max-claim-strength bounded \
-  --risk low
-```
-
-Inspect one pattern or the full contract health:
-
-```bash
-rhetorilex explain RLX-QUA-001
-rhetorilex inspect --validate
-rhetorilex taxonomy
-```
-
-Python API:
 
 ```python
-from rhetorilex import Catalog
+from lugas import Catalog, check_rewrite, lint_id
 
-catalog = Catalog.load()
-results = catalog.search(
-    "state a limitation",
-    stage="discussion",
-    max_claim_strength="bounded",
-    limit=3,
-)
-
-for result in results:
-    print(result.entry.template, result.entry.evidence_requirement)
+for finding in check_rewrite("Responden belum pernah dilatih.", "Responden sudah pernah dilatih."):
+    print(finding.severity, finding.code)        # high negation-lost
+results = Catalog.load().search("state a limitation", stage="discussion", limit=3)
 ```
 
-## Install the Agent Skill
+The catalog behind search holds 96 original English patterns across 24 rhetorical functions and 144 writing skills (64 academic, 66 scientific, 14 paraphrasing) with Indonesian descriptions. Patterns are candidates, not authority.
 
-For one repository, copy `skills/rhetorilex` to `.agents/skills/rhetorilex`. For personal
-use across projects, copy it to `~/.codex/skills/rhetorilex`.
+## Evidence (measured 22 Oct 2026)
 
-The Skill can route requests such as:
+Full method, fixtures, and limits: [docs/benchmarks.md](docs/benchmarks.md).
 
-- “Give three cautious ways to interpret this observational result.”
-- “Rewrite this paragraph without changing citations, values, or claim strength.”
-- “Compare options for stating a bounded research gap.”
-- “Audit this sentence for causal overclaiming.”
+- **Meaning guard vs v0.2 check** on an independently written held-out set (24 cases, 47 faulty rewrites): v0.2 substring check caught 49% with 25% false alarms on faithful rewrites; the new guard caught 81% with 29% false alarms before any tuning, and 85% with 0% after fixes informed by that set (so the second figure is optimistic).
+- **Model runs** (one frontier Claude model, 16 ID/EN tasks, blind LLM judge): meaning errors 3 with a plain prompt, 0 with the v0.2 skill, 0 with Lugas v0.3. Naturalness was similar (4.6–4.8 / 5). Lugas did **not** reduce tokens versus v0.2 on this model (≈11 KB instructions each); it adds Indonesian rules at the same cost.
+- **Workbench prompt** overhead fell from 788 to 576 characters per request (−27%) while adding output-language control and injection protection.
 
-It intentionally refuses citation fabrication, plagiarism disguise, synonym spinning,
-detector evasion, and unsupported claim upgrades. A release-ready plugin archive can be
-built from [.codex-plugin/plugin.json](.codex-plugin/plugin.json).
+Not yet measured: smaller or local models, latency and cost per provider, human expert ratings, Lighthouse field data.
 
 ## Catalog model
 
@@ -143,7 +120,8 @@ values are explicit `null`; no proxy volume was invented.
 python scripts/validate_data.py
 python scripts/build_data.py
 python -m unittest discover -s tests -v
-python scripts/package_plugin.py --output dist/rhetorilex-plugin.zip
+python scripts/package_plugin.py --output dist/lugas-plugin.zip
+python scripts/bench_guard.py --fixture benchmarks/meaning-guard-heldout-v1.json
 ```
 
 The test suite checks schemas, provenance, slot equality, evidence requirements, causal
@@ -157,8 +135,8 @@ checksums.
 data/canonical/catalog.v1.jsonl
           |
           +--> data/dist/*                    portable data artifacts
-          +--> src/rhetorilex/resources/*     Python package
-          +--> skills/rhetorilex/assets/*     offline Agent Skill
+          +--> src/lugas/resources/*          Python package
+          +--> skills/lugas/assets/*     offline Agent Skill
           +--> docs/data/phrases.json          assembled Pages artifact
 
 taxonomy + JSON Schema + evidence contract
@@ -166,7 +144,7 @@ taxonomy + JSON Schema + evidence contract
           +--> validator --> tests --> deterministic release gate
 ```
 
-The browser explorer and paraphrase workbench are static HTML, CSS, and JavaScript. They have no account, backend, CDN dependency, telemetry, or RhetoriLex manuscript database. Endpoint calls go directly from the user's browser to the endpoint they enter. A future shared-key hosted service would need a backend with server-held secrets, quota storage, abuse protection, and manuscript logging disabled by default.
+The browser explorer and paraphrase workbench are static HTML, CSS, and JavaScript. They have no account, backend, CDN dependency, telemetry, or Lugas manuscript database. Endpoint calls go directly from the user's browser to the endpoint they enter. A future shared-key hosted service would need a backend with server-held secrets, quota storage, abuse protection, and manuscript logging disabled by default.
 
 ## Source and rights boundary
 
@@ -195,9 +173,22 @@ Security, confidential-draft, provenance, and rights concerns belong in the priv
 process described by [SECURITY.md](SECURITY.md). Project decisions are recorded in
 [GOVERNANCE.md](GOVERNANCE.md) and [IMPLEMENTATION_LOG.md](IMPLEMENTATION_LOG.md).
 
+## Migration from RhetoriLex
+
+| Old | New | Status |
+| --- | --- | --- |
+| `github.com/rezaprama/RhetoriLex` | `github.com/rezaprama/Lugas` | GitHub forwards the old repository and git URLs |
+| `rezaprama.github.io/RhetoriLex/...` | `rezaprama.github.io/Lugas/...` | per-route redirect pages ([scripts/build_redirect_site.py](scripts/build_redirect_site.py)); old PWA worker is unregistered |
+| `rhetorilex` command, `python -m rhetorilex` | `lugas` | alias kept in 0.x |
+| `import rhetorilex` | `import lugas` | alias kept in 0.x with a `DeprecationWarning` |
+| `skills/rhetorilex`, `$rhetorilex` | `skills/lugas`, `$lugas` | the skill answers to both names |
+| `RLX-*` IDs, `rhetorilex-v0.2.*` data files, format IDs | unchanged | stable identifiers |
+
+To roll back, rename the repository back to `RhetoriLex` and redeploy commit `f3fd63d`; no data or IDs changed.
+
 ## Project and creator
 
-RhetoriLex is created and maintained by
+Lugas is created and maintained by
 [Reza Prama Arviandi](https://rezaprama.com). Release history is in
 [CHANGELOG.md](CHANGELOG.md); the public roadmap is in [ROADMAP.md](ROADMAP.md).
 
@@ -208,5 +199,5 @@ reports, benchmarks, assets, and documentation are CC BY 4.0. Machine-readable p
 mapping lives in [REUSE.toml](REUSE.toml); third-party status lives in
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
 
-Citation metadata for version 0.2.0 is available in [CITATION.cff](CITATION.cff).
+Citation metadata for version 0.3.0 is available in [CITATION.cff](CITATION.cff).
 Licensing documents state project policy, not legal advice.

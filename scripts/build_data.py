@@ -1,4 +1,4 @@
-"""Build deterministic RhetoriLex distribution and package resources."""
+"""Build deterministic Lugas (formerly RhetoriLex) distribution and package resources."""
 
 from __future__ import annotations
 
@@ -17,8 +17,8 @@ from validate_data import DEFAULT_CATALOG, DEFAULT_CONTRACT, DEFAULT_TAXONOMY, v
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DIST = ROOT / "data" / "dist"
-DEFAULT_RESOURCES = ROOT / "src" / "rhetorilex" / "resources"
-DEFAULT_SKILL_ASSETS = ROOT / "skills" / "rhetorilex" / "assets"
+DEFAULT_RESOURCES = ROOT / "src" / "lugas" / "resources"
+DEFAULT_SKILL_ASSETS = ROOT / "skills" / "lugas" / "assets"
 DEFAULT_ALIASES = ROOT / "data" / "taxonomy" / "search-aliases.v1.json"
 DEFAULT_MANIFEST = ROOT / "data" / "canonical" / "catalog-manifest.v2.json"
 DEFAULT_WRITING_SKILLS = ROOT / "data" / "editorial" / "writing-skills.v1.json"
@@ -328,7 +328,7 @@ def build(
     write_bytes(skill_assets / "search-aliases.json", json_bytes(aliases))
     write_bytes(skill_assets / "writing-skills.json", json_bytes(writing_skills))
     write_bytes(skill_assets / "writing-skills.id.json", json_bytes(writing_skills_id))
-    guard_source = ROOT / "src" / "rhetorilex" / "guard.py"
+    guard_source = ROOT / "src" / "lugas" / "guard.py"
     write_bytes(skill_assets.parent / "scripts" / "guard.py", guard_source.read_bytes())
 
     stale_names = (

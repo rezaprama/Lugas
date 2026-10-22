@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-RhetoriLex is pre-1.0 software. Security fixes target the latest release and `main`.
+Lugas is pre-1.0 software. Security fixes target the latest release and `main`.
 Older alpha versions may receive guidance but are not guaranteed patches. The release
 notes will identify any exception.
 

@@ -2,7 +2,7 @@
 
 - Status: accepted
 - Date: 2026-08-19
-- Decision owners: RhetoriLex maintainers
+- Decision owners: Lugas maintainers
 
 ## Context
 
@@ -10,7 +10,7 @@ The project needs useful academic rhetorical patterns while supporting broad pub
 
 ## Decision
 
-RhetoriLex releases only independently authored editorial patterns. Canonical entries must declare `method: original_editorial` and `source_reuse: false`. Restricted inventories may inform exclusion checks or non-expressive aggregate QA when access permits, but their wording, labels, ordering, examples, and formatting do not enter public artifacts.
+Lugas releases only independently authored editorial patterns. Canonical entries must declare `method: original_editorial` and `source_reuse: false`. Restricted inventories may inform exclusion checks or non-expressive aggregate QA when access permits, but their wording, labels, ordering, examples, and formatting do not enter public artifacts.
 
 The supplied workbook remains ignored and local. Its audit reports contain aggregate structure only. All migration candidates are unresolved and zero are eligible for promotion.
 

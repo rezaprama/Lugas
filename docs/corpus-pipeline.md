@@ -1,6 +1,6 @@
 # Corpus pipeline policy
 
-RhetoriLex v0.1 ships no external corpus and has no automatic corpus downloader. This document defines the gate for future aggregate-only validation work.
+Lugas v0.1 ships no external corpus and has no automatic corpus downloader. This document defines the gate for future aggregate-only validation work.
 
 ## Deny by default
 

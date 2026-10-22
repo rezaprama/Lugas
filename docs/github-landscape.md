@@ -1,5 +1,7 @@
 # GitHub landscape
 
+> Historical record from August 2026, when the project was named RhetoriLex. Names and URLs below are kept as recorded. The project is now Lugas; see [the naming record](brand/naming-2026-10.md).
+
 - **Repository snapshot:** 2026-08-19T12:11:05Z
 - **Recursive-tree snapshot:** 2026-08-19T12:16:17Z
 - **Scope:** public GitHub metadata and commit-pinned file counts only

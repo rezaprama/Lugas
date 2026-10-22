@@ -5,7 +5,7 @@
 
 ## Context
 
-RhetoriLex needs indexable English and Bahasa Indonesia guidance, a searchable
+Lugas needs indexable English and Bahasa Indonesia guidance, a searchable
 phrase catalog, canonical writing-skill references, accessible theme and locale
 preferences, and deployment on GitHub Pages. The site must work without a
 client framework or runtime package installation. It must also keep interface
@@ -14,7 +14,7 @@ locale separate from the English language of released phrase patterns.
 A single client-rendered page would make localized metadata, canonical URLs,
 fragment references, and no-script access harder to verify. Root-domain asset
 paths would break when the repository is hosted under the GitHub Pages project
-base /RhetoriLex/.
+base /Lugas/.
 
 ## Decision
 

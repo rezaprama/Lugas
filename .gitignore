@@ -40,3 +40,6 @@ Thumbs.db
 # Documentation preview
 .pages-preview/
 docs/data/phrases.json
+
+# Generated redirect site for the old RhetoriLex Pages path (pushed to its own repo)
+migration/rhetorilex-pages/

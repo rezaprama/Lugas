@@ -690,7 +690,7 @@ if (workbench) {
     prompt: $("paraphrase-prompt"),
     output: $("paraphrase-output"),
   };
-  const guard = window.RhetoriLexGuard;
+  const guard = window.LugasGuard;
   let controller = null;
 
   function createNode(tag, className, text) {

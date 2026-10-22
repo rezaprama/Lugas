@@ -1,6 +1,6 @@
 # Governance
 
-RhetoriLex uses transparent maintainer-led governance with strong provenance and
+Lugas uses transparent maintainer-led governance with strong provenance and
 evidence-safety gates. User utility matters; scientific meaning, privacy, and source
 rights take priority over growth or phrase count.
 

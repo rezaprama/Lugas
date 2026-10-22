@@ -1,9 +1,9 @@
-"""Konten tambahan Bahasa Indonesia untuk situs RhetoriLex."""
+"""Konten tambahan Bahasa Indonesia untuk situs Lugas."""
 
 PAGES_ID = {
     "rhetorical_moves": {
         "kind": "article",
-        "title": "Gerakan Retoris untuk Penulisan Riset | RhetoriLex",
+        "title": "Gerakan Retoris untuk Penulisan Riset | Lugas",
         "description": "Rencanakan paragraf riset melalui gerakan retoris untuk konteks, kesenjangan, metode, temuan, interpretasi, keterbatasan, dan kontribusi.",
         "h1": "Gerakan retoris mengubah draf menjadi argumen",
         "lede": "Gerakan menamai fungsi suatu bagian bagi pembaca. Pemilihan frasa dilakukan setelah fungsi itu jelas.",
@@ -36,7 +36,7 @@ PAGES_ID = {
     },
     "research_writing_guides": {
         "kind": "article",
-        "title": "Panduan Penulisan Riset untuk Setiap Bagian Naskah | RhetoriLex",
+        "title": "Panduan Penulisan Riset untuk Setiap Bagian Naskah | Lugas",
         "description": "Panduan terarah untuk tinjauan pustaka, pendahuluan, metode, hasil, diskusi, simpulan, dan tanggapan reviewer.",
         "h1": "Panduan penulisan riset berdasarkan keputusan",
         "lede": "Pilih bagian yang sedang ditulis, identifikasi keputusan utamanya, lalu gunakan pemeriksaan yang melindungi makna.",
@@ -68,16 +68,16 @@ PAGES_ID = {
     },
     "agent_skills": {
         "kind": "article",
-        "title": "Skill Agen RhetoriLex dan Aplikasi Parafrasa Lokal | RhetoriLex",
-        "description": "Pasang dan gunakan RhetoriLex sebagai skill parafrasa akademik lokal gratis, app statis, CLI, atau workbench BYO-endpoint.",
-        "h1": "Gunakan RhetoriLex sebagai skill parafrasa lokal",
+        "title": "Skill Agen Lugas dan Aplikasi Parafrasa Lokal | Lugas",
+        "description": "Pasang dan gunakan Lugas sebagai skill parafrasa akademik lokal gratis, app statis, CLI, atau workbench BYO-endpoint.",
+        "h1": "Gunakan Lugas sebagai skill parafrasa lokal",
         "lede": "Jalankan parafrasa prompt-first, pencarian frasa lokal, dan cek bukti tanpa bergantung pada SaaS parafrasa berbayar.",
         "body": """
 <section>
   <h2>Pasang dari repositori</h2>
   <p>Paket skill berisi instruksi, skrip pencarian deterministik, dan katalog rilis. Pencarian inti berjalan secara lokal serta tidak memerlukan unggahan naskah. Tinjau repositori dan izin sebelum memasang ekstensi agen apa pun.</p>
-  <pre><code>$skill-installer https://github.com/rezaprama/RhetoriLex/tree/main/skills/rhetorilex</code></pre>
-  <p>Anda juga dapat mengkloning repositori dan mengarahkan agen ke <code>skills/rhetorilex/SKILL.md</code>. Antarmuka baris perintah Python memakai katalog yang sama untuk pencarian yang dapat direproduksi.</p>
+  <pre><code>$skill-installer https://github.com/rezaprama/Lugas/tree/main/skills/lugas</code></pre>
+  <p>Anda juga dapat mengkloning repositori dan mengarahkan agen ke <code>skills/lugas/SKILL.md</code>. Antarmuka baris perintah Python memakai katalog yang sama untuk pencarian yang dapat direproduksi.</p>
 </section>
 <section>
   <h2>Gunakan aplikasi web yang bisa dipasang</h2>
@@ -101,8 +101,8 @@ PAGES_ID = {
 <section>
   <h2>Jaga pencarian agar dapat direproduksi</h2>
   <p>Catat versi atau commit katalog, kueri, filter, dan ID pola terpilih ketika keputusan kata penting. Antarmuka baris perintah mengembalikan ID stabil untuk keperluan ini. Pencarian deterministik membuat katalog dan kueri yang sama menghasilkan urutan yang dapat diaudit.</p>
-  <pre><code>rhetorilex search "cautious interpretation" --limit 3
-rhetorilex show RLX-DISCUSS-INTERPRET-001</code></pre>
+  <pre><code>lugas search "cautious interpretation" --limit 3
+lugas explain RLX-QUA-001</code></pre>
 </section>
 <aside class="article-note">
   <h2>Batas privasi</h2>
@@ -112,25 +112,25 @@ rhetorilex show RLX-DISCUSS-INTERPRET-001</code></pre>
     },
     "about": {
         "kind": "article",
-        "title": "Tentang RhetoriLex: Orisinalitas, Provenans, dan Lisensi",
-        "description": "Pelajari cara RhetoriLex menjaga katalog frasa akademik clean-room yang orisinal, pengaman bukti, lisensi terbuka, dan tata kelola.",
-        "h1": "RhetoriLex adalah indeks pola retoris yang orisinal",
+        "title": "Tentang Lugas: Orisinalitas, Provenans, dan Lisensi",
+        "description": "Pelajari cara Lugas menjaga katalog frasa akademik clean-room yang orisinal, pengaman bukti, lisensi terbuka, dan tata kelola.",
+        "h1": "Lugas adalah indeks pola retoris yang orisinal",
         "lede": "Proyek ini membantu penulis memilih bahasa berdasarkan tujuan dan bukti tanpa menyebarkan isi phrasebank terbatas.",
         "body": """
 <section>
   <h2>Apa yang disediakan proyek</h2>
-  <p>RhetoriLex adalah katalog terstruktur berisi pola bahasa Inggris yang ditulis secara independen untuk penulisan akademik dan ilmiah. Setiap rekaman menghubungkan fungsi retoris dengan template, tahap naskah, kekuatan klaim, kebutuhan bukti, tingkat risiko, dan catatan tinjauan. Penjelajah web, antarmuka Python, alat baris perintah, dan Skill Agen memakai data rilis yang sama.</p>
+  <p>Lugas adalah katalog terstruktur berisi pola bahasa Inggris yang ditulis secara independen untuk penulisan akademik dan ilmiah. Setiap rekaman menghubungkan fungsi retoris dengan template, tahap naskah, kekuatan klaim, kebutuhan bukti, tingkat risiko, dan catatan tinjauan. Penjelajah web, antarmuka Python, alat baris perintah, dan Skill Agen memakai data rilis yang sama.</p>
   <p>Katalog merupakan alat bantu penulisan, bukan otoritas kebenaran klaim ilmiah. Penulis tetap bertanggung jawab atas ketepatan sumber, konvensi disiplin, integritas riset, dan kesesuaian bahasa dengan bukti.</p>
 </section>
 <section>
   <h2>Kepengarangan clean-room dan provenans</h2>
   <p>Pola yang dirilis merupakan karya editorial orisinal. Inventaris sumber lokal yang terbatas dikeluarkan dari repositori dan artefak rilis. Proyek tidak mengimpor, memperbanyak, atau menulis ulang secara ringan inventaris Manchester Academic Phrasebank. Sumber eksternal hanya dapat memberi konteks konsep, taksonomi, atau validasi agregat ketika peran dan lisensinya didokumentasikan.</p>
-  <p>Pemeriksaan build memindai isi terlacak dan paket untuk nama berkas terbatas serta indikator kebocoran lain. Catatan provenans menyatakan apa yang dipertimbangkan, dikeluarkan, dan alasannya. Baca <a href="https://github.com/rezaprama/RhetoriLex/blob/main/PROVENANCE.md">kebijakan provenans</a> sebelum mengusulkan sumber korpus baru.</p>
+  <p>Pemeriksaan build memindai isi terlacak dan paket untuk nama berkas terbatas serta indikator kebocoran lain. Catatan provenans menyatakan apa yang dipertimbangkan, dikeluarkan, dan alasannya. Baca <a href="https://github.com/rezaprama/Lugas/blob/main/PROVENANCE.md">kebijakan provenans</a> sebelum mengusulkan sumber korpus baru.</p>
 </section>
 <section>
   <h2>Lisensi dan atribusi</h2>
   <p>Data editorial orisinal dan dokumentasi untuk manusia dirilis dengan Creative Commons Attribution 4.0. Perangkat lunak serta instruksi Skill Agen dirilis dengan Apache License 2.0. Bahan pihak ketiga, bila diterima pada masa depan, harus mempertahankan pemberitahuannya sendiri dan mungkin tidak tercakup oleh lisensi proyek.</p>
-  <p>Dibuat oleh Reza Prama Arviandi. Kontributor dicatat melalui riwayat repositori dan catatan rilis. Baca <a href="https://github.com/rezaprama/RhetoriLex/blob/main/LICENSE">lisensi perangkat lunak</a>, <a href="https://github.com/rezaprama/RhetoriLex/blob/main/LICENSES/CC-BY-4.0.txt">lisensi data</a>, dan <a href="https://github.com/rezaprama/RhetoriLex/blob/main/GOVERNANCE.md">kebijakan tata kelola</a>.</p>
+  <p>Dibuat oleh Reza Prama Arviandi. Kontributor dicatat melalui riwayat repositori dan catatan rilis. Baca <a href="https://github.com/rezaprama/Lugas/blob/main/LICENSE">lisensi perangkat lunak</a>, <a href="https://github.com/rezaprama/Lugas/blob/main/LICENSES/CC-BY-4.0.txt">lisensi data</a>, dan <a href="https://github.com/rezaprama/Lugas/blob/main/GOVERNANCE.md">kebijakan tata kelola</a>.</p>
 </section>
 <section>
   <h2>Cara berkontribusi secara bertanggung jawab</h2>
@@ -139,7 +139,7 @@ rhetorilex show RLX-DISCUSS-INTERPRET-001</code></pre>
 </section>
 <aside class="article-note">
   <h2>Cakupan</h2>
-  <p>RhetoriLex tidak menciptakan bukti, memverifikasi setiap sitasi, menggantikan tinjauan ahli, atau menjamin publikasi. Proyek membuat keputusan bahasa lebih eksplisit dan dapat diaudit.</p>
+  <p>Lugas tidak menciptakan bukti, memverifikasi setiap sitasi, menggantikan tinjauan ahli, atau menjamin publikasi. Proyek membuat keputusan bahasa lebih eksplisit dan dapat diaudit.</p>
 </aside>
 """,
     },

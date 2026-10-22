@@ -1,17 +1,19 @@
-"""RhetoriLex: offline, evidence-aware academic rhetoric templates."""
+"""Compatibility alias: RhetoriLex is now Lugas.
 
-from .catalog import Catalog, Entry, SearchResult
-from .contracts import ContractIssue, check_entry_contract
-from .guard import Finding, check as check_rewrite, lint_id
+``import rhetorilex`` keeps working and re-exports the ``lugas`` API. New code
+should ``import lugas``. This alias will stay for at least the 0.x series.
+"""
 
-__all__ = [
-    "Catalog",
-    "ContractIssue",
-    "Entry",
-    "Finding",
-    "SearchResult",
-    "check_entry_contract",
-    "check_rewrite",
-    "lint_id",
-]
-__version__ = "0.2.0"
+from __future__ import annotations
+
+import warnings
+
+from lugas import *  # noqa: F401,F403
+from lugas import __all__, __version__  # noqa: F401
+from lugas import catalog, cli, contracts, guard  # noqa: F401
+
+warnings.warn(
+    "The 'rhetorilex' package is now 'lugas'; import lugas instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)

@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from rhetorilex.guard import check, extract, lint_id  # noqa: E402
+from lugas.guard import check, extract, lint_id  # noqa: E402
 import bench_guard  # noqa: E402
 
 
@@ -77,12 +77,12 @@ class GuardTests(unittest.TestCase):
 
     def test_skill_copy_is_identical(self) -> None:
         self.assertEqual(
-            (ROOT / "src" / "rhetorilex" / "guard.py").read_bytes(),
-            (ROOT / "skills" / "rhetorilex" / "scripts" / "guard.py").read_bytes(),
+            (ROOT / "src" / "lugas" / "guard.py").read_bytes(),
+            (ROOT / "skills" / "lugas" / "scripts" / "guard.py").read_bytes(),
         )
 
     def test_cli_exit_codes(self) -> None:
-        script = ROOT / "skills" / "rhetorilex" / "scripts" / "guard.py"
+        script = ROOT / "skills" / "lugas" / "scripts" / "guard.py"
         tmp = ROOT / "tests" / "__pycache__"
         tmp.mkdir(exist_ok=True)
         (tmp / "s.txt").write_text("Tidak ada perbedaan bermakna (p = 0,41).", encoding="utf-8")

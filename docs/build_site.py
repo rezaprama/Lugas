@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the dependency-free bilingual RhetoriLex documentation site."""
+"""Build the dependency-free bilingual Lugas documentation site."""
 
 from __future__ import annotations
 
@@ -15,9 +15,10 @@ from typing import Any
 
 DOCS = Path(__file__).resolve().parent
 ROOT = DOCS.parent
-BASE_URL = "https://rezaprama.github.io/RhetoriLex"
+BASE_URL = "https://rezaprama.github.io/Lugas"
+SOFTWARE_VERSION = "0.3.0"
 AUTHOR = "Reza Prama Arviandi"
-OG_IMAGE = f"{BASE_URL}/assets/rhetorilex-hero.png"
+OG_IMAGE = f"{BASE_URL}/assets/lugas-hero.png"
 WRITING_SKILLS_SOURCE = ROOT / "data" / "editorial" / "writing-skills.v1.json"
 WRITING_SKILLS_ID = ROOT / "data" / "translations" / "writing-skills.id.v1.json"
 
@@ -171,7 +172,7 @@ UI: dict[str, dict[str, str]] = {
         "rights": "Editorial data: CC BY 4.0. Code: Apache 2.0.",
         "resources": "Project resources",
         "sections": "Writing index",
-        "footer_note": "Free local academic paraphrase skill and evidence-safe writing index.",
+        "footer_note": "Clear writing, same meaning. Free, local paraphrase and editing skill for Indonesian and English academic writing. Formerly RhetoriLex.",
     },
     "id": {
         "skip": "Lewati ke isi",
@@ -192,7 +193,7 @@ UI: dict[str, dict[str, str]] = {
         "rights": "Data editorial: CC BY 4.0. Kode: Apache 2.0.",
         "resources": "Sumber proyek",
         "sections": "Indeks penulisan",
-        "footer_note": "Skill parafrasa akademik lokal gratis dan indeks penulisan aman-bukti.",
+        "footer_note": "Tulisan jernih, makna tetap. Skill parafrase dan penyuntingan lokal gratis untuk naskah ilmiah Indonesia dan Inggris. Sebelumnya bernama RhetoriLex.",
     },
 }
 
@@ -287,7 +288,7 @@ def render_header(locale: str, current_key: str) -> str:
 <a class="skip-link" href="#main">{html.escape(text["skip"])}</a>
 <header class="site-header">
   <div class="header-inner">
-    <a class="wordmark" href="{relative_href(locale, current_key, "home")}" aria-label="RhetoriLex {html.escape(text["home"])}">RhetoriLex</a>
+    <a class="wordmark" href="{relative_href(locale, current_key, "home")}" aria-label="Lugas {html.escape(text["home"])}">Lugas</a>
     <nav class="primary-nav" aria-label="{html.escape(text["primary"])}">{primary}</nav>
     <details class="index-menu">
       <summary>{html.escape(text["index"])}</summary>
@@ -316,7 +317,7 @@ def render_footer(locale: str, current_key: str) -> str:
 <footer class="site-footer">
   <div class="footer-inner">
     <div class="footer-intro">
-      <a class="wordmark" href="{relative_href(locale, current_key, "home")}">RhetoriLex</a>
+      <a class="wordmark" href="{relative_href(locale, current_key, "home")}">Lugas</a>
       <p>{html.escape(text["footer_note"])}</p>
       <p>{creator_prefix} <a href="https://rezaprama.com" target="_blank" rel="noopener noreferrer">{AUTHOR}</a>.</p>
       <p>{html.escape(text["rights"])}</p>
@@ -328,10 +329,10 @@ def render_footer(locale: str, current_key: str) -> str:
     <nav aria-label="{html.escape(text["resources"])}">
       <h2>{html.escape(text["resources"])}</h2>
       <ul>
-        <li><a href="https://github.com/rezaprama/RhetoriLex">{html.escape(text["repository"])}</a></li>
-        <li><a href="https://github.com/rezaprama/RhetoriLex/blob/main/PROVENANCE.md">{html.escape(text["provenance"])}</a></li>
-        <li><a href="https://github.com/rezaprama/RhetoriLex/blob/main/SECURITY.md">{html.escape(text["security"])}</a></li>
-        <li><a href="https://github.com/rezaprama/RhetoriLex/blob/main/LICENSE">{html.escape(text["license"])}</a></li>
+        <li><a href="https://github.com/rezaprama/Lugas">{html.escape(text["repository"])}</a></li>
+        <li><a href="https://github.com/rezaprama/Lugas/blob/main/PROVENANCE.md">{html.escape(text["provenance"])}</a></li>
+        <li><a href="https://github.com/rezaprama/Lugas/blob/main/SECURITY.md">{html.escape(text["security"])}</a></li>
+        <li><a href="https://github.com/rezaprama/Lugas/blob/main/LICENSE">{html.escape(text["license"])}</a></li>
       </ul>
     </nav>
   </div>
@@ -395,7 +396,8 @@ def structured_data(locale: str, key: str, page: dict[str, str]) -> dict[str, An
             "@type": "WebSite",
             "@id": f"{url}#website",
             "url": url,
-            "name": "RhetoriLex",
+            "name": "Lugas",
+            "alternateName": "RhetoriLex",
             "description": page["description"],
             "inLanguage": locale,
             "creator": person,
@@ -408,7 +410,22 @@ def structured_data(locale: str, key: str, page: dict[str, str]) -> dict[str, An
                 "query-input": "required name=search_term_string",
             },
         }
-        return {"@context": "https://schema.org", "@graph": [entity]}
+        app = {
+            "@type": "SoftwareApplication",
+            "@id": f"{BASE_URL}/#software",
+            "name": "Lugas",
+            "alternateName": "RhetoriLex",
+            "applicationCategory": "EducationalApplication",
+            "operatingSystem": "Any",
+            "softwareVersion": SOFTWARE_VERSION,
+            "isAccessibleForFree": True,
+            "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+            "license": "https://www.apache.org/licenses/LICENSE-2.0",
+            "codeRepository": "https://github.com/rezaprama/Lugas",
+            "inLanguage": ["id", "en"],
+            "creator": person,
+        }
+        return {"@context": "https://schema.org", "@graph": [entity, app]}
 
     page_type = "CollectionPage" if page["kind"] in {"explorer", "skill_group"} else "Article"
     entity = {
@@ -421,12 +438,12 @@ def structured_data(locale: str, key: str, page: dict[str, str]) -> dict[str, An
         "inLanguage": locale,
         "isAccessibleForFree": True,
         "author": person,
-        "isPartOf": {"@type": "WebSite", "name": "RhetoriLex", "url": canonical_url(locale, "home")},
+        "isPartOf": {"@type": "WebSite", "name": "Lugas", "url": canonical_url(locale, "home")},
     }
     if key == "phrase_explorer":
         entity["mainEntity"] = {
             "@type": "Dataset",
-            "name": "RhetoriLex rhetorical pattern catalog",
+            "name": "Lugas (formerly RhetoriLex) rhetorical pattern catalog",
             "description": "Original academic English patterns with rhetorical and evidence metadata.",
             "url": f"{BASE_URL}/data/phrases.json",
             "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -478,9 +495,9 @@ def render_head(locale: str, key: str, page: dict[str, str]) -> str:
     og_locale = "en_US" if locale == "en" else "id_ID"
     og_alternate = "id_ID" if locale == "en" else "en_US"
     og_alt = (
-        "RhetoriLex academic writing reference"
+        "Lugas academic writing reference"
         if locale == "en"
-        else "Referensi penulisan akademik RhetoriLex"
+        else "Referensi penulisan akademik Lugas"
     )
     schema = json.dumps(structured_data(locale, key, page), ensure_ascii=False, separators=(",", ":"))
     guard_script = (
@@ -501,7 +518,7 @@ def render_head(locale: str, key: str, page: dict[str, str]) -> str:
 <link rel="alternate" hreflang="id" href="{canonical_url("id", key)}">
 <link rel="alternate" hreflang="x-default" href="{canonical_url("en", key)}">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="RhetoriLex">
+<meta property="og:site_name" content="Lugas">
 <meta property="og:locale" content="{og_locale}">
 <meta property="og:locale:alternate" content="{og_alternate}">
 <meta property="og:title" content="{title}">
@@ -538,6 +555,7 @@ def render_home_main(locale: str, page: dict[str, str]) -> str:
         note = "Interface language and pattern language are separate. Phrase patterns remain in English."
         secondary = "Explore writing skills"
         github = "View on GitHub"
+        workbench = "Open the paraphrase workbench"
     else:
         label = "Jelaskan tujuan retoris Anda"
         placeholder = "contoh: bandingkan hasil tanpa menyiratkan sebab"
@@ -545,6 +563,7 @@ def render_home_main(locale: str, page: dict[str, str]) -> str:
         note = "Bahasa antarmuka dan bahasa pola dipisahkan. Pola frasa tetap dalam bahasa Inggris."
         secondary = "Jelajahi skill penulisan"
         github = "Lihat di GitHub"
+        workbench = "Buka alat parafrasa"
     body = resolve_links(page["body"], locale, "home")
     return f"""
 <main id="main">
@@ -561,8 +580,9 @@ def render_home_main(locale: str, page: dict[str, str]) -> str:
       </form>
       <p class="pattern-language">{html.escape(note)}</p>
       <div class="home-links">
+        <a href="{relative_href(locale, "home", "paraphrase_workbench")}"><strong>{html.escape(workbench)}</strong></a>
         <a href="{relative_href(locale, "home", "skills_research_framing")}">{html.escape(secondary)}</a>
-        <a href="https://github.com/rezaprama/RhetoriLex" target="_blank" rel="noopener noreferrer">{html.escape(github)}</a>
+        <a href="https://github.com/rezaprama/Lugas" target="_blank" rel="noopener noreferrer">{html.escape(github)}</a>
       </div>
     </div>
   </section>
@@ -701,7 +721,7 @@ def workbench_labels(locale: str) -> dict[str, str]:
             "check_title": "Meaning check",
             "check_note": "Lexical check of numbers, statistics, citations, quotations, negation, hedges, causality, direction, and scope. A clean result is not proof; read the rewrite yourself.",
             "warning_title": "Before you submit",
-            "warning": "Verify meaning, citations, terminology, evidence strength, and your journal or university rules. RhetoriLex helps you rewrite; the final judgement stays with the author.",
+            "warning": "Verify meaning, citations, terminology, evidence strength, and your journal or university rules. Lugas helps you rewrite; the final judgement stays with the author.",
             "privacy": "Prompt-only mode and the meaning check run entirely in your browser. Text is sent only if you enter an endpoint, and only to that endpoint. This static site stores no manuscripts and runs no analytics.",
             "noscript": "JavaScript is required for the workbench. You can still install the Agent Skill or use the CLI locally.",
         }
@@ -745,7 +765,7 @@ def workbench_labels(locale: str) -> dict[str, str]:
         "check_title": "Pemeriksaan makna",
         "check_note": "Pemeriksaan leksikal atas angka, statistik, sitasi, kutipan, negasi, hedging, kausalitas, arah, dan cakupan. Hasil bersih bukan bukti; tetap baca hasilnya sendiri.",
         "warning_title": "Sebelum dikumpulkan",
-        "warning": "Pastikan makna, sitasi, istilah teknis, kekuatan klaim, dan aturan kampus atau jurnal tetap benar. RhetoriLex membantu menulis ulang; keputusan akhir tetap pada penulis.",
+        "warning": "Pastikan makna, sitasi, istilah teknis, kekuatan klaim, dan aturan kampus atau jurnal tetap benar. Lugas membantu menulis ulang; keputusan akhir tetap pada penulis.",
         "privacy": "Mode prompt saja dan pemeriksaan makna berjalan sepenuhnya di browser. Teks hanya dikirim bila Anda mengisi endpoint, dan hanya ke endpoint itu. Situs statis ini tidak menyimpan naskah dan tidak memakai analytics.",
         "noscript": "JavaScript diperlukan untuk alat ini. Anda tetap dapat memasang Agent Skill atau memakai CLI secara lokal.",
     }
@@ -989,14 +1009,14 @@ def render_root() -> str:
 <meta name="viewport" content="width=device-width, initial-scale=1">
 {THEME_BOOTSTRAP}
 <meta name="robots" content="noindex,follow">
-<meta name="description" content="Choose English or Bahasa Indonesia for the RhetoriLex academic writing index.">
+<meta name="description" content="Choose English or Bahasa Indonesia for the Lugas academic writing index.">
 <meta name="theme-color" content="#f5f3ed" data-theme-color>
 <link rel="canonical" href="{BASE_URL}/">
 <link rel="alternate" hreflang="en" href="{canonical_url("en", "home")}">
 <link rel="alternate" hreflang="id" href="{canonical_url("id", "home")}">
 <link rel="alternate" hreflang="x-default" href="{BASE_URL}/">
 <meta http-equiv="refresh" content="8;url=./en/">
-<title>Choose Language | RhetoriLex</title>
+<title>Choose Language | Lugas</title>
 <link rel="icon" href="assets/icon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="styles.css">
 <script>
@@ -1013,7 +1033,7 @@ def render_root() -> str:
 </head>
 <body class="locale-root">
 <main id="main" class="locale-chooser">
-  <p class="wordmark">RhetoriLex</p>
+  <p class="wordmark">Lugas</p>
   <h1>Choose a language <span lang="id">Pilih bahasa</span></h1>
   <p>Open the scholarly writing index in English or Bahasa Indonesia.</p>
   <nav aria-label="Language">
@@ -1049,7 +1069,13 @@ def render_sitemap() -> str:
 
 
 def render_service_worker() -> str:
-    return """const CACHE_NAME = "rhetorilex-pwa-v1";
+    import hashlib  # noqa: PLC0415
+
+    digest = hashlib.sha256()
+    for name in ("app.js", "styles.css"):
+        digest.update((DOCS / name).read_bytes())
+    digest.update(render_guard_js().encode("utf-8"))
+    return """const CACHE_NAME = "lugas-pwa-__HASH__";
 const CORE_ASSETS = [
   "./",
   "./en/",
@@ -1058,6 +1084,7 @@ const CORE_ASSETS = [
   "./id/alat-parafrasa/",
   "./styles.css",
   "./app.js",
+  "./guard.js",
   "./site.webmanifest",
   "./assets/icon.svg",
   "./data/phrases.json"
@@ -1086,10 +1113,14 @@ self.addEventListener("fetch", (event) => {
         caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
         return response;
       })
-      .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./en/paraphrase-workbench/")))
+      .catch(() =>
+        caches.match(event.request).then(
+          (cached) => cached || caches.match(requestUrl.pathname.includes("/id/") ? "./id/alat-parafrasa/" : "./en/paraphrase-workbench/")
+        )
+      )
   );
 });
-"""
+""".replace("__HASH__", digest.hexdigest()[:10])
 
 
 def generated_files() -> dict[Path, str]:
@@ -1104,8 +1135,8 @@ def generated_files() -> dict[Path, str]:
         f"Sitemap: {BASE_URL}/sitemap.xml\n"
     )
     manifest = {
-        "name": "RhetoriLex Free Local Academic Paraphrase Skill",
-        "short_name": "RhetoriLex",
+        "name": "Lugas: meaning-safe paraphrase and editing",
+        "short_name": "Lugas",
         "description": "Free local-first academic paraphrase workbench and Agent Skill for Indonesian and English writers.",
         "start_url": "./en/paraphrase-workbench/",
         "scope": "./",
@@ -1142,7 +1173,7 @@ def generated_files() -> dict[Path, str]:
 def render_guard_js() -> str:
     """Inject the Python guard lexicon into docs/guard.js (single source of truth)."""
     sys.path.insert(0, str(ROOT / "src"))
-    from rhetorilex import guard  # noqa: PLC0415
+    from lugas import guard  # noqa: PLC0415
 
     lexicon = {
         "NEGATION": list(guard.NEGATION),

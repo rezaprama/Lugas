@@ -1,17 +1,17 @@
-"""English content for the generated RhetoriLex site."""
+"""English content for the generated Lugas site."""
 
 PAGES_EN = {
     "home": {
         "kind": "home",
-        "title": "Free Local Academic Paraphrase Skill | RhetoriLex",
-        "description": "Use a free local-first academic paraphrase skill and web workbench for evidence-safe rewriting, Indonesian-friendly support, and original writing patterns.",
-        "h1": "Free local academic paraphrase skill for researchers.",
-        "lede": "Paraphrase, audit, and revise academic, scientific, technical, and Indonesian-English writing with local-first controls, explicit evidence checks, and no paid SaaS requirement.",
+        "title": "Lugas: Meaning-Safe Academic Paraphrase and Editing",
+        "description": "Lugas (formerly RhetoriLex) paraphrases, edits, and translates Indonesian and English academic writing without changing numbers, citations, negation, or claim strength. Free, local, open source.",
+        "h1": "Clear writing. Same meaning.",
+        "lede": "Lugas is a free paraphrase and editing skill for theses, journal articles, and technical reports in Indonesian and English. A local meaning check flags changed numbers, citations, negation, and claims, and your manuscript never goes to our server.",
         "body": """
 <section class="section-block" aria-labelledby="purpose-index-title">
   <div class="section-heading">
     <h2 id="purpose-index-title">Start with the writing problem</h2>
-    <p>Choose a paraphrase, audit, writing, or revision task. RhetoriLex links purpose, evidence, protected meaning, and final checks.</p>
+    <p>Choose a paraphrase, audit, writing, or revision task. Lugas links purpose, evidence, protected meaning, and final checks.</p>
   </div>
   <ul class="purpose-index">
     <li><a href="{{link:paraphrase_workbench}}"><strong>Paraphrase Workbench</strong><span>Installable local-first tool with your own endpoint, token, or local model.</span></a></li>
@@ -21,7 +21,7 @@ PAGES_EN = {
     <li><a href="{{link:paraphrasing}}"><strong>Paraphrasing</strong><span>Preserve citations, numbers, negation, scope, and inferential force.</span></a></li>
     <li><a href="{{link:rhetorical_moves}}"><strong>Rhetorical Moves</strong><span>Plan what a paragraph does before choosing how it sounds.</span></a></li>
     <li><a href="{{link:research_writing_guides}}"><strong>Research Writing Guides</strong><span>Use focused guidance for reviews, methods, results, and discussions.</span></a></li>
-    <li><a href="{{link:agent_skills}}"><strong>Agent Skills</strong><span>Use RhetoriLex in a local agent workflow with explicit safety checks.</span></a></li>
+    <li><a href="{{link:agent_skills}}"><strong>Agent Skills</strong><span>Use Lugas in a local agent workflow with explicit safety checks.</span></a></li>
     <li><a href="{{link:about}}"><strong>About</strong><span>Read the clean-room, authorship, licensing, and governance record.</span></a></li>
   </ul>
 </section>
@@ -59,8 +59,8 @@ PAGES_EN = {
     <p>A fluent sentence can still misstate the study. Calibrate the relation before polishing the prose.</p>
   </div>
   <div class="comparison-lines">
-    <div><strong>Unsupported causal claim</strong><p>Our observational analysis proves that exposure X causes outcome Y.</p></div>
-    <div><strong>Evidence-calibrated claim</strong><p>In this observational analysis, exposure X was associated with outcome Y.</p></div>
+    <div><strong>Paraphrase that drifts</strong><p>Okafor and Lindqvist (2019) showed that retrofitting reduces bridge defects across all districts.</p></div>
+    <div><strong>Paraphrase that keeps the evidence</strong><p>In a single-district sample of 46 retrofitted bridges, Okafor and Lindqvist (2019) observed an association with fewer defects reported at inspection.</p></div>
   </div>
 </section>
 <section class="section-block install-block" aria-labelledby="install-home-title">
@@ -68,11 +68,12 @@ PAGES_EN = {
     <h2 id="install-home-title">Free, local, installable</h2>
     <p>Open the workbench, download the released JSON catalog, review clean-room provenance, or install the local Agent Skill.</p>
   </div>
-  <pre><code>$skill-installer https://github.com/rezaprama/RhetoriLex/tree/main/skills/rhetorilex</code></pre>
+  <pre><code>$skill-installer https://github.com/rezaprama/Lugas/tree/main/skills/lugas
+python scripts/guard.py check source.txt rewrite.txt</code></pre>
   <ul class="resource-links">
     <li><a href="{{link:paraphrase_workbench}}">Open Paraphrase Workbench</a></li>
-    <li><a href="https://rezaprama.github.io/RhetoriLex/data/phrases.json">Open dataset</a></li>
-    <li><a href="https://github.com/rezaprama/RhetoriLex/blob/main/PROVENANCE.md">Read methodology and provenance</a></li>
+    <li><a href="https://rezaprama.github.io/Lugas/data/phrases.json">Open dataset</a></li>
+    <li><a href="https://github.com/rezaprama/Lugas/blob/main/PROVENANCE.md">Read methodology and provenance</a></li>
     <li><a href="{{link:agent_skills}}">Read installation and prompt examples</a></li>
   </ul>
 </section>
@@ -80,7 +81,7 @@ PAGES_EN = {
     },
     "academic_writing": {
         "kind": "article",
-        "title": "Academic Writing: Purpose, Structure, and Evidence | RhetoriLex",
+        "title": "Academic Writing: Purpose, Structure, and Evidence | Lugas",
         "description": "A practical guide to academic writing by rhetorical purpose, with paragraph moves, stance control, synthesis, and revision checks.",
         "h1": "Academic writing begins with rhetorical purpose",
         "lede": "Plan what each sentence must accomplish, then choose language that matches the evidence and argument.",
@@ -118,7 +119,7 @@ PAGES_EN = {
     },
     "scientific_writing": {
         "kind": "article",
-        "title": "Scientific Writing: Methods, Results, and Causal Limits | RhetoriLex",
+        "title": "Scientific Writing: Methods, Results, and Causal Limits | Lugas",
         "description": "Write scientific methods, results, and interpretations with explicit design, uncertainty, effect size, and causal safeguards.",
         "h1": "Scientific writing connects language to study design",
         "lede": "Report what was measured, estimated, and supported without letting polished prose outrun the analysis.",
@@ -156,7 +157,7 @@ PAGES_EN = {
     },
     "phrase_explorer": {
         "kind": "explorer",
-        "title": "Academic Phrase Explorer by Rhetorical Intent | RhetoriLex",
+        "title": "Academic Phrase Explorer by Rhetorical Intent | Lugas",
         "description": "Search original academic English patterns by natural-language intent, section, function, claim strength, evidence requirement, and risk.",
         "h1": "Find an academic phrase by rhetorical intent",
         "lede": "Describe the work your sentence must do. Results expose evidence requirements and claim risk before you copy a pattern.",
@@ -185,7 +186,7 @@ PAGES_EN = {
     },
     "paraphrasing": {
         "kind": "article",
-        "title": "Academic Paraphrasing Without Meaning Drift | RhetoriLex",
+        "title": "Academic Paraphrasing Without Meaning Drift | Lugas",
         "description": "Paraphrase academic prose while preserving citations, numbers, units, negation, scope, comparison direction, and uncertainty.",
         "h1": "Paraphrasing is a meaning-preservation task",
         "lede": "Change wording only after identifying the facts, logic, scope, and inferential force that must remain invariant.",
@@ -210,22 +211,22 @@ PAGES_EN = {
   <p>When a passage is already concise, highly technical, or legally fixed, paraphrasing may be the wrong goal. Quote briefly when quotation is justified and permitted, cite the source, or retain the technical wording while rewriting the surrounding explanation. Never paraphrase to conceal dependence on a source.</p>
 </section>
 <aside class="article-note">
-  <h2>Use RhetoriLex safely</h2>
+  <h2>Use Lugas safely</h2>
   <p>Ask the Agent Skill to protect a citation, number, and negation explicitly. Then verify the output against the source yourself. See <a href="{{link:agent_skills}}">Agent Skills</a> for prompt patterns.</p>
 </aside>
 """,
     },
     "paraphrase_workbench": {
         "kind": "workbench",
-        "title": "Free Local Paraphrase Workbench | RhetoriLex",
-        "description": "Use an installable local-first paraphrase workbench with your own OpenAI-compatible endpoint, browser-side daily limits, and evidence checks.",
-        "h1": "Free local paraphrase workbench.",
-        "lede": "Use your own AI endpoint or local model to rewrite academic, scientific, technical, and Indonesian-English writing while preserving evidence and meaning.",
+        "title": "Free Local Paraphrase and Editing Workbench | Lugas",
+        "description": "Paraphrase, edit, correct, or translate academic writing with any model, then check numbers, citations, and negation in your browser. Free, with no manuscript server.",
+        "h1": "Local paraphrase and editing workbench.",
+        "lede": "Pick the job and output language, copy the prompt to the model you trust or connect your own endpoint, then check that the meaning stayed the same.",
         "body": """
 <section>
   <h2>Why local-first matters</h2>
-  <p>Many paraphrase services ask writers to paste drafts into a remote form and pay for stronger limits. RhetoriLex takes a different route. The public app is static, installable, and free. It can build a safe prompt without any endpoint, or call only the OpenAI-compatible endpoint that the user enters.</p>
-  <p>This keeps the default tool useful for researchers, students, supervisors, editors, and Indonesian writers who need careful English without turning every sentence into a paid request. The app does not store manuscripts on a RhetoriLex server because the current web version has no server-side manuscript database.</p>
+  <p>Many paraphrase services ask writers to paste drafts into a remote form and pay for stronger limits. Lugas takes a different route. The public app is static, installable, and free. It can build a prompt without any endpoint, or call only the endpoint you enter.</p>
+  <p>Output can be Indonesian (EYD V) or English, independent of the interface language. The meaning check runs in the browser without AI: numbers with decimal commas, statistics, citations, quotations, negation in Indonesian and English, hedges, association versus causation, direction, and scope. The app stores no manuscripts on a Lugas server because the web version has no manuscript server.</p>
 </section>
 <section>
   <h2>Safe setup choices</h2>
@@ -233,16 +234,16 @@ PAGES_EN = {
     <table>
       <thead><tr><th>Choice</th><th>How it works</th><th>Privacy check</th></tr></thead>
       <tbody>
-        <tr><td>Prompt only</td><td>RhetoriLex builds the instruction and invariant checklist.</td><td>No AI call leaves the browser.</td></tr>
+        <tr><td>Prompt only</td><td>Lugas builds a compact prompt. Paste the model's answer into the rewrite box and press Check rewrite.</td><td>No AI call leaves the browser.</td></tr>
         <tr><td>Local endpoint</td><td>Use an OpenAI-compatible local server such as a local model gateway.</td><td>Keep endpoint on your own machine or network.</td></tr>
-        <tr><td>Provider endpoint</td><td>Enter your own endpoint, model, and token when your provider permits browser calls.</td><td>Your text goes to that provider, not to RhetoriLex.</td></tr>
+        <tr><td>Provider endpoint</td><td>Enter your own endpoint, model, and token when your provider permits browser calls.</td><td>Your text goes to that provider, not to Lugas.</td></tr>
       </tbody>
     </table>
   </div>
 </section>
 <section>
-  <h2>Why the hosted web limit is local</h2>
-  <p>The public page applies a three-call daily guard in browser storage. This is a courtesy limit, not account security. It prevents accidental overuse while keeping the static site free and deployable on GitHub Pages.</p>
+  <h2>Why there is no daily cap</h2>
+  <p>Endpoint calls use your own model, token, and quota, so a browser-side cap protects nobody's costs. Earlier versions limited calls to three per day; that cap was removed. Requests stop after 90 seconds and can be cancelled.</p>
   <p>A true shared-key hosted service needs a backend. The planned design is a small Worker API, a D1 table for anonymous daily quota, a KV cache for rate-limit decisions, Turnstile for abuse resistance, provider tokens stored only as server secrets, and manuscript logging disabled by default. That backend is intentionally separate from the current static app.</p>
 </section>
 <aside class="article-note">
