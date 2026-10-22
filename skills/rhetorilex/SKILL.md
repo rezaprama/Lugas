@@ -17,7 +17,7 @@ Infer the narrowest job the request allows. Never widen it silently.
 | Edit / *sunting* | "rapikan", "biar tidak kaku", "polish" | the above + sentence structure, connectors, redundancy, translationese | claims, argument order, technical terms |
 | Paraphrase / *parafrase* | "parafrasekan", "rewrite" | the above + information order, voice, sentence boundaries | facts, numbers, citations, claim strength |
 | Translate / *terjemah* | "ke bahasa Inggris" | language, then register for the target genre | anything above; decimal comma↔point is the only number change |
-| Summarise / *ringkas* | "ringkas", "abstrak dari ini" | length and selection | facts kept must stay exact; limitations stay |
+| Summarise / *ringkas* | "ringkas", "abstrak dari ini" | length and selection | facts kept stay exact; keep contrasts (*sedangkan*, but) and limitations |
 
 Output language follows the request or the source, not the interface language. Indonesian output uses EYD V and KBBI forms; English output keeps one variant (US, UK, or international) consistently.
 
@@ -57,7 +57,7 @@ A `high` finding must be fixed or explained. The guard is lexical: a clean resul
 
 ## 5. Deliver
 
-Give one main result. Then, briefly: what changed (for *koreksi*, a before → after list), any remaining markers, and flagged evidence issues. End with one line reminding the author to check meaning, citations, terms, and their campus/journal rules before submitting.
+Give one main result. Add notes only when they help: for *koreksi*, a compact before → after list; otherwise at most two short lines on remaining markers or evidence risks. Close with one short line asking the author to check meaning, citations, and campus/journal rules. Keep the reply lean; do not restate the source or explain routine edits.
 
 ## Retrieval (optional)
 

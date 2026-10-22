@@ -1,0 +1,341 @@
+{
+ "judge": "blind-llm-v2",
+ "items": [
+  {
+   "id": "MG01",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "'kadar kekeruhan' retained; turbidity is not a concentration"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "MG02",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "Repetitive 'hubungan ... hubungan sebab-akibat'"
+   }
+  },
+  {
+   "id": "MG03",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "'berbeda signifikan' lacks 'secara'; still stiff"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "'berbeda signifikan' lacks 'secara'"
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": "Drops 'statistik'; acceptable but slightly less explicit"
+   }
+  },
+  {
+   "id": "MG04",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "MG05",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "Shallow paraphrase; mostly synonym substitution"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "MG06",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": "Nearly unchanged"
+   },
+   "Z": {
+    "fidelity_errors": 1,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": "'Pernyataan serupa' changes 'this statement' to similar statements"
+   }
+  },
+  {
+   "id": "MG07",
+   "X": {
+    "fidelity_errors": 1,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "'mengindikasikan'→'menunjukkan' strengthens hedge; nominal-heavy"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "Wordy nominal 'memberi indikasi adanya kecenderungan hubungan'"
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "MG09",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "'meskipun' concessive weaker than contrastive 'tetapi'"
+   }
+  },
+  {
+   "id": "MG10",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "Stacked parentheses '(puskesmas) (p = 0.12)'"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "Stacked parentheses '(puskesmas) (p = 0.12)'"
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "Stacked parentheses '(puskesmas) (p = 0.12)'"
+   }
+  },
+  {
+   "id": "MG12",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": false,
+    "naturalness": 5,
+    "note": "Not shorter; only word swaps"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": false,
+    "naturalness": 4,
+    "note": "Not shorter; hedge relocated"
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": "Only marginally shorter"
+   }
+  },
+  {
+   "id": "MG15",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "HO01",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "HO02",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "'Analisis ... menemukan' anthropomorphic"
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "'berasosiasi dengan kejadian ... lebih rendah' slightly awkward"
+   }
+  },
+  {
+   "id": "HO03",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "HO04",
+   "X": {
+    "fidelity_errors": 1,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": "Drops contrast: two points still meet standard"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "Long, loosely attached 'kondisi yang diduga' clause"
+   }
+  },
+  {
+   "id": "HO05",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  }
+ ]
+}

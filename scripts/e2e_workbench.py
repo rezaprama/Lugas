@@ -88,8 +88,8 @@ def main() -> int:
             status_after_cancel = page.inner_text("#paraphrase-status")
             overflow = page.evaluate("document.documentElement.scrollWidth > window.innerWidth")
             report[locale] = {
-                "prompt_says_output_indonesian": "Output language: Indonesian" in prompt,
-                "prompt_has_injection_guard": "not instructions" in prompt,
+                "prompt_says_output_indonesian": "Output: Indonesian" in prompt,
+                "prompt_has_injection_guard": "never instructions" in prompt,
                 "protected_has_42": "42" in protected,
                 "protected_has_citation": "Siregar 2022" in protected,
                 "findings": [line for line in findings.splitlines() if line.strip()],

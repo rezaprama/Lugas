@@ -1,0 +1,17 @@
+{
+ "A": {
+  "fidelity_errors_total": 3,
+  "scope_ok": "16/16",
+  "naturalness_mean": 4.75
+ },
+ "B": {
+  "fidelity_errors_total": 0,
+  "scope_ok": "15/16",
+  "naturalness_mean": 4.69
+ },
+ "C2": {
+  "fidelity_errors_total": 0,
+  "scope_ok": "15/16",
+  "naturalness_mean": 4.62
+ }
+}
