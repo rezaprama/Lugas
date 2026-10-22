@@ -1,0 +1,541 @@
+{
+  "benchmark": "meaning-guard-heldout",
+  "version": "1.0.0",
+  "status": "frozen",
+  "license": "CC-BY-4.0",
+  "provenance": "Original synthetic passages written independently on 2026-10-22 by a separate agent without access to the checker or development set. Numbers, names and citations invented.",
+  "cases": [
+    {
+      "id": "HO01",
+      "lang": "id",
+      "task": "sunting",
+      "request": "Sunting paragraf ini agar lebih lancar tanpa mengubah isi.",
+      "source": "Kuat tekan rata-rata beton umur 28 hari mencapai 32,4 MPa, lebih tinggi daripada mutu rencana 30 MPa (Siregar dkk., 2022). Namun, dua dari 12 benda uji belum memenuhi kriteria penerimaan.",
+      "good": "Pada umur 28 hari, beton menghasilkan kuat tekan rata-rata 32,4 MPa sehingga melampaui mutu rencana 30 MPa (Siregar dkk., 2022). Meskipun demikian, dua dari 12 benda uji belum memenuhi kriteria penerimaan.",
+      "bad": [
+        {
+          "rewrite": "Pada umur 28 hari, beton menghasilkan kuat tekan rata-rata 32,4 MPa sehingga melampaui mutu rencana 30 MPa (Siregar dkk., 2022). Selain itu, dua dari 12 benda uji sudah memenuhi kriteria penerimaan.",
+          "expect": [
+            "negation-lost"
+          ]
+        },
+        {
+          "rewrite": "Pada umur 28 hari, beton menghasilkan kuat tekan rata-rata 34,2 MPa sehingga melampaui mutu rencana 30 MPa (Siregar dkk., 2022). Meskipun demikian, dua dari 12 benda uji belum memenuhi kriteria penerimaan.",
+          "expect": [
+            "number-missing",
+            "number-added"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO02",
+      "lang": "id",
+      "task": "parafrase",
+      "request": "Parafrasekan untuk bagian pembahasan.",
+      "source": "Hasil analisis regresi logistik menunjukkan bahwa akses jamban sehat berhubungan dengan penurunan kejadian diare pada balita (OR = 0,62; IK 95% 0,41–0,93; p = 0,021). Temuan ini sejalan dengan Putri & Hasan (2020).",
+      "good": "Berdasarkan regresi logistik, balita di rumah tangga yang memiliki akses jamban sehat mempunyai peluang diare yang lebih rendah (OR = 0,62; IK 95% 0,41–0,93; p = 0,021). Hasil tersebut konsisten dengan temuan Putri & Hasan (2020).",
+      "bad": [
+        {
+          "rewrite": "Berdasarkan regresi logistik, akses jamban sehat memengaruhi penurunan kejadian diare pada balita (OR = 0,62; IK 95% 0,41–0,93; p = 0,021). Hasil tersebut konsisten dengan temuan Putri & Hasan (2020).",
+          "expect": [
+            "association-to-causation"
+          ]
+        },
+        {
+          "rewrite": "Berdasarkan regresi logistik, akses jamban sehat tidak berhubungan dengan kejadian diare pada balita (OR = 0,62; IK 95% 0,41–0,93; p = 0,021). Hasil tersebut konsisten dengan temuan Putri & Hasan (2020).",
+          "expect": [
+            "negation-added"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO03",
+      "lang": "id",
+      "task": "koreksi",
+      "request": "Perbaiki salah ketik dan ejaan saja.",
+      "source": "Hasil uji-t menunjukan bahwa perbedaan nilai rata-rata post-test antara kelas eksperimen dan kelas kontrol tidak signifikan (t = 1,48; p = 0,143). Dengan demikian, model pembelajaran berbasis proyek belum terbukti meningkatkan hasil belajar pada sampel ini.",
+      "good": "Hasil uji-t menunjukkan bahwa perbedaan nilai rata-rata post-test antara kelas eksperimen dan kelas kontrol tidak signifikan (t = 1,48; p = 0,143). Dengan demikian, model pembelajaran berbasis proyek belum terbukti meningkatkan hasil belajar pada sampel ini.",
+      "bad": [
+        {
+          "rewrite": "Hasil uji-t menunjukkan bahwa perbedaan nilai rata-rata post-test antara kelas eksperimen dan kelas kontrol tidak signifikan (t = 1,48; p = 0,143). Dengan demikian, model pembelajaran berbasis proyek tidak berpengaruh terhadap hasil belajar pada sampel ini.",
+          "expect": [
+            "nonsignificance-to-no-effect"
+          ]
+        },
+        {
+          "rewrite": "Hasil uji-t menunjukkan bahwa perbedaan nilai rata-rata post-test antara kelas eksperimen dan kelas kontrol tidak signifikan (t = 1,48; p = 0,143). Dengan demikian, model pembelajaran berbasis proyek belum terbukti meningkatkan hasil belajar.",
+          "expect": [
+            "scope-qualifier-lost"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO04",
+      "lang": "id",
+      "task": "ringkas",
+      "request": "Ringkas menjadi satu kalimat untuk abstrak.",
+      "source": "Pemantauan di lima titik Sungai Ciliwung selama Maret–Agustus 2023 menunjukkan kekeruhan berkisar 18–145 NTU. Nilai tertinggi tercatat di titik hilir setelah hujan lebat. Kadar BOD di tiga titik melampaui baku mutu kelas II, sedangkan dua titik lainnya masih memenuhi. Kondisi ini diduga berkaitan dengan buangan limbah domestik yang belum terolah (Nugroho, 2021).",
+      "good": "Selama Maret–Agustus 2023, kekeruhan di lima titik pantau Sungai Ciliwung bervariasi antara 18 dan 145 NTU dengan puncak di hilir setelah hujan lebat, sementara BOD melampaui baku mutu kelas II di tiga titik dan masih memenuhi di dua titik lainnya, kemungkinan terkait limbah domestik yang belum terolah (Nugroho, 2021).",
+      "bad": [
+        {
+          "rewrite": "Selama Maret–Agustus 2023, kekeruhan di lima titik pantau Sungai Ciliwung bervariasi antara 18 dan 145 NTU dengan puncak di hilir setelah hujan lebat, sementara BOD melampaui baku mutu kelas II di tiga titik dan masih memenuhi di dua titik lainnya, terkait limbah domestik yang belum terolah (Nugroho, 2021).",
+          "expect": [
+            "hedge-removed"
+          ]
+        },
+        {
+          "rewrite": "Selama Maret–Agustus 2023, kekeruhan di lima titik pantau Sungai Ciliwung bervariasi antara 18 dan 145 NTU dengan puncak di hilir setelah hujan lebat, sementara BOD melampaui baku mutu kelas II di tiga titik dan masih memenuhi di dua titik lainnya, kemungkinan terkait limbah domestik yang belum terolah.",
+          "expect": [
+            "citation-missing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO05",
+      "lang": "id",
+      "task": "parafrase",
+      "request": "Parafrasekan temuan kualitatif ini; kutipan informan jangan diubah.",
+      "source": "Sebagian besar informan menilai program bank sampah memberi tambahan penghasilan, meskipun nilainya kecil. Seorang ibu rumah tangga di RW 07 menyatakan, “Lumayan buat beli gas, tapi belum bisa diandalkan.” Temuan ini tidak dapat digeneralisasi ke kelurahan lain karena jumlah informan hanya 14 orang.",
+      "good": "Bagi kebanyakan informan, bank sampah memberikan pemasukan tambahan walaupun jumlahnya kecil. Hal itu tergambar dalam pernyataan seorang ibu rumah tangga di RW 07: “Lumayan buat beli gas, tapi belum bisa diandalkan.” Karena hanya melibatkan 14 informan, temuan ini tidak dapat digeneralisasi ke kelurahan lain.",
+      "bad": [
+        {
+          "rewrite": "Bagi kebanyakan informan, bank sampah memberikan pemasukan tambahan walaupun jumlahnya kecil. Hal itu tergambar dalam pernyataan seorang ibu rumah tangga di RW 07: “Cukup untuk membeli gas, tetapi belum dapat diandalkan.” Karena hanya melibatkan 14 informan, temuan ini tidak dapat digeneralisasi ke kelurahan lain.",
+          "expect": [
+            "quote-altered"
+          ]
+        },
+        {
+          "rewrite": "Bagi semua informan, bank sampah memberikan pemasukan tambahan walaupun jumlahnya kecil. Hal itu tergambar dalam pernyataan seorang ibu rumah tangga di RW 07: “Lumayan buat beli gas, tapi belum bisa diandalkan.” Karena hanya melibatkan 14 informan, temuan ini tidak dapat digeneralisasi ke kelurahan lain.",
+          "expect": [
+            "scope-widened"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO06",
+      "lang": "id",
+      "task": "sunting",
+      "request": "Sunting supaya ringkas dan formal.",
+      "source": "Inflasi bahan pangan di Kabupaten Sindangreja tercatat sebesar 4,8% (yoy) pada triwulan III 2023, yang mana lebih rendah daripada rata-rata nasional yaitu sebesar 5,6% [4]. Penurunan ini cenderung didorong oleh panen raya, tetapi belum mencerminkan perbaikan rantai pasok.",
+      "good": "Pada triwulan III 2023, inflasi pangan Kabupaten Sindangreja sebesar 4,8% (yoy), di bawah rata-rata nasional 5,6% [4]. Penurunan tersebut cenderung didorong oleh panen raya dan belum mencerminkan perbaikan rantai pasok.",
+      "bad": [
+        {
+          "rewrite": "Pada triwulan III 2023, inflasi pangan Kabupaten Sindangreja sebesar 4,8% (yoy), lebih tinggi daripada rata-rata nasional 5,6% [4]. Penurunan tersebut cenderung didorong oleh panen raya dan belum mencerminkan perbaikan rantai pasok.",
+          "expect": [
+            "direction-flipped"
+          ]
+        },
+        {
+          "rewrite": "Pada triwulan III 2023, inflasi pangan Kabupaten Sindangreja sebesar 4,8% (yoy), di bawah rata-rata nasional 5,6% [4]. Penurunan tersebut didorong oleh panen raya dan belum mencerminkan perbaikan rantai pasok.",
+          "expect": [
+            "hedge-removed"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO07",
+      "lang": "id",
+      "task": "parafrase",
+      "request": "Tulis ulang dengan struktur kalimat berbeda.",
+      "source": "Prevalensi stunting pada 312 balita di wilayah kerja Puskesmas Sukamaju sebesar 27,3%. Prevalensi lebih tinggi ditemukan pada keluarga dengan pendapatan di bawah UMK, tetapi hubungan tersebut tidak signifikan secara statistik (χ² = 2,91; p = 0,088).",
+      "good": "Dari 312 balita yang diperiksa di wilayah kerja Puskesmas Sukamaju, 27,3% tergolong stunting. Meskipun proporsinya lebih besar pada keluarga berpendapatan di bawah UMK, hubungan itu tidak mencapai signifikansi statistik (χ² = 2,91; p = 0,088).",
+      "bad": [
+        {
+          "rewrite": "Dari 312 balita yang diperiksa di wilayah kerja Puskesmas Sukamaju, 27,3% tergolong stunting. Proporsinya lebih besar pada keluarga berpendapatan di bawah UMK, dan hubungan itu signifikan secara statistik (χ² = 2,91; p = 0,088).",
+          "expect": [
+            "negation-lost"
+          ]
+        },
+        {
+          "rewrite": "Dari 312 balita yang diperiksa di wilayah kerja Puskesmas Sukamaju, 27,3% tergolong stunting. Meskipun proporsinya lebih besar pada keluarga berpendapatan di bawah UMK, hubungan itu tidak mencapai signifikansi statistik.",
+          "expect": [
+            "statistic-missing",
+            "number-missing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO08",
+      "lang": "id",
+      "task": "sunting",
+      "request": "Rapikan paragraf hasil survei ini.",
+      "source": "Berdasarkan survei PCI pada ruas Jalan Lingkar Timur sepanjang 6,2 km, 41% segmen berada dalam kondisi rusak ringan hingga sedang. Kerusakan dominan berupa retak buaya dan lubang dengan diameter 150–400 mm. Penelitian ini tidak mencakup evaluasi struktural lapis pondasi.",
+      "good": "Survei PCI di ruas Jalan Lingkar Timur (6,2 km) menunjukkan bahwa 41% segmen mengalami kerusakan ringan hingga sedang, terutama berupa retak buaya serta lubang berdiameter 150–400 mm. Evaluasi struktural lapis pondasi berada di luar cakupan penelitian ini.",
+      "bad": [
+        {
+          "rewrite": "Survei PCI di ruas Jalan Lingkar Timur (6,2 km) menunjukkan bahwa 41% segmen mengalami kerusakan ringan hingga sedang, terutama berupa retak buaya serta lubang berdiameter 150–400 mm.",
+          "expect": [
+            "content-dropped"
+          ]
+        },
+        {
+          "rewrite": "Survei PCI di ruas Jalan Lingkar Timur (6,2 km) menunjukkan bahwa 41% segmen mengalami kerusakan ringan hingga sedang, terutama berupa retak buaya serta lubang berdiameter 150–450 mm. Evaluasi struktural lapis pondasi berada di luar cakupan penelitian ini.",
+          "expect": [
+            "number-missing",
+            "number-added"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO09",
+      "lang": "id",
+      "task": "parafrase",
+      "request": "Parafrasekan kutipan tidak langsung dari hasil wawancara.",
+      "source": "Beberapa guru mengakui belum memahami asesmen diagnostik secara utuh. Menurut mereka, pelatihan daring yang diikuti pada 2022 terlalu singkat, yaitu hanya dua sesi masing-masing 90 menit.",
+      "good": "Sejumlah guru mengaku pemahaman mereka tentang asesmen diagnostik belum utuh. Mereka menilai pelatihan daring tahun 2022 terlalu singkat karena hanya terdiri atas dua sesi berdurasi 90 menit per sesi.",
+      "bad": [
+        {
+          "rewrite": "Guru mengaku pemahaman mereka tentang asesmen diagnostik belum utuh. Mereka menilai pelatihan daring tahun 2022 terlalu singkat karena hanya terdiri atas dua sesi berdurasi 90 menit per sesi.",
+          "expect": [
+            "scope-qualifier-lost"
+          ]
+        },
+        {
+          "rewrite": "Sejumlah guru mengaku pemahaman mereka tentang asesmen diagnostik belum utuh. Mereka menilai pelatihan daring tahun 2022 terlalu singkat karena hanya terdiri atas dua sesi.",
+          "expect": [
+            "number-missing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO10",
+      "lang": "id",
+      "task": "parafrase",
+      "request": "Parafrasekan paragraf tinjauan pustaka ini.",
+      "source": "Tutupan mangrove di pesisir Desa Tanjung Lestari menurun dari 214 ha pada 2015 menjadi 167 ha pada 2023. Konversi menjadi tambak kemungkinan merupakan faktor utama, meskipun data perizinan tambak belum tersedia untuk memastikannya (Lubis dkk., 2024; Rahman, 2019).",
+      "good": "Antara 2015 dan 2023, luas mangrove di pesisir Desa Tanjung Lestari berkurang dari 214 ha menjadi 167 ha. Alih fungsi lahan menjadi tambak kemungkinan merupakan pendorong utamanya, tetapi hal ini belum dapat dipastikan karena data perizinan tambak belum tersedia (Lubis dkk., 2024; Rahman, 2019).",
+      "bad": [
+        {
+          "rewrite": "Antara 2015 dan 2023, luas mangrove di pesisir Desa Tanjung Lestari berkurang dari 214 ha menjadi 167 ha. Alih fungsi lahan menjadi tambak kemungkinan merupakan pendorong utamanya, tetapi hal ini belum dapat dipastikan karena data perizinan tambak belum tersedia (Lubis dkk., 2024).",
+          "expect": [
+            "citation-missing"
+          ]
+        },
+        {
+          "rewrite": "Antara 2015 dan 2023, luas mangrove di pesisir Desa Tanjung Lestari berkurang dari 214 ha menjadi 167 ha. Alih fungsi lahan menjadi tambak kemungkinan merupakan satu-satunya pendorong, tetapi hal ini belum dapat dipastikan karena data perizinan tambak belum tersedia (Lubis dkk., 2024; Rahman, 2019).",
+          "expect": [
+            "claim-strengthened"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO11",
+      "lang": "id",
+      "task": "sunting",
+      "request": "Sunting agar tidak berulang dan lebih padat.",
+      "source": "Sebanyak 64 responden (n = 64) mengikuti survei. Kepatuhan cuci tangan pakai sabun meningkat dari 38,0% sebelum intervensi menjadi 57,8% setelah intervensi. Karena penelitian ini tidak menggunakan kelompok kontrol, peningkatan tersebut belum dapat dikaitkan sepenuhnya dengan intervensi.",
+      "good": "Survei melibatkan 64 responden. Kepatuhan cuci tangan pakai sabun naik dari 38,0% sebelum intervensi menjadi 57,8% sesudahnya. Namun, tanpa kelompok kontrol, peningkatan ini belum dapat sepenuhnya dikaitkan dengan intervensi.",
+      "bad": [
+        {
+          "rewrite": "Survei melibatkan 64 responden. Intervensi meningkatkan kepatuhan cuci tangan pakai sabun dari 38,0% menjadi 57,8%. Namun, tanpa kelompok kontrol, peningkatan ini belum dapat sepenuhnya dikaitkan dengan intervensi.",
+          "expect": [
+            "association-to-causation"
+          ]
+        },
+        {
+          "rewrite": "Survei melibatkan 64 responden. Kepatuhan cuci tangan pakai sabun naik dari 33,0% sebelum intervensi menjadi 57,8% sesudahnya. Namun, tanpa kelompok kontrol, peningkatan ini belum dapat sepenuhnya dikaitkan dengan intervensi.",
+          "expect": [
+            "number-missing",
+            "number-added"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO12",
+      "lang": "id",
+      "task": "parafrase",
+      "request": "Parafrasekan hasil uji statistik ini.",
+      "source": "Pendapatan pedagang pasar tradisional setelah revitalisasi tidak berbeda nyata dengan sebelum revitalisasi (Wilcoxon, Z = −1,12; p = 0,262; n = 46). Meski begitu, 29 pedagang melaporkan jumlah pembeli yang lebih banyak pada akhir pekan.",
+      "good": "Uji Wilcoxon terhadap 46 pedagang pasar tradisional tidak menemukan perbedaan pendapatan yang bermakna antara sebelum dan sesudah revitalisasi (Z = −1,12; p = 0,262). Walaupun demikian, 29 pedagang menyatakan bahwa pembeli pada akhir pekan bertambah.",
+      "bad": [
+        {
+          "rewrite": "Uji Wilcoxon terhadap 46 pedagang pasar tradisional menunjukkan bahwa revitalisasi tidak berdampak terhadap pendapatan pedagang (Z = −1,12; p = 0,262). Walaupun demikian, 29 pedagang menyatakan bahwa pembeli pada akhir pekan bertambah.",
+          "expect": [
+            "nonsignificance-to-no-effect"
+          ]
+        },
+        {
+          "rewrite": "Uji Wilcoxon terhadap 46 pedagang pasar tradisional tidak menemukan perbedaan pendapatan yang bermakna antara sebelum dan sesudah revitalisasi (Z = −1,12; p = 0,262). Walaupun demikian, 29 pedagang menyatakan bahwa jumlah pembeli bertambah.",
+          "expect": [
+            "scope-qualifier-lost"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO13",
+      "lang": "id",
+      "task": "koreksi",
+      "request": "Koreksi ejaan dan tanda baca saja.",
+      "source": "Debit rencana saluran drainase primer di hitung dengan metode rasional untuk kala ulang 10 tahun dan menghasilkan 3,75 m³/detik. Kapasitas saluran eksisting hanya 2,9 m³/detik sehinga saluran tidak mampu menampung debit rencana.",
+      "good": "Debit rencana saluran drainase primer dihitung dengan metode rasional untuk kala ulang 10 tahun dan menghasilkan 3,75 m³/detik. Kapasitas saluran eksisting hanya 2,9 m³/detik sehingga saluran tidak mampu menampung debit rencana.",
+      "bad": [
+        {
+          "rewrite": "Debit rencana saluran drainase primer dihitung dengan metode rasional untuk kala ulang 25 tahun dan menghasilkan 3,75 m³/detik. Kapasitas saluran eksisting hanya 2,9 m³/detik sehingga saluran tidak mampu menampung debit rencana.",
+          "expect": [
+            "number-missing",
+            "number-added"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO14",
+      "lang": "id",
+      "task": "parafrase",
+      "request": "Parafrasekan; kutipan petani harus tetap verbatim.",
+      "source": "Wawancara dengan 9 petani menunjukkan bahwa keterlambatan distribusi pupuk bersubsidi bukan satu-satunya kendala. Petani juga menyebut harga gabah yang fluktuatif. Seorang informan mengatakan, “Pupuk telat itu biasa, yang bikin rugi justru harga jatuh pas panen.”",
+      "good": "Menurut sembilan petani yang diwawancarai, kendala yang mereka hadapi tidak terbatas pada terlambatnya distribusi pupuk bersubsidi; fluktuasi harga gabah juga disebut. Hal ini terungkap dari pernyataan seorang informan: “Pupuk telat itu biasa, yang bikin rugi justru harga jatuh pas panen.”",
+      "bad": [
+        {
+          "rewrite": "Menurut sembilan petani yang diwawancarai, kendala yang mereka hadapi tidak terbatas pada terlambatnya distribusi pupuk bersubsidi; fluktuasi harga gabah juga disebut. Hal ini terungkap dari pernyataan seorang informan: “Pupuk telat itu biasa, yang bikin rugi itu harga jatuh pas panen.”",
+          "expect": [
+            "quote-altered"
+          ]
+        },
+        {
+          "rewrite": "Menurut tujuh petani yang diwawancarai, kendala yang mereka hadapi tidak terbatas pada terlambatnya distribusi pupuk bersubsidi; fluktuasi harga gabah juga disebut. Hal ini terungkap dari pernyataan seorang informan: “Pupuk telat itu biasa, yang bikin rugi justru harga jatuh pas panen.”",
+          "expect": [
+            "number-missing",
+            "number-added"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO15",
+      "lang": "id",
+      "task": "sunting",
+      "request": "Sunting menjadi satu kalimat yang padat.",
+      "source": "Terdapat korelasi positif yang lemah antara durasi penggunaan gawai dan skor kecemasan siswa (r = 0,23; p = 0,004; n = 158). Korelasi ini tidak menunjukkan arah sebab-akibat.",
+      "good": "Durasi penggunaan gawai berkorelasi positif lemah dengan skor kecemasan pada 158 siswa (r = 0,23; p = 0,004), meskipun korelasi tersebut tidak menunjukkan hubungan sebab-akibat.",
+      "bad": [
+        {
+          "rewrite": "Durasi penggunaan gawai berkorelasi positif lemah dengan skor kecemasan pada 158 siswa (r = 0,23; p = 0,004), sejalan dengan Wibowo (2018), meskipun korelasi tersebut tidak menunjukkan hubungan sebab-akibat.",
+          "expect": [
+            "citation-added"
+          ]
+        },
+        {
+          "rewrite": "Durasi penggunaan gawai berkorelasi negatif lemah dengan skor kecemasan pada 158 siswa (r = 0,23; p = 0,004), meskipun korelasi tersebut tidak menunjukkan hubungan sebab-akibat.",
+          "expect": [
+            "direction-flipped"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO16",
+      "lang": "id",
+      "task": "ringkas",
+      "request": "Ringkas untuk ringkasan eksekutif, maksimal dua kalimat.",
+      "source": "Dari 120 unit IPAL komunal yang dibangun pada 2016–2020 di Kabupaten Lembah Hijau, 47 unit (39,2%) tidak berfungsi optimal saat dievaluasi pada 2024. Penyebab yang paling sering dilaporkan adalah tidak adanya iuran pemeliharaan dan lemahnya kelembagaan KSM. Evaluasi yang mengikuti kerangka Hartono & Dewi (2023) ini belum memasukkan pengujian kualitas efluen, sehingga kinerja pengolahan belum dapat disimpulkan.",
+      "good": "Pada evaluasi 2024, 47 dari 120 IPAL komunal (39,2%) yang dibangun di Kabupaten Lembah Hijau selama 2016–2020 tidak berfungsi optimal, terutama karena tidak ada iuran pemeliharaan dan kelembagaan KSM lemah. Karena kualitas efluen belum diuji dalam evaluasi berbasis kerangka Hartono & Dewi (2023), kinerja pengolahan belum dapat disimpulkan.",
+      "bad": [
+        {
+          "rewrite": "Pada evaluasi 2024, 47 dari 120 IPAL komunal (39,2%) yang dibangun di Kabupaten Lembah Hijau selama 2016–2020 tidak berfungsi optimal, terutama karena tidak ada iuran pemeliharaan dan kelembagaan KSM lemah.",
+          "expect": [
+            "content-dropped",
+            "citation-missing"
+          ]
+        },
+        {
+          "rewrite": "Pada evaluasi 2024, sebagian besar IPAL komunal (47 dari 120; 39,2%) yang dibangun di Kabupaten Lembah Hijau selama 2016–2020 tidak berfungsi optimal, terutama karena tidak ada iuran pemeliharaan dan kelembagaan KSM lemah. Karena kualitas efluen belum diuji dalam evaluasi berbasis kerangka Hartono & Dewi (2023), kinerja pengolahan belum dapat disimpulkan.",
+          "expect": [
+            "claim-strengthened"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO17",
+      "lang": "en",
+      "task": "paraphrase",
+      "request": "Paraphrase this results paragraph.",
+      "source": "Mean PM2.5 concentrations at the three roadside stations were 41.7 µg/m³ during the dry season, compared with 23.5 µg/m³ in the wet season (Okafor et al., 2021). These values may underestimate exposure because monitors were not operated at night.",
+      "good": "According to Okafor et al. (2021), the three roadside stations recorded a mean PM2.5 concentration of 41.7 µg/m³ in the dry season and 23.5 µg/m³ in the wet season. Since the monitors did not run at night, true exposure may be underestimated.",
+      "bad": [
+        {
+          "rewrite": "According to Okafor et al. (2021), the three roadside stations recorded a mean PM2.5 concentration of 41.7 µg/m³ in the dry season and 23.5 µg/m³ in the wet season. Since the monitors did not run at night, true exposure is underestimated.",
+          "expect": [
+            "hedge-removed"
+          ]
+        },
+        {
+          "rewrite": "According to Okafor et al. (2021), the three roadside stations recorded a mean PM2.5 concentration of 41.7 µg/m³ in the wet season and 23.5 µg/m³ in the dry season. Since the monitors did not run at night, true exposure may be underestimated.",
+          "expect": [
+            "direction-flipped"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO18",
+      "lang": "en",
+      "task": "edit",
+      "request": "Tighten this paragraph for a journal submission.",
+      "source": "The retrofitted beams showed a 17% increase in flexural capacity relative to the control specimens; however, ductility did not improve significantly (p = 0.31). Only four specimens per group were tested, so these results should be regarded as preliminary.",
+      "good": "Compared with the control specimens, the retrofitted beams gained 17% in flexural capacity, although the improvement in ductility was not statistically significant (p = 0.31). With only four specimens per group, these results should be considered preliminary.",
+      "bad": [
+        {
+          "rewrite": "Compared with the control specimens, the retrofitted beams gained 17% in flexural capacity, whereas retrofitting had no effect on ductility (p = 0.31). With only four specimens per group, these results should be considered preliminary.",
+          "expect": [
+            "nonsignificance-to-no-effect"
+          ]
+        },
+        {
+          "rewrite": "Compared with the control specimens, the retrofitted beams gained 17% in flexural capacity, although the improvement in ductility was not statistically significant (p = 0.31).",
+          "expect": [
+            "content-dropped",
+            "number-missing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO19",
+      "lang": "en",
+      "task": "paraphrase",
+      "request": "Rewrite this sentence pair for the literature review.",
+      "source": "Households receiving the cash transfer reported higher school enrolment, but the difference was confined to girls aged 12–15 in rural districts [7]. No comparable difference was observed among boys.",
+      "good": "Higher school enrolment among cash-transfer households was reported only for rural girls aged 12–15 [7]; boys showed no comparable difference.",
+      "bad": [
+        {
+          "rewrite": "The cash transfer leads to higher school enrolment, but only among rural girls aged 12–15 [7]; boys showed no comparable difference.",
+          "expect": [
+            "association-to-causation"
+          ]
+        },
+        {
+          "rewrite": "Higher school enrolment among cash-transfer households was reported only for girls aged 12–15 [7]; boys showed no comparable difference.",
+          "expect": [
+            "scope-qualifier-lost"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO20",
+      "lang": "en",
+      "task": "paraphrase",
+      "request": "Paraphrase but keep the participants' quoted words exactly.",
+      "source": "Nurses in two of the five clinics described the new triage protocol as 'confusing at first, workable after a month'. Staff in the remaining clinics did not mention the protocol.",
+      "good": "In two of the five clinics, nurses characterised the new triage protocol as 'confusing at first, workable after a month', whereas the protocol went unmentioned by staff at the other three.",
+      "bad": [
+        {
+          "rewrite": "In two of the five clinics, nurses characterised the new triage protocol as 'initially confusing but workable after a month', whereas the protocol went unmentioned by staff at the other three.",
+          "expect": [
+            "quote-altered"
+          ]
+        },
+        {
+          "rewrite": "In most of the five clinics, nurses characterised the new triage protocol as 'confusing at first, workable after a month', whereas the protocol went unmentioned by staff elsewhere.",
+          "expect": [
+            "scope-widened",
+            "number-missing"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO21",
+      "lang": "en",
+      "task": "edit",
+      "request": "Edit for concision.",
+      "source": "Survey respondents (n = 212) were slightly more likely to trust local government than national government (52% vs 47%). This gap was not statistically significant and may reflect sampling from urban wards only (Mendes & Liu, 2019; Hart, 2022).",
+      "good": "Of the 212 respondents, 52% trusted local government and 47% trusted national government; this modest gap was not statistically significant and may reflect a sample drawn solely from urban wards (Mendes & Liu, 2019; Hart, 2022).",
+      "bad": [
+        {
+          "rewrite": "Of the 212 respondents, 52% trusted local government and 47% trusted national government; this modest gap was not statistically significant and may reflect a sample drawn solely from urban wards (Mendes & Liu, 2019).",
+          "expect": [
+            "citation-missing"
+          ]
+        },
+        {
+          "rewrite": "Of the 212 respondents, 52% trusted local government and 47% trusted national government; this modest gap was not statistically significant and reflects a sample drawn solely from urban wards (Mendes & Liu, 2019; Hart, 2022).",
+          "expect": [
+            "hedge-removed"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO22",
+      "lang": "id-en",
+      "task": "terjemah",
+      "request": "Terjemahkan ke bahasa Inggris akademik.",
+      "source": "Kadar fosfat di outlet IPAL rata-rata 2,4 mg/L dan belum memenuhi baku mutu sebesar 2,0 mg/L (Setiawan, 2020). Efisiensi penyisihan COD mencapai 78,5%, tetapi hasil ini hanya berlaku untuk musim kemarau.",
+      "good": "Phosphate concentration at the WWTP outlet averaged 2.4 mg/L and does not yet meet the 2.0 mg/L effluent standard (Setiawan, 2020). COD removal efficiency reached 78.5%, although this result applies only to the dry season.",
+      "bad": [
+        {
+          "rewrite": "Phosphate concentration at the WWTP outlet averaged 2.4 mg/L and already meets the 2.0 mg/L effluent standard (Setiawan, 2020). COD removal efficiency reached 78.5%, although this result applies only to the dry season.",
+          "expect": [
+            "negation-lost"
+          ]
+        },
+        {
+          "rewrite": "Phosphate concentration at the WWTP outlet averaged 2.4 mg/L and does not yet meet the 2.0 mg/L effluent standard (Setiawan, 2021). COD removal efficiency reached 78.5%, although this result applies only to the dry season.",
+          "expect": [
+            "citation-missing",
+            "citation-added"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO23",
+      "lang": "id-en",
+      "task": "terjemah",
+      "request": "Translate into English for an international journal.",
+      "source": "Partisipasi masyarakat dalam musyawarah perencanaan pembangunan desa cenderung lebih rendah pada kelompok perempuan (31%) dibandingkan laki-laki (58%). Rendahnya partisipasi ini mengindikasikan adanya hambatan struktural, sebagaimana dilaporkan Ramadhani dkk. (2022).",
+      "good": "Women tended to participate less than men in village development planning deliberations (31% vs 58%). As reported by Ramadhani et al. (2022), this low participation suggests the presence of structural barriers.",
+      "bad": [
+        {
+          "rewrite": "Women participated less than men in village development planning deliberations (31% vs 58%). As reported by Ramadhani et al. (2022), this low participation suggests the presence of structural barriers.",
+          "expect": [
+            "hedge-removed"
+          ]
+        },
+        {
+          "rewrite": "Women tended to participate more than men in village development planning deliberations (31% vs 58%). As reported by Ramadhani et al. (2022), this participation pattern suggests the presence of structural barriers.",
+          "expect": [
+            "direction-flipped"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "HO24",
+      "lang": "id-en",
+      "task": "terjemah",
+      "request": "Terjemahkan ke bahasa Inggris.",
+      "source": "Penggunaan semen PCC dengan 15% abu terbang tidak menurunkan kuat tekan secara signifikan (p > 0,05), tetapi waktu ikat awal bertambah sekitar 40 menit. Pengujian dilakukan pada 36 silinder di laboratorium, bukan di lapangan.",
+      "good": "Using PCC cement with 15% fly ash did not significantly reduce compressive strength (p > 0.05), but it lengthened the initial setting time by roughly 40 minutes. The tests were conducted on 36 cylinders in the laboratory rather than in the field.",
+      "bad": [
+        {
+          "rewrite": "Using PCC cement with 15% fly ash did not reduce compressive strength (p > 0.05), but it lengthened the initial setting time by roughly 40 minutes. The tests were conducted on 36 cylinders in the laboratory rather than in the field.",
+          "expect": [
+            "nonsignificance-to-no-effect"
+          ]
+        },
+        {
+          "rewrite": "Using PCC cement with 15% fly ash did not significantly reduce compressive strength (p > 0.05), but it lengthened the initial setting time by 40 minutes. The tests were conducted on 36 cylinders in the laboratory rather than in the field.",
+          "expect": [
+            "hedge-removed"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -380,7 +380,7 @@ class StaticSiteTests(unittest.TestCase):
         self.assertIn("textContent", script)
         self.assertNotIn('fetch("/data', script)
 
-    def test_paraphrase_workbench_contract_is_installable_and_limited(self) -> None:
+    def test_paraphrase_workbench_contract_is_installable_and_checked(self) -> None:
         required_ids = {
             "paraphrase-form",
             "paraphrase-source",
@@ -393,6 +393,10 @@ class StaticSiteTests(unittest.TestCase):
             "paraphrase-save",
             "paraphrase-submit",
             "paraphrase-draft",
+            "paraphrase-cancel",
+            "paraphrase-check",
+            "paraphrase-findings",
+            "paraphrase-lang",
             "paraphrase-clear",
             "paraphrase-limit",
             "paraphrase-status",
@@ -411,11 +415,18 @@ class StaticSiteTests(unittest.TestCase):
                 self.assertEqual(required_ids - parser.ids, set())
                 self.assertIn("data-paraphrase-workbench", html_text)
                 self.assertIn("<noscript>", html_text)
-                self.assertIn("3", parser.visible_text)
+                self.assertIn("guard.js", html_text)
+                self.assertIn('value="id-en"', html_text)
 
         script = (DOCS / "app.js").read_text(encoding="utf-8")
-        self.assertIn("const REMOTE_CALL_LIMIT = 3", script)
-        self.assertIn("rhetorilex.workbench.usage", script)
+        # BYO endpoints spend the user's own quota, so no per-browser daily cap.
+        self.assertNotIn("REMOTE_CALL_LIMIT", script)
+        self.assertIn("AbortController", script)
+        self.assertIn("finish_reason", script)
+        self.assertNotIn("academic English that remains friendly", script)
+        guard_js = (DOCS / "guard.js").read_text(encoding="utf-8")
+        self.assertIn("RLX_GUARD_LEXICON", guard_js)
+        self.assertNotIn("innerHTML", guard_js)
         self.assertIn("Authorization", script)
         self.assertIn("x-goog-api-key", script)
         self.assertIn("serviceWorker", script)

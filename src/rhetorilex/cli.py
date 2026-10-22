@@ -91,6 +91,15 @@ def build_parser() -> argparse.ArgumentParser:
     taxonomy = commands.add_parser("taxonomy", help="show stable semantic taxonomy")
     taxonomy.add_argument("section", nargs="?")
 
+    guard_check = commands.add_parser("check", help="compare a source and a rewrite for meaning changes (ID/EN)")
+    guard_check.add_argument("source")
+    guard_check.add_argument("rewrite")
+    guard_check.add_argument("--translation", action="store_true")
+    guard_check.add_argument("--summary", action="store_true")
+
+    lint = commands.add_parser("lint", help="Indonesian EYD V/KBBI and translationese hints")
+    lint.add_argument("file")
+
     random_parser = commands.add_parser("random", help="choose a template, optionally reproducibly")
     random_parser.add_argument("--seed")
     _add_filters(random_parser)
@@ -100,6 +109,17 @@ def build_parser() -> argparse.ArgumentParser:
 def main(argv: Sequence[str] | None = None) -> int:
     parser = build_parser()
     args = parser.parse_args(argv)
+    if args.command in {"check", "lint"}:
+        from . import guard
+
+        forwarded = [args.command]
+        if args.command == "check":
+            forwarded += [args.source, args.rewrite]
+            forwarded += ["--translation"] if args.translation else []
+            forwarded += ["--summary"] if args.summary else []
+        else:
+            forwarded.append(args.file)
+        return guard.main(forwarded + (["--json"] if args.json else []))
     try:
         catalog = Catalog.load()
         if args.command == "search":

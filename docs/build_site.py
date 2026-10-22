@@ -483,6 +483,11 @@ def render_head(locale: str, key: str, page: dict[str, str]) -> str:
         else "Referensi penulisan akademik RhetoriLex"
     )
     schema = json.dumps(structured_data(locale, key, page), ensure_ascii=False, separators=(",", ":"))
+    guard_script = (
+        f'<script src="{relative_asset(locale, key, "guard.js")}" defer></script>\n'
+        if page.get("kind") == "workbench"
+        else ""
+    )
     title = html.escape(page["title"])
     description = html.escape(page["description"], quote=True)
     return f"""<meta charset="utf-8">
@@ -513,7 +518,7 @@ def render_head(locale: str, key: str, page: dict[str, str]) -> str:
 <link rel="manifest" href="{relative_asset(locale, key, "site.webmanifest")}">
 <link rel="stylesheet" href="{relative_asset(locale, key, "styles.css")}">
 <script type="application/ld+json">{schema}</script>
-<script src="{relative_asset(locale, key, "app.js")}" defer></script>"""
+{guard_script}<script src="{relative_asset(locale, key, "app.js")}" defer></script>"""
 
 
 def render_breadcrumb(locale: str, key: str) -> str:
@@ -660,68 +665,88 @@ def workbench_labels(locale: str) -> dict[str, str]:
             "form_title": "Local paraphrase workbench",
             "source": "Source text",
             "source_placeholder": "Paste one paragraph or a short passage. Keep citations and numbers visible.",
-            "mode": "Rewrite mode",
-            "mode_safe": "Academic, meaning-safe",
-            "mode_plain": "Plain-language technical",
-            "mode_concise": "Concise revision",
-            "mode_id": "Indonesian-friendly English",
+            "task": "Task",
+            "task_edit": "Edit: smoother, same claims",
+            "task_paraphrase": "Paraphrase: new structure, same meaning",
+            "task_correct": "Correct only: spelling and punctuation",
+            "task_id_en": "Translate Indonesian → English",
+            "task_en_id": "Translate English → Indonesian",
+            "task_summary": "Summarise: shorter, keep limits",
+            "output_lang": "Output language",
+            "lang_auto": "Same as source",
+            "lang_id": "Indonesian (EYD V)",
+            "lang_en": "English",
             "target": "Target note",
-            "target_placeholder": "Example: keep journal tone, preserve all citations, avoid causal language.",
+            "target_placeholder": "Example: journal tone, APA 7, British English, keep the passive in methods.",
             "protected": "Extra protected terms",
             "protected_placeholder": "Optional: variables, author names, equations, legal terms, local terminology.",
-            "settings": "AI endpoint settings",
-            "endpoint": "OpenAI-compatible endpoint",
+            "settings": "Optional AI endpoint (yours)",
+            "endpoint": "OpenAI-compatible or Gemini endpoint",
             "endpoint_placeholder": "http://localhost:11434/v1/chat/completions",
             "model": "Model",
             "model_placeholder": "local-model or provider model id",
             "token": "API token",
-            "token_placeholder": "Stored only if you choose remember settings",
-            "save": "Remember endpoint, model, and token in this browser",
+            "token_placeholder": "Kept in memory unless you tick remember",
+            "save": "Remember endpoint, model, and token in this browser (not a secure vault)",
             "submit": "Rewrite with endpoint",
             "draft": "Build prompt only",
-            "clear": "Clear text",
-            "limit": "3 endpoint calls per browser day. Prompt-only mode is unlimited.",
-            "status": "Paste text, then choose prompt-only or an endpoint rewrite.",
-            "protected_title": "Protected meaning",
+            "cancel": "Cancel",
+            "clear": "Clear",
+            "limit": "No daily cap: endpoint calls use your own model and quota. Requests time out after 90 seconds.",
+            "status": "Paste text, then build a prompt or call your endpoint.",
+            "protected_title": "Protected elements found",
             "prompt_title": "Prompt to send",
-            "output_title": "Rewrite output",
-            "warning_title": "Final warning",
-            "warning": "Review final text before submission. Verify meaning, citations, terminology, evidence strength, and journal or university rules. RhetoriLex helps rewrite; it does not replace author judgment.",
-            "privacy": "Your manuscript text is sent only to the endpoint you enter. The static RhetoriLex site has no server-side manuscript storage, account system, or analytics.",
+            "output_title": "Rewrite (paste from any model or edit here)",
+            "check": "Check rewrite",
+            "check_title": "Meaning check",
+            "check_note": "Lexical check of numbers, statistics, citations, quotations, negation, hedges, causality, direction, and scope. A clean result is not proof; read the rewrite yourself.",
+            "warning_title": "Before you submit",
+            "warning": "Verify meaning, citations, terminology, evidence strength, and your journal or university rules. RhetoriLex helps you rewrite; the final judgement stays with the author.",
+            "privacy": "Prompt-only mode and the meaning check run entirely in your browser. Text is sent only if you enter an endpoint, and only to that endpoint. This static site stores no manuscripts and runs no analytics.",
             "noscript": "JavaScript is required for the workbench. You can still install the Agent Skill or use the CLI locally.",
         }
     return {
         "form_title": "Alat parafrasa lokal",
         "source": "Teks sumber",
         "source_placeholder": "Tempel satu paragraf atau bagian pendek. Biarkan sitasi dan angka tetap terlihat.",
-        "mode": "Mode penulisan ulang",
-        "mode_safe": "Akademik, aman-makna",
-        "mode_plain": "Teknis bahasa sederhana",
-        "mode_concise": "Revisi ringkas",
-        "mode_id": "Bahasa Inggris ramah Indonesia",
+        "task": "Pekerjaan",
+        "task_edit": "Sunting: lebih luwes, klaim tetap",
+        "task_paraphrase": "Parafrase: struktur baru, makna sama",
+        "task_correct": "Koreksi saja: ejaan dan tanda baca",
+        "task_id_en": "Terjemah Indonesia → Inggris",
+        "task_en_id": "Terjemah Inggris → Indonesia",
+        "task_summary": "Ringkas: lebih pendek, batasan tetap",
+        "output_lang": "Bahasa keluaran",
+        "lang_auto": "Sama dengan sumber",
+        "lang_id": "Indonesia (EYD V)",
+        "lang_en": "Inggris",
         "target": "Catatan target",
-        "target_placeholder": "Contoh: pertahankan nada jurnal, jaga semua sitasi, hindari bahasa kausal.",
+        "target_placeholder": "Contoh: gaya jurnal, APA 7, pertahankan pasif di metode.",
         "protected": "Istilah tambahan yang dilindungi",
         "protected_placeholder": "Opsional: variabel, nama penulis, persamaan, istilah hukum, istilah lokal.",
-        "settings": "Pengaturan endpoint AI",
-        "endpoint": "Endpoint OpenAI-compatible",
+        "settings": "Endpoint AI opsional (milik Anda)",
+        "endpoint": "Endpoint OpenAI-compatible atau Gemini",
         "endpoint_placeholder": "http://localhost:11434/v1/chat/completions",
         "model": "Model",
         "model_placeholder": "local-model atau id model provider",
         "token": "Token API",
-        "token_placeholder": "Disimpan hanya bila opsi ingat pengaturan dipilih",
-        "save": "Ingat endpoint, model, dan token di browser ini",
-        "submit": "Parafrasakan dengan endpoint",
+        "token_placeholder": "Hanya di memori kecuali Anda centang ingat",
+        "save": "Ingat endpoint, model, dan token di browser ini (bukan brankas aman)",
+        "submit": "Tulis ulang lewat endpoint",
         "draft": "Buat prompt saja",
-        "clear": "Bersihkan teks",
-        "limit": "3 panggilan endpoint per hari browser. Mode prompt saja tidak dibatasi.",
-        "status": "Tempel teks, lalu pilih prompt saja atau penulisan ulang lewat endpoint.",
-        "protected_title": "Makna yang dilindungi",
+        "cancel": "Batalkan",
+        "clear": "Bersihkan",
+        "limit": "Tanpa batas harian: panggilan memakai model dan kuota Anda sendiri. Permintaan dihentikan setelah 90 detik.",
+        "status": "Tempel teks, lalu buat prompt atau panggil endpoint Anda.",
+        "protected_title": "Elemen yang dilindungi",
         "prompt_title": "Prompt yang akan dikirim",
-        "output_title": "Keluaran parafrasa",
-        "warning_title": "Peringatan final",
-        "warning": "Cek ulang sebelum dikumpulkan. Pastikan makna, sitasi, istilah teknis, kekuatan klaim, dan aturan kampus atau jurnal tetap benar. RhetoriLex membantu menulis ulang; keputusan akhir tetap pada penulis.",
-        "privacy": "Teks naskah hanya dikirim ke endpoint yang Anda masukkan. Situs statis RhetoriLex tidak memiliki penyimpanan naskah server-side, sistem akun, atau analytics.",
+        "output_title": "Hasil tulis ulang (tempel dari model mana pun atau sunting di sini)",
+        "check": "Periksa hasil",
+        "check_title": "Pemeriksaan makna",
+        "check_note": "Pemeriksaan leksikal atas angka, statistik, sitasi, kutipan, negasi, hedging, kausalitas, arah, dan cakupan. Hasil bersih bukan bukti; tetap baca hasilnya sendiri.",
+        "warning_title": "Sebelum dikumpulkan",
+        "warning": "Pastikan makna, sitasi, istilah teknis, kekuatan klaim, dan aturan kampus atau jurnal tetap benar. RhetoriLex membantu menulis ulang; keputusan akhir tetap pada penulis.",
+        "privacy": "Mode prompt saja dan pemeriksaan makna berjalan sepenuhnya di browser. Teks hanya dikirim bila Anda mengisi endpoint, dan hanya ke endpoint itu. Situs statis ini tidak menyimpan naskah dan tidak memakai analytics.",
         "noscript": "JavaScript diperlukan untuk alat ini. Anda tetap dapat memasang Agent Skill atau memakai CLI secara lokal.",
     }
 
@@ -745,8 +770,9 @@ def render_workbench_main(locale: str, key: str, page: dict[str, str]) -> str:
       </div>
       <form class="workbench-form" id="paraphrase-form">
         <label class="field-span" for="paraphrase-source"><span>{html.escape(labels["source"])}</span><textarea id="paraphrase-source" name="source" rows="10" placeholder="{html.escape(labels["source_placeholder"], quote=True)}"></textarea></label>
-        <div class="settings-grid">
-          <label for="paraphrase-mode"><span>{html.escape(labels["mode"])}</span><select id="paraphrase-mode" name="mode"><option value="safe">{html.escape(labels["mode_safe"])}</option><option value="plain">{html.escape(labels["mode_plain"])}</option><option value="concise">{html.escape(labels["mode_concise"])}</option><option value="idfriendly">{html.escape(labels["mode_id"])}</option></select></label>
+        <div class="settings-grid settings-grid-3">
+          <label for="paraphrase-mode"><span>{html.escape(labels["task"])}</span><select id="paraphrase-mode" name="mode"><option value="edit">{html.escape(labels["task_edit"])}</option><option value="paraphrase">{html.escape(labels["task_paraphrase"])}</option><option value="correct">{html.escape(labels["task_correct"])}</option><option value="id-en">{html.escape(labels["task_id_en"])}</option><option value="en-id">{html.escape(labels["task_en_id"])}</option><option value="summary">{html.escape(labels["task_summary"])}</option></select></label>
+          <label for="paraphrase-lang"><span>{html.escape(labels["output_lang"])}</span><select id="paraphrase-lang" name="lang"><option value="auto">{html.escape(labels["lang_auto"])}</option><option value="id">{html.escape(labels["lang_id"])}</option><option value="en">{html.escape(labels["lang_en"])}</option></select></label>
           <label for="paraphrase-target"><span>{html.escape(labels["target"])}</span><input id="paraphrase-target" name="target" type="text" placeholder="{html.escape(labels["target_placeholder"], quote=True)}" autocomplete="off"></label>
         </div>
         <label class="field-span" for="paraphrase-protected"><span>{html.escape(labels["protected"])}</span><textarea id="paraphrase-protected" name="protected" rows="3" placeholder="{html.escape(labels["protected_placeholder"], quote=True)}"></textarea></label>
@@ -762,6 +788,7 @@ def render_workbench_main(locale: str, key: str, page: dict[str, str]) -> str:
         <div class="workbench-actions">
           <button class="primary-button" id="paraphrase-submit" type="submit">{html.escape(labels["submit"])}</button>
           <button class="secondary-button" id="paraphrase-draft" type="button">{html.escape(labels["draft"])}</button>
+          <button class="secondary-button" id="paraphrase-cancel" type="button" hidden>{html.escape(labels["cancel"])}</button>
           <button class="secondary-button" id="paraphrase-clear" type="button">{html.escape(labels["clear"])}</button>
         </div>
       </form>
@@ -769,7 +796,8 @@ def render_workbench_main(locale: str, key: str, page: dict[str, str]) -> str:
       <div class="workbench-results">
         <section class="workbench-panel"><h2>{html.escape(labels["protected_title"])}</h2><ul class="audit-list" id="paraphrase-invariants"></ul></section>
         <section class="workbench-panel"><h2>{html.escape(labels["prompt_title"])}</h2><pre><code id="paraphrase-prompt"></code></pre></section>
-        <section class="workbench-panel workbench-output"><h2>{html.escape(labels["output_title"])}</h2><div class="rewrite-output" id="paraphrase-output" tabindex="0"></div></section>
+        <section class="workbench-panel workbench-output"><h2><label for="paraphrase-output">{html.escape(labels["output_title"])}</label></h2><textarea class="rewrite-output" id="paraphrase-output" rows="8"></textarea><div class="workbench-actions"><button class="secondary-button" id="paraphrase-check" type="button">{html.escape(labels["check"])}</button></div></section>
+        <section class="workbench-panel"><h2>{html.escape(labels["check_title"])}</h2><p class="warning-box">{html.escape(labels["check_note"])}</p><ul class="audit-list" id="paraphrase-findings" aria-live="polite"></ul></section>
         <section class="workbench-panel"><h2>{html.escape(labels["warning_title"])}</h2><p class="warning-box" id="paraphrase-warning">{html.escape(labels["warning"])}</p></section>
       </div>
       <noscript><p class="notice">{html.escape(labels["noscript"])}</p></noscript>
@@ -1106,8 +1134,44 @@ def generated_files() -> dict[Path, str]:
         ],
     }
     files[DOCS / "site.webmanifest"] = json.dumps(manifest, indent=2, ensure_ascii=False) + "\n"
+    files[DOCS / "guard.js"] = render_guard_js()
     files[DOCS / "service-worker.js"] = render_service_worker()
     return files
+
+
+def render_guard_js() -> str:
+    """Inject the Python guard lexicon into docs/guard.js (single source of truth)."""
+    sys.path.insert(0, str(ROOT / "src"))
+    from rhetorilex import guard  # noqa: PLC0415
+
+    lexicon = {
+        "NEGATION": list(guard.NEGATION),
+        "NEGATION_EXEMPT": list(guard.NEGATION_EXEMPT),
+        "HEDGE": list(guard.HEDGE),
+        "BOOSTER": list(guard.BOOSTER),
+        "CAUSAL": list(guard.CAUSAL),
+        "ASSOCIATION": list(guard.ASSOCIATION),
+        "UP": list(guard.UP),
+        "DOWN": list(guard.DOWN),
+        "UNIVERSAL": list(guard.UNIVERSAL),
+        "PARTIAL": list(guard.PARTIAL),
+        "POSITIVE": list(guard.POSITIVE),
+        "NEGATIVE": list(guard.NEGATIVE),
+        "NUMBER_WORDS": guard.NUMBER_WORDS,
+        "INJECTION": list(guard.INJECTION),
+        "NUMBER": guard.NUMBER_RE.pattern,
+        "NUM_ONLY": guard.NUM_ONLY_RE.pattern,
+        "COMPARATOR": guard.COMPARATOR_RE.pattern,
+        "NUMERIC_CITATION": guard.NUMERIC_CITATION_RE.pattern,
+        "AUTHOR_YEAR": guard.AUTHOR_YEAR_RE.pattern,
+        "QUOTE": guard.QUOTE_RE.pattern,
+        "NONSIG": guard.NONSIG_RE.pattern,
+        "NO_EFFECT": guard.NO_EFFECT_RE.pattern,
+        "VERSION": guard.GUARD_VERSION,
+    }
+    block = "globalThis.RLX_GUARD_LEXICON = " + json.dumps(lexicon, ensure_ascii=False, sort_keys=True) + ";"
+    template = (DOCS / "guard.js").read_text(encoding="utf-8")
+    return re.sub(r"// <lexicon>\n.*?// </lexicon>", lambda _m: "// <lexicon>\n" + block + "\n// </lexicon>", template, count=1, flags=re.S)
 
 
 def build(check: bool) -> int:

@@ -328,6 +328,8 @@ def build(
     write_bytes(skill_assets / "search-aliases.json", json_bytes(aliases))
     write_bytes(skill_assets / "writing-skills.json", json_bytes(writing_skills))
     write_bytes(skill_assets / "writing-skills.id.json", json_bytes(writing_skills_id))
+    guard_source = ROOT / "src" / "rhetorilex" / "guard.py"
+    write_bytes(skill_assets.parent / "scripts" / "guard.py", guard_source.read_bytes())
 
     stale_names = (
         "rhetorilex-v0.1.json",

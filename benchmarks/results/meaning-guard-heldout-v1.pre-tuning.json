@@ -1,0 +1,920 @@
+{
+  "rows": [
+    {
+      "case": "HO01",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO01.1",
+      "expected": [
+        "negation-lost"
+      ],
+      "expected_hit": [
+        "negation-lost"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "negation-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO01.2",
+      "expected": [
+        "number-missing",
+        "number-added"
+      ],
+      "expected_hit": [
+        "number-added",
+        "number-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "number-added",
+        "number-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO02",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [
+        "association-framing-lost"
+      ],
+      "new_flag": false
+    },
+    {
+      "case": "HO02.1",
+      "expected": [
+        "association-to-causation"
+      ],
+      "expected_hit": [
+        "association-to-causation"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "association-to-causation"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO02.2",
+      "expected": [
+        "negation-added"
+      ],
+      "expected_hit": [
+        "negation-added"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "negation-added"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO03",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO03.1",
+      "expected": [
+        "nonsignificance-to-no-effect"
+      ],
+      "expected_hit": [
+        "nonsignificance-to-no-effect"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "causal-increase",
+        "nonsignificance-to-no-effect"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO03.2",
+      "expected": [
+        "scope-qualifier-lost"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO04",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO04.1",
+      "expected": [
+        "hedge-removed"
+      ],
+      "expected_hit": [
+        "hedge-removed"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "hedge-removed"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO04.2",
+      "expected": [
+        "citation-missing"
+      ],
+      "expected_hit": [
+        "citation-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "citation-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO05",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [
+        "number-added",
+        "number-missing",
+        "hedge-removed",
+        "scope-qualifier-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO05.1",
+      "expected": [
+        "quote-altered"
+      ],
+      "expected_hit": [
+        "quote-altered"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "hedge-removed",
+        "number-added",
+        "number-missing",
+        "quote-altered",
+        "scope-qualifier-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO05.2",
+      "expected": [
+        "scope-widened"
+      ],
+      "expected_hit": [
+        "scope-widened"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "hedge-removed",
+        "number-added",
+        "number-missing",
+        "scope-qualifier-lost",
+        "scope-widened"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO06",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO06.1",
+      "expected": [
+        "direction-flipped"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO06.2",
+      "expected": [
+        "hedge-removed"
+      ],
+      "expected_hit": [
+        "hedge-removed"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "hedge-removed"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO07",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO07.1",
+      "expected": [
+        "negation-lost"
+      ],
+      "expected_hit": [
+        "negation-lost"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "negation-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO07.2",
+      "expected": [
+        "statistic-missing",
+        "number-missing"
+      ],
+      "expected_hit": [
+        "number-missing",
+        "statistic-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "number-missing",
+        "statistic-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO08",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [
+        "negation-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO08.1",
+      "expected": [
+        "content-dropped"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "negation-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO08.2",
+      "expected": [
+        "number-missing",
+        "number-added"
+      ],
+      "expected_hit": [
+        "number-added",
+        "number-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "negation-lost",
+        "number-added",
+        "number-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO09",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO09.1",
+      "expected": [
+        "scope-qualifier-lost"
+      ],
+      "expected_hit": [
+        "scope-qualifier-lost"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "scope-qualifier-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO09.2",
+      "expected": [
+        "number-missing"
+      ],
+      "expected_hit": [
+        "number-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "number-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO10",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [
+        "claim-strengthened",
+        "negation-added"
+      ],
+      "new_flag": false
+    },
+    {
+      "case": "HO10.1",
+      "expected": [
+        "citation-missing"
+      ],
+      "expected_hit": [
+        "citation-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "citation-missing",
+        "claim-strengthened",
+        "negation-added"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO10.2",
+      "expected": [
+        "claim-strengthened"
+      ],
+      "expected_hit": [
+        "claim-strengthened"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "claim-strengthened",
+        "negation-added"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO11",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [
+        "number-missing",
+        "statistic-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO11.1",
+      "expected": [
+        "association-to-causation"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "number-missing",
+        "statistic-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO11.2",
+      "expected": [
+        "number-missing",
+        "number-added"
+      ],
+      "expected_hit": [
+        "number-added",
+        "number-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "number-added",
+        "number-missing",
+        "statistic-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO12",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [
+        "statistic-notation-changed"
+      ],
+      "new_flag": false
+    },
+    {
+      "case": "HO12.1",
+      "expected": [
+        "nonsignificance-to-no-effect"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "causal-increase"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO12.2",
+      "expected": [
+        "scope-qualifier-lost"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO13",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO13.1",
+      "expected": [
+        "number-missing",
+        "number-added"
+      ],
+      "expected_hit": [
+        "number-added",
+        "number-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "number-added",
+        "number-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO14",
+      "kind": "good",
+      "legacy_flag": true,
+      "new_codes": [
+        "number-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO14.1",
+      "expected": [
+        "quote-altered"
+      ],
+      "expected_hit": [
+        "quote-altered"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "number-missing",
+        "quote-altered"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO14.2",
+      "expected": [
+        "number-missing",
+        "number-added"
+      ],
+      "expected_hit": [
+        "number-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "number-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO15",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [
+        "statistic-notation-changed"
+      ],
+      "new_flag": false
+    },
+    {
+      "case": "HO15.1",
+      "expected": [
+        "citation-added"
+      ],
+      "expected_hit": [
+        "citation-added"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "citation-added"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO15.2",
+      "expected": [
+        "direction-flipped"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO16",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO16.1",
+      "expected": [
+        "content-dropped",
+        "citation-missing"
+      ],
+      "expected_hit": [
+        "citation-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "citation-missing",
+        "negation-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO16.2",
+      "expected": [
+        "claim-strengthened"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO17",
+      "kind": "good",
+      "legacy_flag": true,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO17.1",
+      "expected": [
+        "hedge-removed"
+      ],
+      "expected_hit": [
+        "hedge-removed"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "hedge-removed"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO17.2",
+      "expected": [
+        "direction-flipped"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO18",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO18.1",
+      "expected": [
+        "nonsignificance-to-no-effect"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO18.2",
+      "expected": [
+        "content-dropped",
+        "number-missing"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO19",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO19.1",
+      "expected": [
+        "association-to-causation"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "causal-increase"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO19.2",
+      "expected": [
+        "scope-qualifier-lost"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO20",
+      "kind": "good",
+      "legacy_flag": true,
+      "new_codes": [
+        "negation-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO20.1",
+      "expected": [
+        "quote-altered"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "negation-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO20.2",
+      "expected": [
+        "scope-widened",
+        "number-missing"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "negation-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO21",
+      "kind": "good",
+      "legacy_flag": true,
+      "new_codes": [
+        "number-added",
+        "number-missing",
+        "statistic-missing",
+        "hedge-removed"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO21.1",
+      "expected": [
+        "citation-missing"
+      ],
+      "expected_hit": [
+        "citation-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "citation-missing",
+        "hedge-removed",
+        "number-added",
+        "number-missing",
+        "statistic-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO21.2",
+      "expected": [
+        "hedge-removed"
+      ],
+      "expected_hit": [
+        "hedge-removed"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "hedge-removed",
+        "number-added",
+        "number-missing",
+        "statistic-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO22",
+      "kind": "good",
+      "legacy_flag": true,
+      "new_codes": [],
+      "new_flag": false
+    },
+    {
+      "case": "HO22.1",
+      "expected": [
+        "negation-lost"
+      ],
+      "expected_hit": [
+        "negation-lost"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "negation-lost"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO22.2",
+      "expected": [
+        "citation-missing",
+        "citation-added"
+      ],
+      "expected_hit": [
+        "citation-added",
+        "citation-missing"
+      ],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "citation-added",
+        "citation-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO23",
+      "kind": "good",
+      "legacy_flag": false,
+      "new_codes": [
+        "hedge-removed"
+      ],
+      "new_flag": false
+    },
+    {
+      "case": "HO23.1",
+      "expected": [
+        "hedge-removed"
+      ],
+      "expected_hit": [
+        "hedge-removed"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "hedge-removed"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO23.2",
+      "expected": [
+        "direction-flipped"
+      ],
+      "expected_hit": [
+        "direction-flipped"
+      ],
+      "kind": "bad",
+      "legacy_flag": false,
+      "new_codes": [
+        "direction-flipped",
+        "hedge-removed"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO24",
+      "kind": "good",
+      "legacy_flag": true,
+      "new_codes": [
+        "negation-lost",
+        "number-added",
+        "number-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO24.1",
+      "expected": [
+        "nonsignificance-to-no-effect"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "negation-lost",
+        "number-added",
+        "number-missing"
+      ],
+      "new_flag": true
+    },
+    {
+      "case": "HO24.2",
+      "expected": [
+        "hedge-removed"
+      ],
+      "expected_hit": [],
+      "kind": "bad",
+      "legacy_flag": true,
+      "new_codes": [
+        "negation-lost",
+        "number-added",
+        "number-missing"
+      ],
+      "new_flag": true
+    }
+  ],
+  "summary": {
+    "bad_rewrites": 47,
+    "benchmark": "meaning-guard-heldout 1.0.0",
+    "cases": 24,
+    "legacy_detection_rate": 0.489,
+    "legacy_false_positive_rate_on_good": 0.25,
+    "new_detection_rate": 0.809,
+    "new_expected_code_recall": 0.632,
+    "new_false_positive_rate_on_good": 0.292
+  }
+}
