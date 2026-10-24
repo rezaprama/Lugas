@@ -172,14 +172,14 @@ privat di [SECURITY.md](SECURITY.md). Keputusan proyek dicatat di
 
 | Lama | Baru | Status |
 | --- | --- | --- |
-| `github.com/rezaprama/RhetoriLex` | `github.com/rezaprama/Lugas` | GitHub meneruskan URL repo dan git lama |
+| `github.com/rezaprama/RhetoriLex` | `github.com/rezaprama/Lugas` | Nama lama kini menjadi repo publik khusus pengalih Pages; ubah remote Git ke `Lugas` untuk source dan rilis |
 | `rezaprama.github.io/RhetoriLex/...` | `rezaprama.github.io/Lugas/...` | halaman pengalih per rute; service worker lama dicabut |
 | perintah `rhetorilex`, `python -m rhetorilex` | `lugas` | alias dipertahankan di seri 0.x |
 | `import rhetorilex` | `import lugas` | alias dengan `DeprecationWarning` |
 | `skills/rhetorilex`, `$rhetorilex` | `skills/lugas`, `$lugas` | skill menjawab kedua nama |
 | ID `RLX-*`, berkas data `rhetorilex-v0.2.*`, ID format | tidak berubah | pengenal stabil |
 
-Untuk membatalkan: ubah nama repo kembali ke `RhetoriLex` dan deploy ulang commit `f3fd63d`; data dan ID tidak berubah.
+Rollback tidak lagi cukup dengan mengganti nama repo: nama lama dipakai repo publik pengalih Pages. Pindahkan atau atur ulang repo pengalih sebelum mempertimbangkan rollback; periksa ulang Pages dan remote Git.
 
 ## Proyek dan pembuat
 
