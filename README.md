@@ -177,7 +177,7 @@ process described by [SECURITY.md](SECURITY.md). Project decisions are recorded 
 
 | Old | New | Status |
 | --- | --- | --- |
-| `github.com/rezaprama/RhetoriLex` | `github.com/rezaprama/Lugas` | GitHub forwards the old repository and git URLs |
+| `github.com/rezaprama/RhetoriLex` | `github.com/rezaprama/Lugas` | The old name is now a public Pages-redirect repository; update Git remotes to `Lugas` for source and releases |
 | `rezaprama.github.io/RhetoriLex/...` | `rezaprama.github.io/Lugas/...` | per-route redirect pages ([scripts/build_redirect_site.py](scripts/build_redirect_site.py)); old PWA worker is unregistered |
 | `rhetorilex` command, `python -m rhetorilex` | `lugas` | alias kept in 0.x |
 | `import rhetorilex` | `import lugas` | alias kept in 0.x with a `DeprecationWarning` |
