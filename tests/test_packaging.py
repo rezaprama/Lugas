@@ -16,12 +16,12 @@ from package_plugin import build_archive, verify_archive  # noqa: E402
 class PluginPackagingTests(unittest.TestCase):
     def test_archive_is_verified_and_carries_mixed_license_notices(self) -> None:
         with tempfile.TemporaryDirectory() as raw:
-            archive = Path(raw) / "rhetorilex-plugin.zip"
-            built, sidecar, digest = build_archive(ROOT, output=archive, expected_version="0.2.0")
+            archive = Path(raw) / "lugas-plugin.zip"
+            built, sidecar, digest = build_archive(ROOT, output=archive, expected_version="0.3.0")
 
             self.assertEqual(built, archive.resolve())
             self.assertTrue(sidecar.is_file())
-            self.assertEqual(verify_archive(built, expected_version="0.2.0"), digest)
+            self.assertEqual(verify_archive(built, expected_version="0.3.0"), digest)
 
             with zipfile.ZipFile(built) as package:
                 names = set(package.namelist())
@@ -33,12 +33,14 @@ class PluginPackagingTests(unittest.TestCase):
                 "THIRD_PARTY_NOTICES.md",
                 "LICENSES/Apache-2.0.txt",
                 "LICENSES/CC-BY-4.0.txt",
-                "skills/rhetorilex/assets/patterns.json",
-                "skills/rhetorilex/assets/search-aliases.json",
-                "skills/rhetorilex/assets/taxonomy.json",
-                "skills/rhetorilex/assets/writing-skills.json",
-                "skills/rhetorilex/assets/writing-skills.id.json",
-                "skills/rhetorilex/references/evidential-verbs.md",
+                "skills/lugas/assets/patterns.json",
+                "skills/lugas/assets/search-aliases.json",
+                "skills/lugas/assets/taxonomy.json",
+                "skills/lugas/assets/writing-skills.json",
+                "skills/lugas/assets/writing-skills.id.json",
+                "skills/lugas/references/evidential-verbs.md",
+                "skills/lugas/references/bahasa-indonesia.md",
+                "skills/lugas/scripts/guard.py",
             }
             self.assertEqual(required - names, set())
 

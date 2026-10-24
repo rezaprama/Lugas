@@ -11,7 +11,7 @@ import unittest
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "src"))
 
-from rhetorilex.cli import main  # noqa: E402
+from lugas.cli import main  # noqa: E402
 
 
 class CliTests(unittest.TestCase):

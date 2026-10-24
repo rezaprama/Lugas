@@ -1,0 +1,10 @@
+interface:
+  display_name: "Lugas"
+  short_description: "Meaning-safe paraphrase & editing (ID/EN)"
+  icon_small: "./assets/icon.svg"
+  icon_large: "./assets/logo.svg"
+  brand_color: "#0F766E"
+  default_prompt: "Use $lugas to paraphrase this academic passage without changing citations, numbers, or claim strength."
+
+policy:
+  allow_implicit_invocation: true

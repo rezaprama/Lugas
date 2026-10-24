@@ -1,0 +1,85 @@
+{
+ "condition": "B-skill-v0.2",
+ "outputs": [
+  {
+   "id": "MG01",
+   "response": "Hasil pengujian menunjukkan bahwa kekeruhan air turun dari 12,4 NTU menjadi 3,1 NTU (p < 0,05) pada 18 dari 20 titik sampling.\n\nCatatan: \"Dari hasil ... menunjukkan\" diubah agar kalimat memiliki subjek; \"kadar\" dihapus karena kekeruhan bukan kadar. Angka, satuan, nilai p, dan cakupan 18 dari 20 titik dipertahankan.\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Hasil pengujian menunjukkan bahwa kekeruhan air turun dari 12,4 NTU menjadi 3,1 NTU (p < 0,05) pada 18 dari 20 titik sampling."
+  },
+  {
+   "id": "MG02",
+   "response": "Rahmawati dkk. (2021) menemukan korelasi negatif antara durasi pemeliharaan dan tingkat kebocoran pipa (r = -0,41); karena studi tersebut menggunakan desain potong lintang, hubungan ini tidak dapat ditafsirkan sebagai hubungan sebab-akibat.\n\nCatatan: sitasi, nilai r, arah negatif, dan batasan kausal dipertahankan. Parafrase tetap wajib disertai sitasi.\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Rahmawati dkk. (2021) menemukan korelasi negatif antara durasi pemeliharaan dan tingkat kebocoran pipa (r = -0,41); karena studi tersebut menggunakan desain potong lintang, hubungan ini tidak dapat ditafsirkan sebagai hubungan sebab-akibat."
+  },
+  {
+   "id": "MG03",
+   "response": "Secara statistik, skor kepuasan kelompok intervensi tidak berbeda signifikan dengan skor kelompok kontrol (p = 0,27).\n\nCatatan: hasil tidak signifikan tidak ditulis sebagai \"tidak ada perbedaan\" atau \"intervensi tidak berpengaruh\".\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Secara statistik, skor kepuasan kelompok intervensi tidak berbeda signifikan dengan skor kelompok kontrol (p = 0,27)."
+  },
+  {
+   "id": "MG04",
+   "response": "Sampel tanah diambil dari kedalaman 30 cm, kemudian dianalisis di laboratorium dalam waktu 24 jam.\n\nPerubahan ejaan saja: \"di ambil\" → \"diambil\" (awalan di- ditulis serangkai); \"di analisa\" → \"dianalisis\" (bentuk baku).\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Sampel tanah diambil dari kedalaman 30 cm, kemudian dianalisis di laboratorium dalam waktu 24 jam."
+  },
+  {
+   "id": "MG05",
+   "response": "Sebanyak 42% responden belum pernah mengikuti pelatihan keselamatan kerja; oleh karena itu, hasil ini mungkin tidak berlaku bagi kontraktor besar.\n\nCatatan: persentase, negasi \"belum pernah\", dan modalitas \"mungkin\" dipertahankan. Hubungan \"sehingga\" pada sumber kurang jelas alasannya (mengapa ketiadaan pelatihan membatasi penerapan pada kontraktor besar); pertimbangkan menyebut karakteristik sampel secara eksplisit.\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Sebanyak 42% responden belum pernah mengikuti pelatihan keselamatan kerja; oleh karena itu, hasil ini mungkin tidak berlaku bagi kontraktor besar."
+  },
+  {
+   "id": "MG06",
+   "response": "Seorang mandor menyatakan, \"Kalau material telat datang, pekerjaan pengecoran ya terpaksa mundur.\" Pernyataan tersebut muncul dalam 7 dari 11 wawancara.\n\nCatatan: kutipan tidak diubah. Jika yang muncul di 7 wawancara adalah pernyataan bermakna serupa (bukan kalimat yang sama persis), pertimbangkan \"Pernyataan serupa\"—sesuaikan dengan data Anda.\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Seorang mandor menyatakan, \"Kalau material telat datang, pekerjaan pengecoran ya terpaksa mundur.\" Pernyataan tersebut muncul dalam 7 dari 11 wawancara."
+  },
+  {
+   "id": "MG07",
+   "response": "Hasil ini memberi indikasi bahwa keterlambatan pembayaran termin cenderung berkaitan dengan peningkatan klaim perubahan pekerjaan [3], [5].\n\nCatatan: kekuatan klaim (\"mengindikasikan\", \"cenderung\", \"berhubungan\") tetap asosiatif, tidak kausal. Jika [3] dan [5] adalah studi pembanding, bukan sumber temuan ini, pertimbangkan \"sejalan dengan [3], [5]\".\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Hasil ini memberi indikasi bahwa keterlambatan pembayaran termin cenderung berkaitan dengan peningkatan klaim perubahan pekerjaan [3], [5]."
+  },
+  {
+   "id": "MG09",
+   "response": "Model regresi menjelaskan 63% variasi biaya pemeliharaan (R² = 0,63; n = 112), tetapi belum diuji pada data di luar Provinsi Jawa Barat.\n\nCatatan: nilai R², n, dan batasan validasi eksternal dipertahankan.\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Model regresi menjelaskan 63% variasi biaya pemeliharaan (R² = 0,63; n = 112), tetapi belum diuji pada data di luar Provinsi Jawa Barat."
+  },
+  {
+   "id": "MG10",
+   "response": "Mean waiting time decreased by 18.6% after the online queuing system was implemented; however, this decrease was not statistically significant in rural community health centres (puskesmas) (p = 0.12).\n\nNotes: decimal commas converted to decimal points per English convention; \"after\" kept temporal rather than causal; non-significance is limited to rural centres, as in the source. The source does not state whether the overall decrease was significant.\nPlease verify the final text against your source data.",
+   "rewrite": "Mean waiting time decreased by 18.6% after the online queuing system was implemented; however, this decrease was not statistically significant in rural community health centres (puskesmas) (p = 0.12)."
+  },
+  {
+   "id": "MG12",
+   "response": "The results may suggest that the coating does not slow corrosion in saline conditions, though the 95% CI is wide (0.82 to 1.31).\n\nNote: hedging and the CI are preserved. Because the interval is wide, a more accurate framing may be that the data do not show whether the coating slows corrosion; consider this if it fits your analysis.\nPlease verify the final text against your source data.",
+   "rewrite": "The results may suggest that the coating does not slow corrosion in saline conditions, though the 95% CI is wide (0.82 to 1.31)."
+  },
+  {
+   "id": "MG15",
+   "response": "Sebanyak 15 informan kunci dipilih secara purposif, bukan acak, lalu diwawancarai pada Maret–Mei 2024.\n\nCatatan: jumlah informan, periode, dan teknik pemilihan (purposif, bukan acak) dipertahankan.\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Sebanyak 15 informan kunci dipilih secara purposif, bukan acak, lalu diwawancarai pada Maret–Mei 2024."
+  },
+  {
+   "id": "HO01",
+   "response": "Pada umur 28 hari, kuat tekan rata-rata beton mencapai 32,4 MPa, melampaui mutu rencana 30 MPa (Siregar dkk., 2022). Meskipun demikian, dua dari 12 benda uji belum memenuhi kriteria penerimaan.\n\nCatatan: angka, satuan, dan posisi sitasi dipertahankan. Periksa apakah sitasi Siregar dkk. (2022) memang mendukung hasil uji ini atau hanya mutu rencana/metode.\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Pada umur 28 hari, kuat tekan rata-rata beton mencapai 32,4 MPa, melampaui mutu rencana 30 MPa (Siregar dkk., 2022). Meskipun demikian, dua dari 12 benda uji belum memenuhi kriteria penerimaan."
+  },
+  {
+   "id": "HO02",
+   "response": "Berdasarkan analisis regresi logistik, akses jamban sehat berhubungan dengan penurunan kejadian diare pada balita (OR = 0,62; IK 95% 0,41–0,93; p = 0,021). Hasil ini konsisten dengan temuan Putri & Hasan (2020).\n\nCatatan: hubungan tetap asosiatif (bukan \"mencegah\" atau \"menyebabkan\"); OR, IK 95%, nilai p, dan sitasi dipertahankan.\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Berdasarkan analisis regresi logistik, akses jamban sehat berhubungan dengan penurunan kejadian diare pada balita (OR = 0,62; IK 95% 0,41–0,93; p = 0,021). Hasil ini konsisten dengan temuan Putri & Hasan (2020)."
+  },
+  {
+   "id": "HO03",
+   "response": "Hasil uji-t menunjukkan bahwa perbedaan nilai rata-rata post-test antara kelas eksperimen dan kelas kontrol tidak signifikan (t = 1,48; p = 0,143). Dengan demikian, model pembelajaran berbasis proyek belum terbukti meningkatkan hasil belajar pada sampel ini.\n\nPerubahan: \"menunjukan\" → \"menunjukkan\". Opsional: istilah asing \"post-test\" dapat dimiringkan atau diganti \"pascates\" sesuai gaya institusi.\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Hasil uji-t menunjukkan bahwa perbedaan nilai rata-rata post-test antara kelas eksperimen dan kelas kontrol tidak signifikan (t = 1,48; p = 0,143). Dengan demikian, model pembelajaran berbasis proyek belum terbukti meningkatkan hasil belajar pada sampel ini."
+  },
+  {
+   "id": "HO04",
+   "response": "Pemantauan di lima titik Sungai Ciliwung pada Maret–Agustus 2023 menunjukkan kekeruhan 18–145 NTU (tertinggi di titik hilir setelah hujan lebat) serta kadar BOD yang melampaui baku mutu kelas II di tiga titik dan masih memenuhi di dua titik lainnya, kondisi yang diduga berkaitan dengan buangan limbah domestik yang belum terolah (Nugroho, 2021).\n\nCatatan: rentang, periode, jumlah titik, kelas baku mutu, dan status \"diduga\" dipertahankan. Untuk abstrak, pertimbangkan apakah sitasi diperbolehkan oleh pedoman jurnal.\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Pemantauan di lima titik Sungai Ciliwung pada Maret–Agustus 2023 menunjukkan kekeruhan 18–145 NTU (tertinggi di titik hilir setelah hujan lebat) serta kadar BOD yang melampaui baku mutu kelas II di tiga titik dan masih memenuhi di dua titik lainnya, kondisi yang diduga berkaitan dengan buangan limbah domestik yang belum terolah (Nugroho, 2021)."
+  },
+  {
+   "id": "HO05",
+   "response": "Mayoritas informan memandang program bank sampah sebagai sumber penghasilan tambahan, walaupun jumlahnya kecil. Seorang ibu rumah tangga di RW 07 menyatakan, “Lumayan buat beli gas, tapi belum bisa diandalkan.” Karena hanya melibatkan 14 informan, temuan ini tidak dapat digeneralisasi ke kelurahan lain.\n\nCatatan: kutipan informan tidak diubah; batasan generalisasi dan jumlah informan dipertahankan. \"Sebagian besar\" menjadi \"mayoritas\" dengan makna setara.\nPeriksa kembali hasil akhir terhadap sumber dan data Anda.",
+   "rewrite": "Mayoritas informan memandang program bank sampah sebagai sumber penghasilan tambahan, walaupun jumlahnya kecil. Seorang ibu rumah tangga di RW 07 menyatakan, “Lumayan buat beli gas, tapi belum bisa diandalkan.” Karena hanya melibatkan 14 informan, temuan ini tidak dapat digeneralisasi ke kelurahan lain."
+  }
+ ]
+}

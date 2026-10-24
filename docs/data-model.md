@@ -43,7 +43,7 @@ Release entries require:
 ```json
 {
   "method": "original_editorial",
-  "author": "RhetoriLex contributors",
+  "author": "Lugas contributors",
   "source_reuse": false
 }
 ```

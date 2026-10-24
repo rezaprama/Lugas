@@ -1,0 +1,85 @@
+{
+ "condition": "C2-skill-v0.3-rev",
+ "outputs": [
+  {
+   "id": "MG01",
+   "response": "Hasil pengujian menunjukkan bahwa kadar kekeruhan air turun dari 12,4 NTU menjadi 3,1 NTU (p < 0,05) pada 18 dari 20 titik sampling.\n\nCatatan: subjek dipulihkan (*Dari hasil … menunjukkan* → *Hasil … menunjukkan*); *mengalami penurunan* → *turun*. Angka, satuan, nilai p, dan cakupan 18 dari 20 titik tetap.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Hasil pengujian menunjukkan bahwa kadar kekeruhan air turun dari 12,4 NTU menjadi 3,1 NTU (p < 0,05) pada 18 dari 20 titik sampling."
+  },
+  {
+   "id": "MG02",
+   "response": "Rahmawati dkk. (2021) melaporkan korelasi negatif antara durasi pemeliharaan dan tingkat kebocoran pipa (r = -0,41); namun, karena desainnya potong lintang, temuan tersebut tidak dapat dijadikan dasar kesimpulan kausal.\n\nCatatan: status korelasional, nilai r, dan batas kausal tetap. Pastikan peringatan desain potong lintang memang berasal dari Rahmawati dkk. atau dari penilaian Anda sendiri.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Rahmawati dkk. (2021) melaporkan korelasi negatif antara durasi pemeliharaan dan tingkat kebocoran pipa (r = -0,41); namun, karena desainnya potong lintang, temuan tersebut tidak dapat dijadikan dasar kesimpulan kausal."
+  },
+  {
+   "id": "MG03",
+   "response": "Skor kepuasan kelompok intervensi dan kelompok kontrol tidak berbeda signifikan secara statistik (p = 0,27).\n\nCatatan: tetap *tidak berbeda signifikan*, bukan *tidak berpengaruh*.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Skor kepuasan kelompok intervensi dan kelompok kontrol tidak berbeda signifikan secara statistik (p = 0,27)."
+  },
+  {
+   "id": "MG04",
+   "response": "Sampel tanah diambil dari kedalaman 30 cm, kemudian dianalisis di laboratorium dalam waktu 24 jam.\n\n- di ambil → diambil\n- di analisa → dianalisis\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Sampel tanah diambil dari kedalaman 30 cm, kemudian dianalisis di laboratorium dalam waktu 24 jam."
+  },
+  {
+   "id": "MG05",
+   "response": "Sebanyak 42% responden belum pernah mendapatkan pelatihan keselamatan kerja. Karena itu, hasil ini mungkin tidak berlaku untuk kontraktor besar.\n\nCatatan: *belum pernah* dan *mungkin* tetap. Hubungan sebab antara angka 42% dan keterbatasan untuk kontraktor besar belum dijelaskan pada sumber; pertimbangkan menambahkan alasannya [PERLU DATA: profil responden menurut ukuran kontraktor].\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Sebanyak 42% responden belum pernah mendapatkan pelatihan keselamatan kerja. Karena itu, hasil ini mungkin tidak berlaku untuk kontraktor besar."
+  },
+  {
+   "id": "MG06",
+   "response": "Seorang mandor menyatakan, \"Kalau material telat datang, pekerjaan pengecoran ya terpaksa mundur.\" Pernyataan ini muncul dalam 7 dari 11 wawancara.\n\nCatatan: kutipan tidak diubah. Bila yang muncul di 7 wawancara adalah pernyataan senada (bukan kalimat yang sama), tulis *Pernyataan serupa*.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Seorang mandor menyatakan, \"Kalau material telat datang, pekerjaan pengecoran ya terpaksa mundur.\" Pernyataan ini muncul dalam 7 dari 11 wawancara."
+  },
+  {
+   "id": "MG07",
+   "response": "Temuan ini memberi indikasi adanya kecenderungan hubungan antara keterlambatan pembayaran termin dan meningkatnya klaim perubahan pekerjaan [3], [5].\n\nCatatan: status asosiasi dan hedging (*indikasi*, *kecenderungan*) tetap; tidak diubah menjadi pengaruh. Pastikan [3] dan [5] memang mendukung hubungan ini, bukan hanya temuan Anda.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Temuan ini memberi indikasi adanya kecenderungan hubungan antara keterlambatan pembayaran termin dan meningkatnya klaim perubahan pekerjaan [3], [5]."
+  },
+  {
+   "id": "MG09",
+   "response": "Model regresi menjelaskan 63% variasi biaya pemeliharaan (R² = 0,63; n = 112), tetapi belum diuji pada data di luar Provinsi Jawa Barat.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Model regresi menjelaskan 63% variasi biaya pemeliharaan (R² = 0,63; n = 112), tetapi belum diuji pada data di luar Provinsi Jawa Barat."
+  },
+  {
+   "id": "MG10",
+   "response": "Mean waiting time decreased by 18.6% after the online queuing system was implemented, but this decrease was not statistically significant in rural primary health centers (puskesmas) (p = 0.12).\n\nNote: decimal commas converted to points; \"not significant\" kept (not \"no effect\"). The source does not say whether the 18.6% is overall or per facility type; check that the scope is clear.\n\nPeriksa kembali makna, sitasi, dan pedoman jurnal sebelum dipakai.",
+   "rewrite": "Mean waiting time decreased by 18.6% after the online queuing system was implemented, but this decrease was not statistically significant in rural primary health centers (puskesmas) (p = 0.12)."
+  },
+  {
+   "id": "MG12",
+   "response": "These results suggest that the coating may not slow corrosion in saline conditions, although the 95% CI (0.82 to 1.31) is wide.\n\nNote: a wide CI that spans 1 is inconclusive rather than evidence of no effect; a calibrated alternative is \"These results do not show whether the coating slows corrosion in saline conditions (95% CI 0.82 to 1.31).\"\n\nPlease check meaning, citations, and journal rules before use.",
+   "rewrite": "These results suggest that the coating may not slow corrosion in saline conditions, although the 95% CI (0.82 to 1.31) is wide."
+  },
+  {
+   "id": "MG15",
+   "response": "Pada Maret–Mei 2024, sebanyak 15 informan kunci diwawancarai; mereka dipilih secara purposif, bukan acak.\n\nCatatan: jumlah informan, periode, dan *bukan acak* tetap; pasif Metode dipertahankan.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Pada Maret–Mei 2024, sebanyak 15 informan kunci diwawancarai; mereka dipilih secara purposif, bukan acak."
+  },
+  {
+   "id": "HO01",
+   "response": "Pada umur 28 hari, kuat tekan rata-rata beton mencapai 32,4 MPa, lebih tinggi daripada mutu rencana 30 MPa (Siregar dkk., 2022). Meskipun demikian, dua dari 12 benda uji belum memenuhi kriteria penerimaan.\n\nCatatan: angka, satuan, sitasi, dan *belum memenuhi* tetap. Jika 32,4 MPa adalah hasil uji Anda sendiri, periksa apakah sitasi Siregar dkk. (2022) memang diperlukan di kalimat itu.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Pada umur 28 hari, kuat tekan rata-rata beton mencapai 32,4 MPa, lebih tinggi daripada mutu rencana 30 MPa (Siregar dkk., 2022). Meskipun demikian, dua dari 12 benda uji belum memenuhi kriteria penerimaan."
+  },
+  {
+   "id": "HO02",
+   "response": "Analisis regresi logistik menemukan bahwa akses jamban sehat berhubungan dengan penurunan kejadian diare pada balita (OR = 0,62; IK 95% 0,41–0,93; p = 0,021), sejalan dengan temuan Putri & Hasan (2020).\n\nCatatan: status asosiasi (*berhubungan*, bukan *mencegah* atau *menurunkan*) dan seluruh statistik tetap.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Analisis regresi logistik menemukan bahwa akses jamban sehat berhubungan dengan penurunan kejadian diare pada balita (OR = 0,62; IK 95% 0,41–0,93; p = 0,021), sejalan dengan temuan Putri & Hasan (2020)."
+  },
+  {
+   "id": "HO03",
+   "response": "Hasil uji-t menunjukkan bahwa perbedaan nilai rata-rata post-test antara kelas eksperimen dan kelas kontrol tidak signifikan (t = 1,48; p = 0,143). Dengan demikian, model pembelajaran berbasis proyek belum terbukti meningkatkan hasil belajar pada sampel ini.\n\n- menunjukan → menunjukkan\n\n*post-test* dibiarkan; bila mengikuti EYD V, istilah asing ini dicetak miring atau diganti *pascates* sesuai pedoman kampus.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Hasil uji-t menunjukkan bahwa perbedaan nilai rata-rata post-test antara kelas eksperimen dan kelas kontrol tidak signifikan (t = 1,48; p = 0,143). Dengan demikian, model pembelajaran berbasis proyek belum terbukti meningkatkan hasil belajar pada sampel ini."
+  },
+  {
+   "id": "HO04",
+   "response": "Pemantauan di lima titik Sungai Ciliwung pada Maret–Agustus 2023 menunjukkan kekeruhan 18–145 NTU (tertinggi di titik hilir setelah hujan lebat) dan kadar BOD yang melampaui baku mutu kelas II di tiga titik, sedangkan dua titik lainnya masih memenuhi; kondisi ini diduga berkaitan dengan buangan limbah domestik yang belum terolah (Nugroho, 2021).\n\nCatatan: *diduga* dan sitasi tetap. Banyak pedoman abstrak tidak memuat sitasi; periksa aturan jurnal/kampus Anda.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Pemantauan di lima titik Sungai Ciliwung pada Maret–Agustus 2023 menunjukkan kekeruhan 18–145 NTU (tertinggi di titik hilir setelah hujan lebat) dan kadar BOD yang melampaui baku mutu kelas II di tiga titik, sedangkan dua titik lainnya masih memenuhi; kondisi ini diduga berkaitan dengan buangan limbah domestik yang belum terolah (Nugroho, 2021)."
+  },
+  {
+   "id": "HO05",
+   "response": "Sebagian besar informan memandang program bank sampah sebagai sumber penghasilan tambahan, walaupun jumlahnya kecil. Seorang ibu rumah tangga di RW 07 menyatakan, “Lumayan buat beli gas, tapi belum bisa diandalkan.” Karena hanya melibatkan 14 informan, temuan ini tidak dapat digeneralisasi ke kelurahan lain.\n\nCatatan: kutipan informan tidak diubah; *sebagian besar*, *kecil*, dan batas generalisasi tetap.\n\nPeriksa kembali makna, sitasi, dan pedoman kampus/jurnal sebelum dipakai.",
+   "rewrite": "Sebagian besar informan memandang program bank sampah sebagai sumber penghasilan tambahan, walaupun jumlahnya kecil. Seorang ibu rumah tangga di RW 07 menyatakan, “Lumayan buat beli gas, tapi belum bisa diandalkan.” Karena hanya melibatkan 14 informan, temuan ini tidak dapat digeneralisasi ke kelurahan lain."
+  }
+ ]
+}

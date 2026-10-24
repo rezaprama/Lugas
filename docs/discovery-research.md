@@ -1,5 +1,7 @@
 # Discovery research
 
+> Historical record from August 2026, when the project was named RhetoriLex. Names and URLs below are kept as recorded. The project is now Lugas; see [the naming record](brand/naming-2026-10.md).
+
 - **Snapshot:** 2026-08-19
 - **GitHub capture:** 2026-08-19T12:11:05Z
 - **Status:** descriptive research, not market-size or demand evidence

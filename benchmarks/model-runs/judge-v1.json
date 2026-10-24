@@ -1,0 +1,341 @@
+{
+ "judge": "blind-llm-v1",
+ "items": [
+  {
+   "id": "MG01",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "keeps redundant 'kadar kekeruhan'"
+   }
+  },
+  {
+   "id": "MG02",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": "'menemukan' slightly stronger than 'melaporkan'"
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "heavy passive, somewhat stiff"
+   }
+  },
+  {
+   "id": "MG03",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "fronted 'Secara statistik' still stiff"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": "drops 'statistik' but p-value retains meaning"
+   }
+  },
+  {
+   "id": "MG04",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "MG05",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "minimal restructuring; barely a paraphrase"
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "MG06",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 1,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": "'pernyataan serupa' broadens what recurred in 7/11"
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "MG07",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "near synonym swap; 'memberi indikasi' wordy"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 1,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": "'menunjukkan' strengthens hedged 'mengindikasikan'"
+   }
+  },
+  {
+   "id": "MG09",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "MG10",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "stacked parentheses clunky"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "stacked parentheses clunky"
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "MG12",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": false,
+    "naturalness": 5,
+    "note": "not actually shorter"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": "only drops 'that'; minimal concision"
+   }
+  },
+  {
+   "id": "MG15",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "HO01",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "HO02",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "'berasosiasi' slightly calqued"
+   }
+  },
+  {
+   "id": "HO03",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   }
+  },
+  {
+   "id": "HO04",
+   "X": {
+    "fidelity_errors": 1,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "omits two sites meeting standard (contrast)"
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "long, dense sentence"
+   },
+   "Z": {
+    "fidelity_errors": 1,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "omits two sites meeting standard (contrast)"
+   }
+  },
+  {
+   "id": "HO05",
+   "X": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 5,
+    "note": ""
+   },
+   "Y": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "'tidak besar' softens 'kecil'; dangling 'melibatkan'"
+   },
+   "Z": {
+    "fidelity_errors": 0,
+    "scope_ok": true,
+    "naturalness": 4,
+    "note": "dangling subject for 'melibatkan'"
+   }
+  }
+ ]
+}

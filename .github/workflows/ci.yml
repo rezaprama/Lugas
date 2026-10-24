@@ -51,15 +51,15 @@ jobs:
         run: |
           validator="$HOME/.codex/skills/.system/skill-creator/scripts/quick_validate.py"
           if [[ -f "$validator" ]]; then
-            python "$validator" skills/rhetorilex
+            python "$validator" skills/lugas
           else
-            python .github/scripts/validate_skill.py skills/rhetorilex
+            python .github/scripts/validate_skill.py skills/lugas
           fi
 
       - name: Build and verify plugin package
         run: |
-          python scripts/package_plugin.py --output dist/rhetorilex-plugin.zip
-          python scripts/package_plugin.py --verify dist/rhetorilex-plugin.zip
+          python scripts/package_plugin.py --output dist/lugas-plugin.zip
+          python scripts/package_plugin.py --verify dist/lugas-plugin.zip
 
       - name: Verify reproducible rebuilds
         run: python .github/scripts/check_determinism.py

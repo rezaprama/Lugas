@@ -25,7 +25,7 @@ def run(*arguments: str) -> None:
 
 
 def main() -> int:
-    with tempfile.TemporaryDirectory(prefix="rhetorilex-determinism-") as raw:
+    with tempfile.TemporaryDirectory(prefix="lugas-determinism-") as raw:
         temporary = Path(raw)
         builds = []
         archives = []

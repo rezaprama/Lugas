@@ -1,6 +1,6 @@
 # Rhetorical Routing
 
-RhetoriLex uses a clean-room functional model:
+Lugas uses a clean-room functional model:
 
 ```text
 writing goal

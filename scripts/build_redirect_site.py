@@ -1,0 +1,141 @@
+#!/usr/bin/env python3
+"""Generate the static redirect site for the old RhetoriLex GitHub Pages path.
+
+GitHub Pages cannot send HTTP 301 responses. After the repository rename the
+old project path (https://rezaprama.github.io/RhetoriLex/) would return 404, so
+this script writes a tiny site for a new repository named ``RhetoriLex`` whose
+only job is to forward every known route to the same route under /Lugas/:
+
+* one ``index.html`` per route with ``rel=canonical``, an immediate meta
+  refresh, a JavaScript ``location.replace`` that keeps query and hash, and a
+  visible link (works without JavaScript);
+* ``404.html`` that maps any unknown /RhetoriLex/<path> to /Lugas/<path>;
+* ``service-worker.js`` that unregisters the old PWA worker and clears its
+  caches, so installed copies stop serving stale pages;
+* a copy of ``data/phrases.json`` so the old dataset URL keeps working.
+
+Output is deterministic. Usage: python scripts/build_redirect_site.py [--out DIR]
+"""
+
+from __future__ import annotations
+
+import argparse
+import html
+from pathlib import Path
+import shutil
+
+ROOT = Path(__file__).resolve().parents[1]
+DOCS = ROOT / "docs"
+OLD_BASE = "https://rezaprama.github.io/RhetoriLex"
+NEW_BASE = "https://rezaprama.github.io/Lugas"
+
+STUB = """<!doctype html>
+<html lang="{lang}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{title}</title>
+<link rel="canonical" href="{target}">
+<meta http-equiv="refresh" content="0; url={target}">
+<script>location.replace({target_js} + location.search + location.hash);</script>
+<style>body{{font:16px/1.5 Arial,system-ui,sans-serif;margin:2rem;color:#17202c;background:#f5f3ed}}a{{color:#164f7a}}@media (prefers-color-scheme:dark){{body{{color:#edf1f5;background:#10161e}}a{{color:#78b9e3}}}}</style>
+</head>
+<body>
+<p>{message} <a href="{target}">{target_text}</a></p>
+</body>
+</html>
+"""
+
+NOT_FOUND = """<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moved to Lugas</title>
+<meta name="robots" content="noindex">
+<script>
+(function () {
+  var path = location.pathname.replace(/^\\/RhetoriLex(\\/|$)/i, "/Lugas/");
+  if (path.indexOf("/Lugas/") !== 0) path = "/Lugas/";
+  location.replace(path + location.search + location.hash);
+})();
+</script>
+</head>
+<body>
+<p>RhetoriLex is now Lugas. <a href="NEW_BASE/">NEW_BASE/</a></p>
+</body>
+</html>
+""".replace("NEW_BASE", NEW_BASE)
+
+KILL_SW = """// RhetoriLex moved to /Lugas/. Remove the old worker and its caches.
+self.addEventListener("install", () => self.skipWaiting());
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    caches.keys()
+      .then((keys) => Promise.all(keys.map((key) => caches.delete(key))))
+      .then(() => self.registration.unregister())
+      .then(() => self.clients.matchAll({ type: "window" }))
+      .then((clients) => clients.forEach((client) => client.navigate(client.url)))
+  );
+});
+"""
+
+
+def routes() -> list[str]:
+    found = sorted(
+        path.parent.relative_to(DOCS).as_posix()
+        for path in DOCS.rglob("index.html")
+        if not any(part.startswith(".") for part in path.parts)
+    )
+    return ["" if route == "." else route for route in found]
+
+
+def build(out: Path) -> int:
+    if out.exists():
+        shutil.rmtree(out)
+    out.mkdir(parents=True)
+    count = 0
+    for route in routes():
+        target = f"{NEW_BASE}/{route}/" if route else f"{NEW_BASE}/"
+        lang = "id" if route.startswith("id") else "en"
+        message = "RhetoriLex sekarang bernama Lugas. Halaman ini pindah ke" if lang == "id" else "RhetoriLex is now Lugas. This page moved to"
+        page = STUB.format(
+            lang=lang,
+            title="Lugas (formerly RhetoriLex)",
+            target=html.escape(target, quote=True),
+            target_js='"' + target.replace('"', "") + '"',
+            target_text=html.escape(target),
+            message=message,
+        )
+        dest = out / route / "index.html" if route else out / "index.html"
+        dest.parent.mkdir(parents=True, exist_ok=True)
+        dest.write_text(page, encoding="utf-8", newline="\n")
+        count += 1
+    (out / "404.html").write_text(NOT_FOUND, encoding="utf-8", newline="\n")
+    (out / "service-worker.js").write_text(KILL_SW, encoding="utf-8", newline="\n")
+    (out / "robots.txt").write_text("User-agent: *\nAllow: /\n", encoding="utf-8", newline="\n")
+    (out / ".nojekyll").write_text("", encoding="utf-8")
+    phrases = ROOT / "data" / "dist" / "phrases.json"
+    (out / "data").mkdir()
+    shutil.copyfile(phrases, out / "data" / "phrases.json")
+    (out / "README.md").write_text(
+        "# RhetoriLex → Lugas\n\nRhetoriLex was renamed **Lugas**. This repository only serves redirects from the old\n"
+        f"GitHub Pages path to {NEW_BASE}/ . Code, issues, and releases live at\n"
+        "https://github.com/rezaprama/Lugas . Generated by `scripts/build_redirect_site.py`.\n",
+        encoding="utf-8",
+        newline="\n",
+    )
+    print(f"wrote {count} redirect pages, 404.html, service-worker.js to {out}")
+    return count
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--out", type=Path, default=ROOT / "migration" / "rhetorilex-pages")
+    args = parser.parse_args()
+    build(args.out)
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -135,7 +135,7 @@ class Catalog:
 
     @classmethod
     def load(cls) -> "Catalog":
-        root = resources.files("rhetorilex").joinpath("resources")
+        root = resources.files("lugas").joinpath("resources")
         catalog_data = json.loads(root.joinpath("catalog.json").read_text(encoding="utf-8"))
         taxonomy = json.loads(root.joinpath("taxonomy.json").read_text(encoding="utf-8"))
         contract = json.loads(

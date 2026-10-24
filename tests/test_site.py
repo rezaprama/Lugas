@@ -14,7 +14,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 DOCS = ROOT / "docs"
-BASE_URL = "https://rezaprama.github.io/RhetoriLex"
+BASE_URL = "https://rezaprama.github.io/Lugas"
 
 ROUTE_PAIRS = [
     ("", ""),
@@ -247,11 +247,11 @@ class StaticSiteTests(unittest.TestCase):
         id_page = parse_page(DOCS / "id" / "index.html")
         self.assertEqual(
             en.h1,
-            "Free local academic paraphrase skill for researchers.",
+            "Clear writing. Same meaning.",
         )
         self.assertEqual(
             id_page.h1,
-            "Skill parafrasa akademik lokal dan gratis.",
+            "Tulisan jernih, makna tetap.",
         )
         for phrase in ("Explore writing skills", "Search phrases", "View on GitHub"):
             self.assertIn(phrase, en.visible_text)
@@ -281,9 +281,9 @@ class StaticSiteTests(unittest.TestCase):
                 self.assertEqual(parser.meta.get("og:url"), expected_url)
                 self.assertEqual(parser.meta.get("twitter:card"), "summary_large_image")
                 expected_alt = (
-                    "RhetoriLex academic writing reference"
+                    "Lugas academic writing reference"
                     if locale == "en"
-                    else "Referensi penulisan akademik RhetoriLex"
+                    else "Referensi penulisan akademik Lugas"
                 )
                 self.assertEqual(parser.meta.get("og:image:alt"), expected_alt)
                 self.assertEqual(len(parser.schemas), 1)
@@ -380,7 +380,7 @@ class StaticSiteTests(unittest.TestCase):
         self.assertIn("textContent", script)
         self.assertNotIn('fetch("/data', script)
 
-    def test_paraphrase_workbench_contract_is_installable_and_limited(self) -> None:
+    def test_paraphrase_workbench_contract_is_installable_and_checked(self) -> None:
         required_ids = {
             "paraphrase-form",
             "paraphrase-source",
@@ -393,6 +393,10 @@ class StaticSiteTests(unittest.TestCase):
             "paraphrase-save",
             "paraphrase-submit",
             "paraphrase-draft",
+            "paraphrase-cancel",
+            "paraphrase-check",
+            "paraphrase-findings",
+            "paraphrase-lang",
             "paraphrase-clear",
             "paraphrase-limit",
             "paraphrase-status",
@@ -411,11 +415,18 @@ class StaticSiteTests(unittest.TestCase):
                 self.assertEqual(required_ids - parser.ids, set())
                 self.assertIn("data-paraphrase-workbench", html_text)
                 self.assertIn("<noscript>", html_text)
-                self.assertIn("3", parser.visible_text)
+                self.assertIn("guard.js", html_text)
+                self.assertIn('value="id-en"', html_text)
 
         script = (DOCS / "app.js").read_text(encoding="utf-8")
-        self.assertIn("const REMOTE_CALL_LIMIT = 3", script)
-        self.assertIn("rhetorilex.workbench.usage", script)
+        # BYO endpoints spend the user's own quota, so no per-browser daily cap.
+        self.assertNotIn("REMOTE_CALL_LIMIT", script)
+        self.assertIn("AbortController", script)
+        self.assertIn("finish_reason", script)
+        self.assertNotIn("academic English that remains friendly", script)
+        guard_js = (DOCS / "guard.js").read_text(encoding="utf-8")
+        self.assertIn("RLX_GUARD_LEXICON", guard_js)
+        self.assertNotIn("innerHTML", guard_js)
         self.assertIn("Authorization", script)
         self.assertIn("x-goog-api-key", script)
         self.assertIn("serviceWorker", script)
@@ -440,7 +451,7 @@ class StaticSiteTests(unittest.TestCase):
         ]
         dist_payload = json.loads((ROOT / "data" / "dist" / "phrases.json").read_text(encoding="utf-8"))
         bundled_payload = json.loads(
-            (ROOT / "skills" / "rhetorilex" / "assets" / "patterns.json").read_text(encoding="utf-8")
+            (ROOT / "skills" / "lugas" / "assets" / "patterns.json").read_text(encoding="utf-8")
         )
         dist = dist_payload["entries"]
         bundled = (

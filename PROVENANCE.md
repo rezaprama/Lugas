@@ -1,12 +1,12 @@
 # Provenance and clean-room policy
 
-RhetoriLex is built as an original editorial system. External sources may inform
+Lugas is built as an original editorial system. External sources may inform
 research questions, taxonomy design, or validation, but source wording enters no
 release unless its rights, attribution, transformation, and review status are
 explicitly cleared.
 
 This document records engineering policy, not legal advice. Copyright scope depends
-on jurisdiction and facts. When rights remain uncertain, RhetoriLex excludes the
+on jurisdiction and facts. When rights remain uncertain, Lugas excludes the
 material.
 
 ## Release invariant
@@ -56,7 +56,7 @@ examples written for this project.
 ## Initial workbook decision
 
 The supplied spreadsheet carried an academic-use-only/no-redistribution notice.
-RhetoriLex performed a local, read-only aggregate audit. Two parser views were used to
+Lugas performed a local, read-only aggregate audit. Two parser views were used to
 understand structure; neither output wording publicly. All source-derived candidates
 remain provenance-unresolved and **zero were promoted**. The workbook itself, raw cell
 values, category wording, and staging records are excluded from the repository.
@@ -109,7 +109,7 @@ Discovery research uses public GitHub API metadata, search-result counts, and
 commit-pinned recursive-tree file counts. Each structured observation records its
 source, scope, metric, retrieval time, confidence, and limitations under
 `data/discovery/`. Repository names, topics, activity fields, and counts are factual
-metadata; selection, categories, notes, and analysis are original RhetoriLex work.
+metadata; selection, categories, notes, and analysis are original Lugas work.
 
 No third-party repository content, prompts, Skill instructions, templates, or README
 prose was copied. GitHub counts are volatile supply/index observations, not web-search
@@ -128,7 +128,7 @@ gates.
 - original canonical data, synthetic benchmarks, reports, and documentation:
   CC-BY-4.0;
 - third-party material: its own license, if ever accepted and clearly marked;
-- restricted local inputs: no RhetoriLex license and no distribution.
+- restricted local inputs: no Lugas license and no distribution.
 
 `REUSE.toml` supplies file-level machine-readable mappings. License decisions reference
 the [Apache text](https://www.apache.org/licenses/LICENSE-2.0.html),

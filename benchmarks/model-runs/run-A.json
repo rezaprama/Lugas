@@ -1,0 +1,85 @@
+{
+ "condition": "A-plain",
+ "outputs": [
+  {
+   "id": "MG01",
+   "response": "Hasil pengujian menunjukkan bahwa kekeruhan air menurun dari 12,4 NTU menjadi 3,1 NTU (p < 0,05) pada 18 dari 20 titik sampling.\n\nCatatan: \"Dari hasil pengujian menunjukkan\" diubah menjadi \"Hasil pengujian menunjukkan\" agar kalimat memiliki subjek yang jelas; \"kadar kekeruhan ... mengalami penurunan\" disederhanakan menjadi \"kekeruhan ... menurun\". Angka dan nilai p tidak diubah.",
+   "rewrite": "Hasil pengujian menunjukkan bahwa kekeruhan air menurun dari 12,4 NTU menjadi 3,1 NTU (p < 0,05) pada 18 dari 20 titik sampling."
+  },
+  {
+   "id": "MG02",
+   "response": "Menurut Rahmawati dkk. (2021), terdapat korelasi negatif antara durasi pemeliharaan dan tingkat kebocoran pipa (r = -0,41); namun, karena penelitian tersebut menggunakan desain potong lintang, hubungan sebab-akibat tidak dapat disimpulkan.\n\nSitasi dan nilai r dipertahankan. Tetap cantumkan rujukan Rahmawati dkk. (2021) di daftar pustaka.",
+   "rewrite": "Menurut Rahmawati dkk. (2021), terdapat korelasi negatif antara durasi pemeliharaan dan tingkat kebocoran pipa (r = -0,41); namun, karena penelitian tersebut menggunakan desain potong lintang, hubungan sebab-akibat tidak dapat disimpulkan."
+  },
+  {
+   "id": "MG03",
+   "response": "Skor kepuasan kelompok intervensi dan kelompok kontrol tidak berbeda secara signifikan (p = 0,27).\n\nKalimat dibuat lebih ringkas tanpa mengubah makna; hasil tetap disebut tidak signifikan, bukan \"tidak ada perbedaan\".",
+   "rewrite": "Skor kepuasan kelompok intervensi dan kelompok kontrol tidak berbeda secara signifikan (p = 0,27)."
+  },
+  {
+   "id": "MG04",
+   "response": "Sampel tanah diambil dari kedalaman 30 cm, kemudian dianalisis di laboratorium dalam waktu 24 jam.\n\nPerbaikan: \"di ambil\" → \"diambil\", \"di analisa\" → \"dianalisis\" (bentuk baku KBBI).",
+   "rewrite": "Sampel tanah diambil dari kedalaman 30 cm, kemudian dianalisis di laboratorium dalam waktu 24 jam."
+  },
+  {
+   "id": "MG05",
+   "response": "Sebanyak 42% responden belum pernah mengikuti pelatihan keselamatan kerja; oleh karena itu, temuan ini mungkin tidak dapat diterapkan pada kontraktor besar.",
+   "rewrite": "Sebanyak 42% responden belum pernah mengikuti pelatihan keselamatan kerja; oleh karena itu, temuan ini mungkin tidak dapat diterapkan pada kontraktor besar."
+  },
+  {
+   "id": "MG06",
+   "response": "Seorang mandor menyatakan, \"Kalau material telat datang, pekerjaan pengecoran ya terpaksa mundur.\" Pernyataan serupa ditemukan dalam 7 dari 11 wawancara.\n\nKutipan langsung tidak diubah. Hanya kalimat kedua yang dirapikan.",
+   "rewrite": "Seorang mandor menyatakan, \"Kalau material telat datang, pekerjaan pengecoran ya terpaksa mundur.\" Pernyataan serupa ditemukan dalam 7 dari 11 wawancara."
+  },
+  {
+   "id": "MG07",
+   "response": "Temuan ini menunjukkan adanya kecenderungan hubungan antara keterlambatan pembayaran termin dan peningkatan klaim perubahan pekerjaan [3], [5].\n\nSitasi [3], [5] dipertahankan. Bahasa hati-hati (\"mengindikasikan\", \"cenderung\") tetap dijaga agar tidak menjadi klaim sebab-akibat.",
+   "rewrite": "Temuan ini menunjukkan adanya kecenderungan hubungan antara keterlambatan pembayaran termin dan peningkatan klaim perubahan pekerjaan [3], [5]."
+  },
+  {
+   "id": "MG09",
+   "response": "Model regresi menjelaskan 63% variasi biaya pemeliharaan (R² = 0,63; n = 112), meskipun belum diuji pada data di luar Provinsi Jawa Barat.",
+   "rewrite": "Model regresi menjelaskan 63% variasi biaya pemeliharaan (R² = 0,63; n = 112), meskipun belum diuji pada data di luar Provinsi Jawa Barat."
+  },
+  {
+   "id": "MG10",
+   "response": "The average waiting time decreased by 18.6% after the online queuing system was implemented; however, this reduction was not statistically significant in rural community health centres (puskesmas) (p = 0.12).\n\nCatatan: desimal koma diubah menjadi titik sesuai konvensi bahasa Inggris. \"Puskesmas\" diterjemahkan sebagai \"community health centres\"; istilah aslinya dapat dipertahankan dalam kurung jika diperlukan. Gunakan ejaan \"centers\" untuk American English.",
+   "rewrite": "The average waiting time decreased by 18.6% after the online queuing system was implemented; however, this reduction was not statistically significant in rural community health centres (puskesmas) (p = 0.12)."
+  },
+  {
+   "id": "MG12",
+   "response": "These results may suggest the coating does not slow corrosion in saline conditions, though the 95% CI (0.82–1.31) is wide.",
+   "rewrite": "These results may suggest the coating does not slow corrosion in saline conditions, though the 95% CI (0.82–1.31) is wide."
+  },
+  {
+   "id": "MG15",
+   "response": "Sebanyak 15 informan kunci diwawancarai pada periode Maret–Mei 2024. Pemilihan informan dilakukan secara purposif, tidak secara acak.",
+   "rewrite": "Sebanyak 15 informan kunci diwawancarai pada periode Maret–Mei 2024. Pemilihan informan dilakukan secara purposif, tidak secara acak."
+  },
+  {
+   "id": "HO01",
+   "response": "Kuat tekan rata-rata beton pada umur 28 hari mencapai 32,4 MPa, melampaui mutu rencana 30 MPa (Siregar dkk., 2022). Meskipun demikian, dua dari 12 benda uji belum memenuhi kriteria penerimaan.\n\nIsi, angka, dan sitasi tidak diubah; hanya alur kalimat yang diperhalus.",
+   "rewrite": "Kuat tekan rata-rata beton pada umur 28 hari mencapai 32,4 MPa, melampaui mutu rencana 30 MPa (Siregar dkk., 2022). Meskipun demikian, dua dari 12 benda uji belum memenuhi kriteria penerimaan."
+  },
+  {
+   "id": "HO02",
+   "response": "Analisis regresi logistik memperlihatkan bahwa akses terhadap jamban sehat berasosiasi dengan kejadian diare yang lebih rendah pada balita (OR = 0,62; IK 95% 0,41–0,93; p = 0,021). Hasil ini konsisten dengan temuan Putri & Hasan (2020).\n\nStatistik dan sitasi dipertahankan. Istilah \"berasosiasi\" tetap dipakai karena regresi logistik pada data ini menunjukkan hubungan, bukan sebab-akibat.",
+   "rewrite": "Analisis regresi logistik memperlihatkan bahwa akses terhadap jamban sehat berasosiasi dengan kejadian diare yang lebih rendah pada balita (OR = 0,62; IK 95% 0,41–0,93; p = 0,021). Hasil ini konsisten dengan temuan Putri & Hasan (2020)."
+  },
+  {
+   "id": "HO03",
+   "response": "Hasil uji-t menunjukkan bahwa perbedaan nilai rata-rata post-test antara kelas eksperimen dan kelas kontrol tidak signifikan (t = 1,48; p = 0,143). Dengan demikian, model pembelajaran berbasis proyek belum terbukti meningkatkan hasil belajar pada sampel ini.\n\nPerbaikan: \"menunjukan\" → \"menunjukkan\". Opsional: \"post-test\" dapat dimiringkan sebagai istilah asing atau diganti \"pascates\" sesuai pedoman institusi Anda.",
+   "rewrite": "Hasil uji-t menunjukkan bahwa perbedaan nilai rata-rata post-test antara kelas eksperimen dan kelas kontrol tidak signifikan (t = 1,48; p = 0,143). Dengan demikian, model pembelajaran berbasis proyek belum terbukti meningkatkan hasil belajar pada sampel ini."
+  },
+  {
+   "id": "HO04",
+   "response": "Pemantauan di lima titik Sungai Ciliwung pada Maret–Agustus 2023 menunjukkan kekeruhan 18–145 NTU (tertinggi di titik hilir setelah hujan lebat) serta kadar BOD yang melampaui baku mutu kelas II di tiga titik, yang diduga berkaitan dengan buangan limbah domestik yang belum terolah (Nugroho, 2021).\n\nInformasi bahwa dua titik lainnya masih memenuhi baku mutu tersirat dari \"di tiga titik\". Untuk abstrak, pertimbangkan apakah sitasi perlu dipertahankan sesuai gaya jurnal.",
+   "rewrite": "Pemantauan di lima titik Sungai Ciliwung pada Maret–Agustus 2023 menunjukkan kekeruhan 18–145 NTU (tertinggi di titik hilir setelah hujan lebat) serta kadar BOD yang melampaui baku mutu kelas II di tiga titik, yang diduga berkaitan dengan buangan limbah domestik yang belum terolah (Nugroho, 2021)."
+  },
+  {
+   "id": "HO05",
+   "response": "Mayoritas informan memandang program bank sampah sebagai sumber penghasilan tambahan, walaupun jumlahnya tidak besar. Seorang ibu rumah tangga di RW 07 menyatakan, “Lumayan buat beli gas, tapi belum bisa diandalkan.” Karena hanya melibatkan 14 informan, temuan ini tidak dapat digeneralisasi ke kelurahan lain.\n\nKutipan informan tidak diubah.",
+   "rewrite": "Mayoritas informan memandang program bank sampah sebagai sumber penghasilan tambahan, walaupun jumlahnya tidak besar. Seorang ibu rumah tangga di RW 07 menyatakan, “Lumayan buat beli gas, tapi belum bisa diandalkan.” Karena hanya melibatkan 14 informan, temuan ini tidak dapat digeneralisasi ke kelurahan lain."
+  }
+ ]
+}

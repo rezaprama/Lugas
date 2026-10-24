@@ -1,4 +1,4 @@
-const CACHE_NAME = "rhetorilex-pwa-v1";
+const CACHE_NAME = "lugas-pwa-f64fd3a2ee";
 const CORE_ASSETS = [
   "./",
   "./en/",
@@ -7,6 +7,7 @@ const CORE_ASSETS = [
   "./id/alat-parafrasa/",
   "./styles.css",
   "./app.js",
+  "./guard.js",
   "./site.webmanifest",
   "./assets/icon.svg",
   "./data/phrases.json"
@@ -35,6 +36,10 @@ self.addEventListener("fetch", (event) => {
         caches.open(CACHE_NAME).then((cache) => cache.put(event.request, clone));
         return response;
       })
-      .catch(() => caches.match(event.request).then((cached) => cached || caches.match("./en/paraphrase-workbench/")))
+      .catch(() =>
+        caches.match(event.request).then(
+          (cached) => cached || caches.match(requestUrl.pathname.includes("/id/") ? "./id/alat-parafrasa/" : "./en/paraphrase-workbench/")
+        )
+      )
   );
 });

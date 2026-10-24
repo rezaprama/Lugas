@@ -1,6 +1,6 @@
 {
-  "name": "RhetoriLex Free Local Academic Paraphrase Skill",
-  "short_name": "RhetoriLex",
+  "name": "Lugas: meaning-safe paraphrase and editing",
+  "short_name": "Lugas",
   "description": "Free local-first academic paraphrase workbench and Agent Skill for Indonesian and English writers.",
   "start_url": "./en/paraphrase-workbench/",
   "scope": "./",

@@ -12,6 +12,7 @@
   --code: #172536;
   --code-ink: #edf3f8;
   --focus: #2b78ad;
+  --danger: #a3261a;
   --max: 1180px;
   --measure: 72ch;
   --radius: 2px;
@@ -33,6 +34,7 @@ html[data-theme="dark"] {
   --code: #0b1118;
   --code-ink: #e6edf3;
   --focus: #91cef3;
+  --danger: #ff9b8f;
 }
 
 * {
@@ -863,8 +865,20 @@ textarea {
   color: var(--muted);
 }
 
+.audit-tag-high {
+  border-color: currentColor;
+  color: var(--danger);
+}
+
+.settings-grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr));
+}
+
 .rewrite-output {
+  width: 100%;
   min-height: 9rem;
+  font: inherit;
+  color: inherit;
   padding: 1rem;
   border: 1px solid var(--line);
   background: var(--paper);

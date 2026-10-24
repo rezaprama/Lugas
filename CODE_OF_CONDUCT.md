@@ -1,6 +1,6 @@
 # Community code of conduct
 
-RhetoriLex aims to be a rigorous, welcoming international community for researchers,
+Lugas aims to be a rigorous, welcoming international community for researchers,
 students, editors, linguists, and developers. Participation means helping others do
 careful work without humiliation, gatekeeping, or pressure to compromise integrity.
 
@@ -30,7 +30,7 @@ careful work without humiliation, gatekeeping, or pressure to compromise integri
 ## Scope
 
 These standards apply in repository spaces, project events, official communications,
-and public situations where someone represents RhetoriLex. They also apply to private
+and public situations where someone represents Lugas. They also apply to private
 interactions when those interactions materially affect community safety.
 
 ## Reporting

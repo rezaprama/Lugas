@@ -1,0 +1,118 @@
+{
+ "fixture": "model-run-v1",
+ "note": "Sources from meaning-guard dev/held-out sets; no reference answers included.",
+ "tasks": [
+  {
+   "id": "MG01",
+   "lang": "id",
+   "task": "sunting",
+   "request": "Rapikan bahasanya.",
+   "source": "Dari hasil pengujian menunjukkan bahwa kadar kekeruhan air mengalami penurunan dari 12,4 NTU menjadi 3,1 NTU (p < 0,05) pada 18 dari 20 titik sampling."
+  },
+  {
+   "id": "MG02",
+   "lang": "id",
+   "task": "parafrase",
+   "request": "Parafrasekan untuk tinjauan pustaka.",
+   "source": "Rahmawati dkk. (2021) melaporkan bahwa durasi pemeliharaan berkorelasi negatif dengan tingkat kebocoran pipa (r = -0,41), tetapi desain potong lintang tidak memungkinkan penarikan kesimpulan kausal."
+  },
+  {
+   "id": "MG03",
+   "lang": "id",
+   "task": "sunting",
+   "request": "Biar tidak kaku.",
+   "source": "Perbedaan skor kepuasan antara kelompok intervensi dan kelompok kontrol tidak signifikan secara statistik (p = 0,27)."
+  },
+  {
+   "id": "MG04",
+   "lang": "id",
+   "task": "koreksi",
+   "request": "Koreksi ejaan saja.",
+   "source": "Sampel tanah di ambil dari kedalaman 30 cm, kemudian di analisa di laboratorium dalam waktu 24 jam."
+  },
+  {
+   "id": "MG05",
+   "lang": "id",
+   "task": "parafrase",
+   "request": "Parafrasekan.",
+   "source": "Sebagian responden (42%) belum pernah menerima pelatihan keselamatan kerja, sehingga hasil ini mungkin tidak berlaku untuk kontraktor besar."
+  },
+  {
+   "id": "MG06",
+   "lang": "id",
+   "task": "sunting",
+   "request": "Rapikan tanpa mengubah kutipan.",
+   "source": "Seorang mandor menyatakan, \"Kalau material telat datang, pekerjaan pengecoran ya terpaksa mundur.\" Pernyataan ini muncul pada 7 dari 11 wawancara."
+  },
+  {
+   "id": "MG07",
+   "lang": "id",
+   "task": "parafrase",
+   "request": "Parafrasekan untuk bab pembahasan.",
+   "source": "Temuan ini mengindikasikan bahwa keterlambatan pembayaran termin cenderung berhubungan dengan meningkatnya klaim perubahan pekerjaan [3], [5]."
+  },
+  {
+   "id": "MG09",
+   "lang": "id",
+   "task": "ringkas",
+   "request": "Ringkaskan menjadi satu kalimat.",
+   "source": "Model regresi menjelaskan 63% variasi biaya pemeliharaan (R² = 0,63; n = 112). Namun, model belum diuji pada data di luar Provinsi Jawa Barat."
+  },
+  {
+   "id": "MG10",
+   "lang": "id-en",
+   "task": "terjemah",
+   "request": "Terjemahkan ke bahasa Inggris akademik.",
+   "source": "Rata-rata waktu tunggu turun 18,6% setelah sistem antrean daring diterapkan, tetapi penurunan ini tidak signifikan pada puskesmas pedesaan (p = 0,12)."
+  },
+  {
+   "id": "MG12",
+   "lang": "en",
+   "task": "edit",
+   "request": "Make this more concise.",
+   "source": "These results may suggest that the coating does not slow corrosion in saline conditions, but the 95% CI (0.82 to 1.31) is wide."
+  },
+  {
+   "id": "MG15",
+   "lang": "id",
+   "task": "parafrase",
+   "request": "Parafrasekan bagian metode.",
+   "source": "Wawancara dilakukan terhadap 15 informan kunci pada Maret–Mei 2024. Informan dipilih secara purposif, bukan acak."
+  },
+  {
+   "id": "HO01",
+   "lang": "id",
+   "task": "sunting",
+   "request": "Sunting paragraf ini agar lebih lancar tanpa mengubah isi.",
+   "source": "Kuat tekan rata-rata beton umur 28 hari mencapai 32,4 MPa, lebih tinggi daripada mutu rencana 30 MPa (Siregar dkk., 2022). Namun, dua dari 12 benda uji belum memenuhi kriteria penerimaan."
+  },
+  {
+   "id": "HO02",
+   "lang": "id",
+   "task": "parafrase",
+   "request": "Parafrasekan untuk bagian pembahasan.",
+   "source": "Hasil analisis regresi logistik menunjukkan bahwa akses jamban sehat berhubungan dengan penurunan kejadian diare pada balita (OR = 0,62; IK 95% 0,41–0,93; p = 0,021). Temuan ini sejalan dengan Putri & Hasan (2020)."
+  },
+  {
+   "id": "HO03",
+   "lang": "id",
+   "task": "koreksi",
+   "request": "Perbaiki salah ketik dan ejaan saja.",
+   "source": "Hasil uji-t menunjukan bahwa perbedaan nilai rata-rata post-test antara kelas eksperimen dan kelas kontrol tidak signifikan (t = 1,48; p = 0,143). Dengan demikian, model pembelajaran berbasis proyek belum terbukti meningkatkan hasil belajar pada sampel ini."
+  },
+  {
+   "id": "HO04",
+   "lang": "id",
+   "task": "ringkas",
+   "request": "Ringkas menjadi satu kalimat untuk abstrak.",
+   "source": "Pemantauan di lima titik Sungai Ciliwung selama Maret–Agustus 2023 menunjukkan kekeruhan berkisar 18–145 NTU. Nilai tertinggi tercatat di titik hilir setelah hujan lebat. Kadar BOD di tiga titik melampaui baku mutu kelas II, sedangkan dua titik lainnya masih memenuhi. Kondisi ini diduga berkaitan dengan buangan limbah domestik yang belum terolah (Nugroho, 2021)."
+  },
+  {
+   "id": "HO05",
+   "lang": "id",
+   "task": "parafrase",
+   "request": "Parafrasekan temuan kualitatif ini; kutipan informan jangan diubah.",
+   "source": "Sebagian besar informan menilai program bank sampah memberi tambahan penghasilan, meskipun nilainya kecil. Seorang ibu rumah tangga di RW 07 menyatakan, “Lumayan buat beli gas, tapi belum bisa diandalkan.” Temuan ini tidak dapat digeneralisasi ke kelurahan lain karena jumlah informan hanya 14 orang."
+  }
+ ]
+}

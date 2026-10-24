@@ -1,36 +1,39 @@
 cff-version: 1.2.0
-message: "If RhetoriLex supports your work, cite the software and the exact dataset release used."
-title: "RhetoriLex"
+message: "If Lugas (formerly RhetoriLex) supports your work, cite the software and the exact dataset release used."
+title: "Lugas"
 type: software
 abstract: >-
-  RhetoriLex is an open, structured academic-language system for finding and
-  adapting rhetorical moves and phrase patterns while preserving evidence,
-  citations, uncertainty, and scientific claim strength.
+  Lugas (formerly RhetoriLex) is a free, local, open skill and toolset for
+  paraphrasing, editing, correcting, and translating academic and technical
+  writing in Indonesian and English while preserving numbers, citations,
+  negation, uncertainty, and scientific claim strength. It includes an
+  offline meaning guard, an Indonesian EYD V/KBBI lint, an Agent Skill, a
+  Python CLI/API, a static PWA workbench, and an original pattern catalog.
 authors:
   - family-names: "Arviandi"
     given-names: "Reza Prama"
     website: "https://rezaprama.com"
-version: 0.2.0
-date-released: 2026-08-19
-repository-code: "https://github.com/rezaprama/RhetoriLex"
-url: "https://rezaprama.github.io/RhetoriLex/"
+version: 0.3.0
+date-released: 2026-10-22
+repository-code: "https://github.com/rezaprama/Lugas"
+url: "https://rezaprama.github.io/Lugas/"
 license: Apache-2.0
 keywords:
   - academic writing
+  - paraphrasing
+  - Indonesian
+  - Bahasa Indonesia
   - scientific writing
-  - rhetoric
-  - phrasebank
-  - literature review
   - evidence preservation
   - claim strength
-  - rhetorical moves
   - agent skills
+  - RhetoriLex
 preferred-citation:
   type: software
-  title: "RhetoriLex"
+  title: "Lugas (formerly RhetoriLex)"
   authors:
     - family-names: "Arviandi"
       given-names: "Reza Prama"
-  version: 0.2.0
+  version: 0.3.0
   year: 2026
-  url: "https://github.com/rezaprama/RhetoriLex"
+  url: "https://github.com/rezaprama/Lugas"

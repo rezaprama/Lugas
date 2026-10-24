@@ -3,7 +3,7 @@
 PAGES_ID = {
     "research_gap": {
         "kind": "article",
-        "title": "Cara Menulis Kesenjangan Riset Tanpa Overclaim | RhetoriLex",
+        "title": "Cara Menulis Kesenjangan Riset Tanpa Overclaim | Lugas",
         "description": "Tentukan kesenjangan riset yang spesifik dari bukti yang ditinjau tanpa mengklaim bahwa penelitian terdahulu tidak ada.",
         "h1": "Tulis kesenjangan riset yang didukung literatur",
         "lede": "Kesenjangan yang dapat dipertahankan menamai persoalan terbuka, cakupan, dan bukti yang menetapkannya.",
@@ -29,7 +29,7 @@ PAGES_ID = {
     },
     "literature_review": {
         "kind": "article",
-        "title": "Cara Menulis Tinjauan Pustaka yang Menyintesis | RhetoriLex",
+        "title": "Cara Menulis Tinjauan Pustaka yang Menyintesis | Lugas",
         "description": "Tulis tinjauan pustaka yang mengatur, membandingkan, dan mengevaluasi bukti, bukan mendaftar studi satu per satu.",
         "h1": "Tinjauan pustaka perlu menyintesis, bukan menginventarisasi",
         "lede": "Atur sumber di sekitar pertanyaan dan tampilkan dasar perbandingan kepada pembaca.",
@@ -55,7 +55,7 @@ PAGES_ID = {
     },
     "thesis": {
         "kind": "article",
-        "title": "Penulisan Tesis: Argumen, Bab, dan Kontribusi | RhetoriLex",
+        "title": "Penulisan Tesis: Argumen, Bab, dan Kontribusi | Lugas",
         "description": "Rencanakan dan revisi tesis sebagai satu argumen berbasis bukti dari pendahuluan hingga diskusi.",
         "h1": "Tulis tesis sebagai satu argumen yang dapat ditelusuri",
         "lede": "Setiap bab memajukan masalah riset yang sama sambil memenuhi fungsi retorisnya sendiri.",
@@ -81,7 +81,7 @@ PAGES_ID = {
     },
     "methods": {
         "kind": "article",
-        "title": "Cara Menulis Bagian Metode yang Reproduktif | RhetoriLex",
+        "title": "Cara Menulis Bagian Metode yang Reproduktif | Lugas",
         "description": "Tulis metode yang membuat desain, sampel, ukuran, prosedur, eksklusi, dan pilihan analisis dapat ditelusuri.",
         "h1": "Penulisan metode menampilkan keputusan analitik",
         "lede": "Metode yang jelas menunjukkan apa yang dilakukan, alasannya, dan dampak pilihan terhadap interpretasi.",
@@ -106,7 +106,7 @@ PAGES_ID = {
     },
     "results": {
         "kind": "article",
-        "title": "Cara Menulis Hasil dengan Estimasi dan Ketidakpastian | RhetoriLex",
+        "title": "Cara Menulis Hasil dengan Estimasi dan Ketidakpastian | Lugas",
         "description": "Tulis hasil yang melaporkan perbandingan, magnitudo, arah, ketidakpastian, dan data hilang tanpa overclaim kausal.",
         "h1": "Penulisan hasil melaporkan apa yang diestimasi analisis",
         "lede": "Mulai dari perbandingan dan estimasi, pertahankan ketidakpastian, dan sesuaikan interpretasi dengan desain.",
@@ -131,7 +131,7 @@ PAGES_ID = {
     },
     "discussion": {
         "kind": "article",
-        "title": "Cara Menulis Diskusi Tanpa Overclaim | RhetoriLex",
+        "title": "Cara Menulis Diskusi Tanpa Overclaim | Lugas",
         "description": "Tulis diskusi yang menjawab pertanyaan, menghubungkan bukti terdahulu, mempertimbangkan penjelasan, dan menyatakan batas.",
         "h1": "Diskusi menafsirkan temuan dalam batasnya",
         "lede": "Jawab pertanyaan riset, lalu jelaskan relasi, ketidakpastian, alternatif, implikasi, dan cakupan.",
@@ -156,7 +156,7 @@ PAGES_ID = {
     },
     "hedging": {
         "kind": "article",
-        "title": "Hedging Akademik untuk Menyelaraskan Klaim | RhetoriLex",
+        "title": "Hedging Akademik untuk Menyelaraskan Klaim | Lugas",
         "description": "Gunakan hedging akademik untuk menyatakan ketidakpastian, cakupan, frekuensi, dan penjelasan alternatif tanpa membuat prosa samar.",
         "h1": "Hedging akademik mengalibrasi klaim",
         "lede": "Pilih hedge untuk alasan bukti tertentu, lalu tempatkan pada proposisi yang hendak dibatasi.",
@@ -182,7 +182,7 @@ PAGES_ID = {
     },
     "reviewer_response": {
         "kind": "article",
-        "title": "Cara Menulis Tanggapan Reviewer yang Jelas | RhetoriLex",
+        "title": "Cara Menulis Tanggapan Reviewer yang Jelas | Lugas",
         "description": "Tulis tanggapan reviewer yang mengidentifikasi masalah, mencatat revisi, menyebut lokasi, dan menyatakan ketidaksetujuan dengan bukti.",
         "h1": "Tanggapan reviewer perlu membuat revisi dapat ditelusuri",
         "lede": "Jawab substansi, nyatakan perubahan, tunjukkan lokasi, dan jelaskan alasan tanpa menciptakan pekerjaan.",
@@ -207,7 +207,7 @@ PAGES_ID = {
     },
     "association_vs_causation": {
         "kind": "article",
-        "title": "Asosiasi vs Kausalitas dalam Penulisan Ilmiah | RhetoriLex",
+        "title": "Asosiasi vs Kausalitas dalam Penulisan Ilmiah | Lugas",
         "description": "Bedakan asosiasi dari kausalitas dan pilih verba yang sesuai dengan bukti observasional, eksperimental, dan kausal.",
         "h1": "Asosiasi dan kausalitas membuat klaim berbeda",
         "lede": "Asosiasi menjelaskan relasi pada data teramati. Klaim kausal menjelaskan perubahan di bawah intervensi.",
@@ -232,7 +232,7 @@ PAGES_ID = {
     },
     "preserve_claim_strength": {
         "kind": "article",
-        "title": "Pertahankan Kekuatan Klaim Saat Menulis Ulang | RhetoriLex",
+        "title": "Pertahankan Kekuatan Klaim Saat Menulis Ulang | Lugas",
         "description": "Pertahankan daya tentatif, terbatasi, tegas, dan kausal saat memparafrasakan, menyunting, meringkas, atau menerjemahkan klaim.",
         "h1": "Pertahankan kekuatan klaim ketika kata berubah",
         "lede": "Penulisan ulang hanya setia bila menjaga komitmen sumber dan ketidakpastian yang tersisa.",

@@ -1,8 +1,8 @@
 # Third-party notices
 
-RhetoriLex distributes original code, Skill instructions, editorial templates, and
+Lugas distributes original code, Skill instructions, editorial templates, and
 documentation. A citation or conceptual influence does **not** place the cited work
-under a RhetoriLex license. No third-party corpus text is included in this release.
+under a Lugas license. No third-party corpus text is included in this release.
 
 This inventory records material considered during design. It is not legal advice.
 For machine-readable decisions, see
@@ -16,12 +16,12 @@ For machine-readable decisions, see
 - References: [resource](https://www.phrasebank.manchester.ac.uk/),
   [about page](https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/),
   and [University copyright notice](https://www.manchester.ac.uk/copyright/).
-- RhetoriLex use: high-level conceptual orientation about rhetorical moves only.
+- Lugas use: high-level conceptual orientation about rhetorical moves only.
 - Distribution decision: excluded. No page, PDF, phrase inventory, mirror, or
   source sentence was scraped, imported, transformed, or redistributed.
 
 The University's copyright notice says its web material is protected and may not be
-reproduced without permission. RhetoriLex therefore treats the inventory as
+reproduced without permission. Lugas therefore treats the inventory as
 all-rights-reserved unless a specific permission says otherwise.
 
 ### Supervisor-provided workbook

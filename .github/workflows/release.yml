@@ -42,7 +42,7 @@ jobs:
           python scripts/build_data.py
           python docs/build_site.py
           python -m unittest discover -s tests -v
-          python .github/scripts/validate_skill.py skills/rhetorilex
+          python .github/scripts/validate_skill.py skills/lugas
 
       - name: Build deterministic release archive
         env:
@@ -50,19 +50,19 @@ jobs:
         run: |
           python scripts/package_plugin.py \
             --expected-version "$VERSION" \
-            --output "dist/rhetorilex-plugin-$VERSION.zip"
+            --output "dist/lugas-plugin-$VERSION.zip"
           python scripts/package_plugin.py \
             --expected-version "$VERSION" \
-            --verify "dist/rhetorilex-plugin-$VERSION.zip"
+            --verify "dist/lugas-plugin-$VERSION.zip"
 
       - name: Upload workflow artifact
         uses: actions/upload-artifact@v7
         with:
-          name: rhetorilex-plugin-${{ steps.version.outputs.version }}
+          name: lugas-plugin-${{ steps.version.outputs.version }}
           if-no-files-found: error
           path: |
-            dist/rhetorilex-plugin-${{ steps.version.outputs.version }}.zip
-            dist/rhetorilex-plugin-${{ steps.version.outputs.version }}.zip.sha256
+            dist/lugas-plugin-${{ steps.version.outputs.version }}.zip
+            dist/lugas-plugin-${{ steps.version.outputs.version }}.zip.sha256
 
       - name: Create or update GitHub release
         env:
@@ -70,11 +70,11 @@ jobs:
           VERSION: ${{ steps.version.outputs.version }}
         shell: bash
         run: |
-          archive="dist/rhetorilex-plugin-$VERSION.zip"
+          archive="dist/lugas-plugin-$VERSION.zip"
           checksum="$archive.sha256"
           if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
             gh release upload "$GITHUB_REF_NAME" "$archive" "$checksum" --clobber
           else
             gh release create "$GITHUB_REF_NAME" "$archive" "$checksum" \
-              --verify-tag --generate-notes --title "RhetoriLex $VERSION"
+              --verify-tag --generate-notes --title "Lugas $VERSION"
           fi

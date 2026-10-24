@@ -59,3 +59,18 @@ not a substitute for commits, release notes, or the source registry.
   unresolved provenance, restricted source leakage, broken offline quick start, or an
   unmitigated high-severity security/evidence-safety defect.
 - Kept community-growth targets subordinate to measured utility and integrity.
+
+## 2026-10-22 — v0.3.0: Indonesian capability, meaning guard, rename to Lugas
+
+- Verified the v0.2 baseline before changes: 69 tests passed; confirmed in source that the
+  `idfriendly` mode produced English only, invariants were English regexes capped at 40
+  with substring matching, and the 3/day cap limited only the user's own endpoint.
+- Added a dependency-free meaning guard shared by the skill, CLI, and browser (lexicon
+  generated into `docs/guard.js`; parity test over 112 items) and an Indonesian lint.
+- Measured instead of assumed: guard on an independently written held-out set (first-run
+  figures reported separately from post-fix figures), model runs with blind judging, and
+  workbench prompt size. No token saving versus v0.2 was found; recorded as such.
+- Adopted naskah-id principles (job scope, K/G/AI split, do-not-over-correct list,
+  deterministic checks, scenario evals) with original text; no files copied.
+- Renamed to Lugas after a recorded registry/web check and an internal rubric; kept
+  `RLX-*` IDs, dataset names, format IDs, and `rhetorilex` command/import aliases.

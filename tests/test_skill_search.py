@@ -8,8 +8,8 @@ import unittest
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SEARCH = ROOT / "skills" / "rhetorilex" / "scripts" / "search.py"
-SKILL = ROOT / "skills" / "rhetorilex"
+SEARCH = ROOT / "skills" / "lugas" / "scripts" / "search.py"
+SKILL = ROOT / "skills" / "lugas"
 
 
 class SkillSearchTests(unittest.TestCase):

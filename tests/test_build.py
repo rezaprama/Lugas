@@ -67,6 +67,7 @@ class BuildTests(unittest.TestCase):
                 "resources/taxonomy.json",
                 "resources/writing_skills.json",
                 "resources/writing_skills_id.json",
+                "scripts/guard.py",
             }
             self.assertEqual(set(digest_tree(first)), expected)
             catalog = json.loads(

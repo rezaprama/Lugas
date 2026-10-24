@@ -1,6 +1,6 @@
 # Architecture
 
-RhetoriLex is an offline-first reference implementation. The core has zero runtime dependencies and keeps editorial data, semantic contracts, rendering, and agent behavior separable.
+Lugas is an offline-first reference implementation. The core has zero runtime dependencies and keeps editorial data, semantic contracts, rendering, and agent behavior separable.
 
 ## Data flow
 
@@ -40,11 +40,11 @@ Canonical entries are sorted and serialised predictably. Generated artifacts mus
 
 ### Python package
 
-`src/rhetorilex` loads immutable bundled resources with `importlib.resources`. `Catalog` provides deterministic get, filter, exact/lexical/fuzzy search, suggestions, seeded random selection, and health counts. The CLI is a thin interface over the same API.
+`src/lugas` loads immutable bundled resources with `importlib.resources`. `Catalog` provides deterministic get, filter, exact/lexical/fuzzy search, suggestions, seeded random selection, and health counts. The CLI is a thin interface over the same API.
 
 ### Agent Skill and plugin
 
-`skills/rhetorilex` is portable. `SKILL.md` contains routing and safety instructions; references are loaded only for relevant tasks; `scripts/search.py` searches the bundled asset without requiring the package; `agents/openai.yaml` provides UI metadata. `.codex-plugin/plugin.json` exposes the skill as a distributable plugin.
+`skills/lugas` is portable. `SKILL.md` contains routing and safety instructions; references are loaded only for relevant tasks; `scripts/search.py` searches the bundled asset without requiring the package; `agents/openai.yaml` provides UI metadata. `.codex-plugin/plugin.json` exposes the skill as a distributable plugin.
 
 ### Explorer
 
