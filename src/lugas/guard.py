@@ -446,4 +446,9 @@ def main(argv: list[str] | None = None) -> int:
 
 
 if __name__ == "__main__":
+    # Findings contain Unicode punctuation and Indonesian text. Windows' legacy
+    # console encoding cannot represent all of it, so keep CLI output reliable.
+    for stream in (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(encoding="utf-8", errors="backslashreplace")
     raise SystemExit(main())

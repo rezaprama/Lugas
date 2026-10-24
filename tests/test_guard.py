@@ -87,7 +87,12 @@ class GuardTests(unittest.TestCase):
         tmp.mkdir(exist_ok=True)
         (tmp / "s.txt").write_text("Tidak ada perbedaan bermakna (p = 0,41).", encoding="utf-8")
         (tmp / "o.txt").write_text("Ada perbedaan bermakna (p = 0,41).", encoding="utf-8")
-        result = subprocess.run([sys.executable, str(script), "check", str(tmp / "s.txt"), str(tmp / "o.txt"), "--json"], capture_output=True, text=True)
+        result = subprocess.run(
+            [sys.executable, str(script), "check", str(tmp / "s.txt"), str(tmp / "o.txt"), "--json"],
+            capture_output=True,
+            text=True,
+            encoding="utf-8",
+        )
         self.assertEqual(result.returncode, 1)
         self.assertIn("negation-lost", json.loads(result.stdout)["findings"][0]["code"])
 
