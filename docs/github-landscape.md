@@ -1,6 +1,6 @@
 # GitHub landscape
 
-> Historical record from August 2026, when the project was named RhetoriLex. Names and URLs below are kept as recorded. The project is now Lugas; see [the naming record](brand/naming-2026-10.md).
+> Historical record of public GitHub metadata collected in August 2026. Counts remain as captured; links use current paths where practical. See [the naming record](brand/naming-2026-10.md).
 
 - **Repository snapshot:** 2026-08-19T12:11:05Z
 - **Recursive-tree snapshot:** 2026-08-19T12:16:17Z
@@ -8,7 +8,7 @@
 
 This landscape maps adjacent GitHub projects without importing their repository
 content. Names, topics, activity dates, API license fields, and counts are factual
-metadata. Categories and positioning notes are original RhetoriLex annotations.
+metadata. Categories and positioning notes are original Lugas annotations.
 
 ## Method
 
@@ -41,7 +41,7 @@ Metadata-visible scope differs:
 - `academic-research-skills` uses topics for academic pipelines, academic writing,
   literature review, peer review, Claude, and prompt engineering.
 - `scientific-agent-skills` uses a broad `agent-skills` topic plus many scientific
-  discipline topics. Its repository description claims 163 skills; RhetoriLex did not
+  discipline topics. Its repository description claims 163 skills; Lugas did not
   treat that self-description as independent validation. The separate recursive-tree
   method below also found 163 `SKILL.md` files at the pinned commit.
 - `academic-research-skills-codex` uses Codex, academic research/writing, literature
@@ -52,7 +52,7 @@ These observations describe public positioning, not feature parity or quality.
 ## Context repositories
 
 Four additional repositories were selected from relevant topic/keyword result sets to
-show adjacent product forms. RhetoriLex itself is included as baseline.
+show adjacent product forms. Lugas itself is included as baseline.
 
 | Repository | Original category annotation | Stars | Forks | Watchers | API license | Last push (UTC) |
 | --- | --- | ---: | ---: | ---: | --- | --- |
@@ -60,9 +60,9 @@ show adjacent product forms. RhetoriLex itself is included as baseline.
 | [OpenNSWM-Lab/FAROS](https://github.com/OpenNSWM-Lab/FAROS) | research workflow/orchestration system | 2,997 | 349 | 268 | `null` | 2026-08-12 |
 | [delibae/claude-prism](https://github.com/delibae/claude-prism) | offline scientific-writing workspace | 1,747 | 157 | 13 | MIT | 2026-07-28 |
 | [Epsilon617/Codex-Academic-Skills](https://github.com/Epsilon617/Codex-Academic-Skills) | Codex academic skill collection | 170 | 7 | 1 | MIT | 2026-06-16 |
-| [rezaprama/RhetoriLex](https://github.com/rezaprama/RhetoriLex) | evidence-calibrated rhetorical-move catalog | 1 | 0 | 0 | Apache-2.0 | 2026-08-19 |
+| [rezaprama/Lugas](https://github.com/rezaprama/Lugas) | evidence-calibrated rhetorical-move catalog | 1 | 0 | 0 | Apache-2.0 | 2026-08-19 |
 
-The category column is a compact RhetoriLex classification based on repository names,
+The category column is a compact Lugas classification based on repository names,
 topics, and product form; it is not copied description text.
 
 ## Commit-pinned `SKILL.md` footprint
@@ -100,7 +100,7 @@ reports a larger `total_count`, and counts can move with indexing and topic edit
 ## Positioning implications
 
 The landscape contains high-visibility broad skill collections, research workflows,
-prompt collections, and writing workspaces. RhetoriLex should not imply that it replaces
+prompt collections, and writing workspaces. Lugas should not imply that it replaces
 those categories or compete on raw file count. Its verifiable role is narrower:
 
 - a structured lexicon of rhetorical moves rather than a full research pipeline;
@@ -109,7 +109,7 @@ those categories or compete on raw file count. Its verifiable role is narrower:
 - one deterministic offline catalog exposed through API, CLI, browser, and Agent Skill;
 - original editorial data with documented clean-room provenance.
 
-This makes RhetoriLex useful as a focused component inside human and agent workflows.
+This makes Lugas useful as a focused component inside human and agent workflows.
 Interoperability and auditability are stronger, supportable claims than breadth or
 popularity.
 
@@ -124,7 +124,7 @@ was not copied or evaluated feature-by-feature in this study.
 
 **Homepage**
 
-<https://rezaprama.github.io/RhetoriLex/>
+<https://rezaprama.github.io/Lugas/>
 
 **Topics**
 

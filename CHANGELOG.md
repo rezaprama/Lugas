@@ -1,6 +1,6 @@
 # Changelog
 
-All notable project changes are recorded here. Lugas (formerly RhetoriLex) follows
+All notable project changes are recorded here. Lugas follows
 [Semantic Versioning](https://semver.org/) for software. Dataset snapshots may carry a
 separate calendar-based version in release notes.
 
@@ -102,6 +102,6 @@ separate calendar-based version in release notes.
 - Canonical entries require original-editorial provenance and explicit evidence/claim
   metadata.
 
-[Unreleased]: https://github.com/rezaprama/RhetoriLex/compare/v0.2.0...HEAD
-[0.2.0]: https://github.com/rezaprama/RhetoriLex/compare/v0.1.0...v0.2.0
-[0.1.0]: https://github.com/rezaprama/RhetoriLex/releases/tag/v0.1.0
+[Unreleased]: https://github.com/rezaprama/Lugas/compare/v0.3.0...HEAD
+[0.2.0]: https://github.com/rezaprama/Lugas/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/rezaprama/Lugas/releases/tag/v0.1.0

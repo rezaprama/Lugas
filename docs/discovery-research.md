@@ -1,18 +1,18 @@
 # Discovery research
 
-> Historical record from August 2026, when the project was named RhetoriLex. Names and URLs below are kept as recorded. The project is now Lugas; see [the naming record](brand/naming-2026-10.md).
+> Historical record of the August 2026 repository snapshot. Names, URLs, and counts are preserved as observed; the current project is Lugas. See [the naming record](brand/naming-2026-10.md).
 
 - **Snapshot:** 2026-08-19
 - **GitHub capture:** 2026-08-19T12:11:05Z
 - **Status:** descriptive research, not market-size or demand evidence
 
-RhetoriLex uses discovery research to choose accurate public language, repository topics,
+Lugas uses discovery research to choose accurate public language, repository topics,
 and testable outreach hypotheses. It does not use popularity data to change claim-safety
 rules or to copy another project's content.
 
 ## Research question
 
-Which terms describe RhetoriLex accurately, appear in the surrounding GitHub ecosystem,
+Which terms describe Lugas accurately, appear in the surrounding GitHub ecosystem,
 and preserve its specific value: evidence-calibrated rhetorical moves for humans and AI
 agents?
 
@@ -37,7 +37,7 @@ Repository metadata came from the official
 [get-a-repository endpoint](https://docs.github.com/en/rest/repos/repos#get-a-repository).
 GitHub's [watching documentation](https://docs.github.com/en/rest/activity/watching#about-watching)
 states that `subscribers_count` is the number of watchers, while legacy `watchers`,
-`watchers_count`, and `stargazers_count` all represent stars. RhetoriLex reports watchers
+`watchers_count`, and `stargazers_count` all represent stars. Lugas reports watchers
 from `subscribers_count` only.
 
 The complete dated records, including source, geo, language, window, metric, value,
@@ -101,7 +101,7 @@ and normalization notes.
 
 ## Positioning decision
 
-RhetoriLex should sit inside familiar categories—academic writing, scientific writing,
+Lugas should sit inside familiar categories—academic writing, scientific writing,
 research tools, and agent skills—then differentiate with capabilities that are directly
 verifiable in this repository:
 
@@ -132,7 +132,7 @@ Avoid unsupported copy such as “largest,” “best,” “most trusted,” �
 ## Research basis
 
 Discovery language is separate from the intellectual basis of the data model. Original
-RhetoriLex design is oriented by published work on:
+Lugas design is oriented by published work on:
 
 - genre and move analysis:
   [10.1017/CBO9781139524827](https://doi.org/10.1017/CBO9781139524827),

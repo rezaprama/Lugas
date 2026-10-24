@@ -72,7 +72,7 @@ technical or editorial quality cannot override that failure.
 
 ## Clean-room replacement
 
-RhetoriLex replaces migration with an independent contribution path:
+Lugas replaces migration with an independent contribution path:
 
 1. Define rhetorical intents from open scholarship at a conceptual level and from the
    project's own product requirements.

@@ -7,7 +7,7 @@ PLUGIN_ZIP ?= $(DIST_DIR)/lugas-plugin.zip
 .PHONY: help validate build site test skill-check restricted-check package verify-package determinism pages check release-check
 
 help:
-	@echo "RhetoriLex developer targets"
+	@echo "Lugas developer targets"
 	@echo "  make validate        Validate canonical data"
 	@echo "  make build           Build public data and package resources"
 	@echo "  make site            Build bilingual static reference pages"

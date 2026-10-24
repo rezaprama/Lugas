@@ -123,7 +123,7 @@ category was detected. A secondary-label field follows a 15/2/2 distribution. Th
 blocks use different header schemas.
 
 These figures show an imbalanced, flat seed organisation—not a release taxonomy.
-RhetoriLex builds its hierarchical semantic taxonomy independently and does not promote
+Lugas builds its hierarchical semantic taxonomy independently and does not promote
 the workbook's labels.
 
 ## Audit conclusions

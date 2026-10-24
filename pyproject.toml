@@ -5,13 +5,13 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "lugas"
 version = "0.3.0"
-description = "Lugas (formerly RhetoriLex): free, local, meaning-safe academic paraphrase and editing skill for Indonesian and English"
+description = "Lugas: free, local, meaning-safe academic paraphrase, editing, and translation for Indonesian and English"
 requires-python = ">=3.10"
 dependencies = []
 readme = "README.md"
 license = { text = "Apache-2.0" }
 authors = [{ name = "Reza Prama Arviandi" }]
-keywords = ["lugas", "rhetorilex", "indonesian", "bahasa-indonesia", "eyd", "academic-paraphrase", "paraphrasing-tool", "academic-writing", "scientific-writing", "research-writing", "academic-english", "phrasebank", "local-first", "pwa", "agent-skills", "codex", "evidence-calibration", "offline"]
+keywords = ["lugas", "indonesian", "bahasa-indonesia", "eyd", "academic-paraphrase", "paraphrasing-tool", "academic-writing", "scientific-writing", "research-writing", "academic-english", "phrasebank", "local-first", "pwa", "agent-skills", "codex", "evidence-calibration", "offline"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "Environment :: Console",

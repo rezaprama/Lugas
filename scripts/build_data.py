@@ -1,4 +1,4 @@
-"""Build deterministic Lugas (formerly RhetoriLex) distribution and package resources."""
+"""Build deterministic Lugas distribution and package resources."""
 
 from __future__ import annotations
 
@@ -153,7 +153,7 @@ def _markdown_cell(text: Any) -> str:
 
 def markdown_document(entries: list[dict[str, Any]], taxonomy: dict[str, Any]) -> bytes:
     lines = [
-        "# RhetoriLex Catalog",
+        "# Lugas Catalog",
         "",
         f"Release {RELEASE_VERSION}; format {FORMAT_VERSION}; taxonomy {taxonomy['version']}; "
         f"{len(entries)} original editorial templates.",

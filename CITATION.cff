@@ -1,9 +1,9 @@
 cff-version: 1.2.0
-message: "If Lugas (formerly RhetoriLex) supports your work, cite the software and the exact dataset release used."
+message: "If Lugas supports your work, cite the software and the exact dataset release used."
 title: "Lugas"
 type: software
 abstract: >-
-  Lugas (formerly RhetoriLex) is a free, local, open skill and toolset for
+  Lugas is a free, local, open skill and toolset for
   paraphrasing, editing, correcting, and translating academic and technical
   writing in Indonesian and English while preserving numbers, citations,
   negation, uncertainty, and scientific claim strength. It includes an
@@ -27,10 +27,9 @@ keywords:
   - evidence preservation
   - claim strength
   - agent skills
-  - RhetoriLex
 preferred-citation:
   type: software
-  title: "Lugas (formerly RhetoriLex)"
+  title: "Lugas"
   authors:
     - family-names: "Arviandi"
       given-names: "Reza Prama"

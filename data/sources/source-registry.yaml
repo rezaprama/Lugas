@@ -68,7 +68,7 @@ sources:
     prohibited_uses:
       - "Scrape, mirror, bulk-copy, or redistribute the phrase inventory"
       - "Import website pages, PDFs, examples, or third-party mirrors"
-      - "Paraphrase its inventory into the RhetoriLex canonical dataset"
+      - "Paraphrase its inventory into the Lugas canonical dataset"
     ingestion_status: excluded
     notes: >-
       About page: https://www.phrasebank.manchester.ac.uk/about-academic-phrasebank/ .
@@ -100,11 +100,11 @@ sources:
       - "Naturalness validation that does not publish source sentences"
     prohibited_uses:
       - "Automatic promotion of article text into canonical templates"
-      - "Publication of source sentences in RhetoriLex data, fixtures, or reports"
+      - "Publication of source sentences in Lugas data, fixtures, or reports"
       - "Ingestion before checksum, attribution, minimisation, and leakage review"
     ingestion_status: not_ingested
     notes: >-
-      CC BY 4.0 may permit broader uses than this project chooses. RhetoriLex adopts an
+      CC BY 4.0 may permit broader uses than this project chooses. Lugas adopts an
       aggregate-only, independently-authored-output policy to minimise source leakage.
       No file from this corpus is included in the repository or initial release.
 
@@ -130,11 +130,11 @@ sources:
       - "Credit the named corpus authors and repository record"
     allowed_uses:
       - "Independent use only under the corpus license and repository terms"
-      - "Bibliographic citation in RhetoriLex documentation"
+      - "Bibliographic citation in Lugas documentation"
     prohibited_uses:
-      - "Use in the RhetoriLex ingestion or canonical-data pipeline"
-      - "Redistribute BAWE text or derived text through RhetoriLex"
-      - "Represent BAWE material as CC-BY-4.0 RhetoriLex data"
+      - "Use in the Lugas ingestion or canonical-data pipeline"
+      - "Redistribute BAWE text or derived text through Lugas"
+      - "Represent BAWE material as CC-BY-4.0 Lugas data"
     ingestion_status: excluded
     notes: >-
       Exclusion is a conservative project decision because non-commercial/share-alike

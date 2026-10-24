@@ -4,7 +4,7 @@ PAGES_EN = {
     "home": {
         "kind": "home",
         "title": "Lugas: Meaning-Safe Academic Paraphrase and Editing",
-        "description": "Lugas (formerly RhetoriLex) paraphrases, edits, and translates Indonesian and English academic writing without changing numbers, citations, negation, or claim strength. Free, local, open source.",
+        "description": "Lugas paraphrases, edits, and translates Indonesian and English academic writing without changing numbers, citations, negation, or claim strength. Free, local, open source.",
         "h1": "Clear writing. Same meaning.",
         "lede": "Lugas is a free paraphrase and editing skill for theses, journal articles, and technical reports in Indonesian and English. A local meaning check flags changed numbers, citations, negation, and claims, and your manuscript never goes to our server.",
         "body": """

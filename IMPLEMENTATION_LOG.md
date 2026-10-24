@@ -39,7 +39,7 @@ not a substitute for commits, release notes, or the source registry.
   inventory ingestion, scraping, mirroring, or transformation.
 - Recorded Elsevier OA CC-BY Corpus v3 as a possible future aggregate-only research
   source; did not ingest it.
-- Excluded BAWE from the RhetoriLex pipeline because its CC BY-NC-SA terms do not fit
+- Excluded BAWE from the Lugas pipeline because its CC BY-NC-SA terms do not fit
   the project's intended distribution workflow.
 - Centralised decisions in `data/sources/source-registry.yaml` and established a
   deny-by-default ingestion gate.
