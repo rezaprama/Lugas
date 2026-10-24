@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://rezaprama.github.io/RhetoriLex/schema/writing-skills.v1.schema.json",
-  "title": "RhetoriLex writing-skills catalog",
+  "title": "Lugas writing-skills catalog",
   "type": "object",
   "additionalProperties": false,
   "required": ["$schema", "format", "format_version", "release", "language", "count", "group_count", "provenance", "groups", "skills"],

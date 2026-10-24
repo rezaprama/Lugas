@@ -1,7 +1,7 @@
 {
   "name": "lugas",
   "version": "0.3.0",
-  "description": "Lugas (formerly RhetoriLex): free, local, meaning-safe paraphrase and editing skill for Indonesian and English academic writing.",
+  "description": "Lugas: free, local, meaning-safe paraphrase, editing, and translation for Indonesian and English academic writing.",
   "author": {
     "name": "Reza Prama Arviandi",
     "url": "https://rezaprama.com"
@@ -11,7 +11,6 @@
   "license": "Apache-2.0",
   "keywords": [
     "lugas",
-    "rhetorilex",
     "academic-writing",
     "indonesian",
     "bahasa-indonesia",
@@ -24,7 +23,7 @@
   "interface": {
     "displayName": "Lugas",
     "shortDescription": "Meaning-safe paraphrase & editing (ID/EN)",
-    "longDescription": "Edit, paraphrase, correct, and translate academic and technical Indonesian and English without changing numbers, citations, negation, hedges, or claim strength. Includes an offline meaning guard and EYD V lint. Formerly RhetoriLex.",
+    "longDescription": "Edit, paraphrase, correct, and translate academic and technical Indonesian and English without changing numbers, citations, negation, hedges, or claim strength. Includes an offline meaning guard and EYD V lint.",
     "developerName": "Reza Prama Arviandi",
     "category": "Productivity",
     "capabilities": [],

@@ -296,6 +296,19 @@ class StaticSiteTests(unittest.TestCase):
         self.assertEqual(len(descriptions), len(set(descriptions)))
         self.assertEqual(len(h1s), len(set(h1s)))
 
+    def test_current_brand_is_used_in_public_site_copy_and_schema(self) -> None:
+        for locale, slug, path, parser in self.localized_pages:
+            with self.subTest(path=path):
+                self.assertNotIn("RhetoriLex", parser.visible_text)
+                self.assertNotIn("RhetoriLex", parser.meta["description"])
+                schema_text = parser.schemas[0]
+                self.assertNotIn("RhetoriLex", schema_text)
+                if not slug:
+                    schema = json.loads(schema_text)
+                    website, application = schema["@graph"]
+                    self.assertEqual(website["name"], "Lugas")
+                    self.assertEqual(application["name"], "Lugas")
+
     def test_root_is_accessible_noindex_locale_chooser(self) -> None:
         html = (DOCS / "index.html").read_text(encoding="utf-8")
         parser = parse_page(DOCS / "index.html")

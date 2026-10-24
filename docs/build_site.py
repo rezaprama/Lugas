@@ -172,7 +172,7 @@ UI: dict[str, dict[str, str]] = {
         "rights": "Editorial data: CC BY 4.0. Code: Apache 2.0.",
         "resources": "Project resources",
         "sections": "Writing index",
-        "footer_note": "Clear writing, same meaning. Free, local paraphrase and editing skill for Indonesian and English academic writing. Formerly RhetoriLex.",
+        "footer_note": "Clear writing, same meaning. Free, local paraphrase and editing skill for Indonesian and English academic writing.",
     },
     "id": {
         "skip": "Lewati ke isi",
@@ -193,7 +193,7 @@ UI: dict[str, dict[str, str]] = {
         "rights": "Data editorial: CC BY 4.0. Kode: Apache 2.0.",
         "resources": "Sumber proyek",
         "sections": "Indeks penulisan",
-        "footer_note": "Tulisan jernih, makna tetap. Skill parafrase dan penyuntingan lokal gratis untuk naskah ilmiah Indonesia dan Inggris. Sebelumnya bernama RhetoriLex.",
+        "footer_note": "Tulisan jernih, makna tetap. Skill parafrase dan penyuntingan lokal gratis untuk naskah ilmiah Indonesia dan Inggris.",
     },
 }
 
@@ -397,7 +397,6 @@ def structured_data(locale: str, key: str, page: dict[str, str]) -> dict[str, An
             "@id": f"{url}#website",
             "url": url,
             "name": "Lugas",
-            "alternateName": "RhetoriLex",
             "description": page["description"],
             "inLanguage": locale,
             "creator": person,
@@ -414,7 +413,6 @@ def structured_data(locale: str, key: str, page: dict[str, str]) -> dict[str, An
             "@type": "SoftwareApplication",
             "@id": f"{BASE_URL}/#software",
             "name": "Lugas",
-            "alternateName": "RhetoriLex",
             "applicationCategory": "EducationalApplication",
             "operatingSystem": "Any",
             "softwareVersion": SOFTWARE_VERSION,
@@ -443,7 +441,7 @@ def structured_data(locale: str, key: str, page: dict[str, str]) -> dict[str, An
     if key == "phrase_explorer":
         entity["mainEntity"] = {
             "@type": "Dataset",
-            "name": "Lugas (formerly RhetoriLex) rhetorical pattern catalog",
+            "name": "Lugas rhetorical pattern catalog",
             "description": "Original academic English patterns with rhetorical and evidence metadata.",
             "url": f"{BASE_URL}/data/phrases.json",
             "license": "https://creativecommons.org/licenses/by/4.0/",

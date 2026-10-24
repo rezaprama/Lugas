@@ -2,8 +2,6 @@
 
 **Tulisan jernih, makna tetap.** Skill gratis dan lokal untuk memparafrasekan, menyunting, mengoreksi, dan menerjemahkan naskah ilmiah serta teknis **berbahasa Indonesia dan Inggris** tanpa mengubah angka, sitasi, negasi, atau kekuatan klaim.
 
-*Sampai v0.2, Lugas bernama **RhetoriLex**. Tautan lama, perintah `rhetorilex`, `import rhetorilex`, dan ID stabil `RLX-*` tetap berfungsi; lihat [Migrasi](#migrasi-dari-rhetorilex).*
-
 [![CI](https://github.com/rezaprama/Lugas/actions/workflows/ci.yml/badge.svg)](https://github.com/rezaprama/Lugas/actions/workflows/ci.yml)
 [![Pages](https://github.com/rezaprama/Lugas/actions/workflows/pages.yml/badge.svg)](https://github.com/rezaprama/Lugas/actions/workflows/pages.yml)
 [![Lisensi: Apache-2.0](https://img.shields.io/badge/kode-Apache--2.0-0f766e.svg)](LICENSE)
@@ -168,18 +166,9 @@ Masalah keamanan, draft rahasia, provenance, dan hak penggunaan dilaporkan lewat
 privat di [SECURITY.md](SECURITY.md). Keputusan proyek dicatat di
 [GOVERNANCE.md](GOVERNANCE.md) dan [IMPLEMENTATION_LOG.md](IMPLEMENTATION_LOG.md).
 
-## Migrasi dari RhetoriLex
+## Kompatibilitas
 
-| Lama | Baru | Status |
-| --- | --- | --- |
-| `github.com/rezaprama/RhetoriLex` | `github.com/rezaprama/Lugas` | Nama lama kini menjadi repo publik khusus pengalih Pages; ubah remote Git ke `Lugas` untuk source dan rilis |
-| `rezaprama.github.io/RhetoriLex/...` | `rezaprama.github.io/Lugas/...` | halaman pengalih per rute; service worker lama dicabut |
-| perintah `rhetorilex`, `python -m rhetorilex` | `lugas` | alias dipertahankan di seri 0.x |
-| `import rhetorilex` | `import lugas` | alias dengan `DeprecationWarning` |
-| `skills/rhetorilex`, `$rhetorilex` | `skills/lugas`, `$lugas` | skill menjawab kedua nama |
-| ID `RLX-*`, berkas data `rhetorilex-v0.2.*`, ID format | tidak berubah | pengenal stabil |
-
-Rollback tidak lagi cukup dengan mengganti nama repo: nama lama dipakai repo publik pengalih Pages. Pindahkan atau atur ulang repo pengalih sebelum mempertimbangkan rollback; periksa ulang Pages dan remote Git.
+Tautan lama, nama perintah, impor, pemicu skill, dan pengenal data memiliki panduan migrasi di [catatan migrasi](docs/migration.md).
 
 ## Proyek dan pembuat
 

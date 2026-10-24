@@ -1,4 +1,4 @@
-# RhetoriLex Catalog
+# Lugas Catalog
 
 Release 0.2.0; format 2.0.0; taxonomy 1.1.0; 96 original editorial templates.
 

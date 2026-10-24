@@ -2,8 +2,6 @@
 
 **Clear writing. Same meaning.** A free, local skill for paraphrasing, editing, correcting, and translating academic and technical writing in **Indonesian and English** without changing numbers, citations, negation, or claim strength.
 
-*Lugas was called **RhetoriLex** until v0.2. Old links, the `rhetorilex` command, `import rhetorilex`, and stable `RLX-*` IDs keep working; see [Migration](#migration-from-rhetorilex).*
-
 [![CI](https://github.com/rezaprama/Lugas/actions/workflows/ci.yml/badge.svg)](https://github.com/rezaprama/Lugas/actions/workflows/ci.yml)
 [![Pages](https://github.com/rezaprama/Lugas/actions/workflows/pages.yml/badge.svg)](https://github.com/rezaprama/Lugas/actions/workflows/pages.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/code-Apache--2.0-0f766e.svg)](LICENSE)
@@ -173,18 +171,9 @@ Security, confidential-draft, provenance, and rights concerns belong in the priv
 process described by [SECURITY.md](SECURITY.md). Project decisions are recorded in
 [GOVERNANCE.md](GOVERNANCE.md) and [IMPLEMENTATION_LOG.md](IMPLEMENTATION_LOG.md).
 
-## Migration from RhetoriLex
+## Compatibility
 
-| Old | New | Status |
-| --- | --- | --- |
-| `github.com/rezaprama/RhetoriLex` | `github.com/rezaprama/Lugas` | The old name is now a public Pages-redirect repository; update Git remotes to `Lugas` for source and releases |
-| `rezaprama.github.io/RhetoriLex/...` | `rezaprama.github.io/Lugas/...` | per-route redirect pages ([scripts/build_redirect_site.py](scripts/build_redirect_site.py)); old PWA worker is unregistered |
-| `rhetorilex` command, `python -m rhetorilex` | `lugas` | alias kept in 0.x |
-| `import rhetorilex` | `import lugas` | alias kept in 0.x with a `DeprecationWarning` |
-| `skills/rhetorilex`, `$rhetorilex` | `skills/lugas`, `$lugas` | the skill answers to both names |
-| `RLX-*` IDs, `rhetorilex-v0.2.*` data files, format IDs | unchanged | stable identifiers |
-
-To roll back, rename the repository back to `RhetoriLex` and redeploy commit `f3fd63d`; no data or IDs changed.
+Existing links, command names, imports, skill triggers, and data identifiers have a documented migration path in [migration notes](docs/migration.md).
 
 ## Project and creator
 

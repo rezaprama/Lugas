@@ -4,7 +4,7 @@ PAGES_ID = {
     "home": {
         "kind": "home",
         "title": "Lugas: Parafrase dan Sunting Naskah Ilmiah, Makna Tetap",
-        "description": "Lugas (sebelumnya RhetoriLex) membantu memparafrasekan, menyunting, mengoreksi EYD V, dan menerjemahkan naskah ilmiah tanpa mengubah angka, sitasi, negasi, atau kekuatan klaim. Gratis, lokal, terbuka.",
+        "description": "Lugas membantu memparafrasekan, menyunting, mengoreksi EYD V, dan menerjemahkan naskah ilmiah tanpa mengubah angka, sitasi, negasi, atau kekuatan klaim. Gratis, lokal, terbuka.",
         "h1": "Tulisan jernih, makna tetap.",
         "lede": "Lugas adalah skill parafrase dan penyuntingan gratis untuk skripsi, tesis, jurnal, dan laporan teknis berbahasa Indonesia maupun Inggris. Pemeriksa makna lokal menandai angka, sitasi, negasi, dan klaim yang berubah, tanpa mengirim naskah ke server kami.",
         "body": """

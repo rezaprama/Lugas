@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://rhetorilex.dev/schema/canonical-entry.v1.json",
-  "title": "RhetoriLex canonical entry",
+  "title": "Lugas canonical entry",
   "type": "object",
   "additionalProperties": false,
   "required": ["id", "function", "title", "template", "description", "stage", "disciplines", "claim_strength", "evidence_requirement", "causal_design_required", "placeholders", "keywords", "notes", "risk", "provenance", "version"],

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://rezaprama.github.io/RhetoriLex/schema/writing-skills-translation.v1.schema.json",
-  "title": "RhetoriLex writing-skills interface translation",
+  "title": "Lugas writing-skills interface translation",
   "type": "object",
   "additionalProperties": false,
   "required": ["$schema", "format", "format_version", "release", "language", "canonical_language", "source", "count", "groups", "skills"],

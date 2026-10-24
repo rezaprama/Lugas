@@ -1,4 +1,4 @@
-"""Validate canonical Lugas (formerly RhetoriLex) data without third-party packages."""
+"""Validate canonical Lugas data without third-party packages."""
 
 from __future__ import annotations
 

@@ -1,4 +1,4 @@
-"""Lugas (formerly RhetoriLex): local, meaning-safe academic paraphrase and editing tools."""
+"""Lugas: local, meaning-safe academic paraphrase and editing tools."""
 
 from .catalog import Catalog, Entry, SearchResult
 from .contracts import ContractIssue, check_entry_contract

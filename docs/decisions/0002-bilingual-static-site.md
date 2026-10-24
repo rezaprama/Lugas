@@ -40,8 +40,8 @@ explorer receives data-catalog-url as a page-relative path to
 docs/data/phrases.json. Deep routes therefore remain inside the GitHub project
 base and never request root-domain /data.
 
-Locale preference uses rhetorilex.locale. Theme preference uses
-rhetorilex.theme. These keys are independent. Changing the interface locale
+The legacy browser preference keys `rhetorilex.locale` and `rhetorilex.theme` are
+retained to preserve saved settings across the rename. These keys are independent. Changing the interface locale
 does not translate, rewrite, or mutate English catalog patterns. Indonesian
 writing-skill pages use maintained translations for names and descriptions,
 while canonical examples and technical warnings remain marked as English.

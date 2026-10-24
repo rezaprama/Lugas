@@ -1,37 +1,29 @@
-# Checkpoint (handoff for the next session)
+# Checkpoint
 
-Last updated: 22 October 2026, v0.3.0 release work.
+Last updated: 24 October 2026. Current product name: **Lugas**.
 
-## Done
+## Current state
 
-- Baseline re-verified from source and tests (69 → 87 tests now).
-- Offline meaning guard (Python, skill copy, browser port with parity test) and Indonesian lint.
-- Workbench: job and output-language selectors, Indonesian output, compact prompt (−27%), paste-and-check, timeout/cancel/truncation/CORS handling, no daily cap.
-- Skill rewritten (scope table, protected-element lock, `bahasa-indonesia.md`, lean replies).
-- Benchmarks: guard dev + independent held-out sets; model runs A/B/C/C2 with blind judging; prompt size; browser E2E. See `docs/benchmarks.md`.
-- naskah-id adoption matrix: `docs/naskah-id-matrix.md`.
-- Name chosen by maintainer: **Lugas** (`docs/brand/naming-2026-10.md`). Rename applied in code, site, docs, plugin, CITATION; aliases kept.
-- Redirect-site generator for the old Pages path: `scripts/build_redirect_site.py`.
+- Source repository: [rezaprama/Lugas](https://github.com/rezaprama/Lugas). Public site: <https://rezaprama.github.io/Lugas/>.
+- The previous repository and Pages paths now serve compatibility redirects. The redirect pages preserve route, query, and hash, and remove only the old app's PWA caches.
+- Rename and redirects are live. PRs #8–#10 are merged; the latest recorded source commit is `c686f6d`.
+- This update consolidates migration details in `docs/migration.md`, removes obsolete current-brand wording from both READMEs, package and plugin descriptions, citation metadata, and site metadata, and fixes the old rollback instructions.
 
-## Decisions
+## Verified baseline
 
-- Hosting stays on GitHub Pages (no Cloudflare credentials in session; no new costs).
-- Removed the 3/day browser cap; no hosted shared-key AI service (would need backend, quota, abuse protection; not justified yet).
-- Dataset files (`rhetorilex-v0.2.*`), `RLX-*` IDs, and format identifiers stay unchanged until a data release.
-- Generated redirect site is not committed (`migration/rhetorilex-pages/` is ignored); it is pushed to its own repository.
+- CI passed on Python 3.10–3.13; CodeQL, dependency review, and Pages deployment passed on the merged changes.
+- Local quality gate passed with 89 tests on Python 3.14. Browser smoke covered English and Indonesian pages at 390 px.
+- PageSpeed Insights previously returned 100 in Performance, Accessibility, Best Practices, and SEO for the English home, Indonesian home, and Indonesian workbench on mobile and desktop. Field data was unavailable; rerun after this copy update is published.
+- Meaning guard, offline checks, EYD V lint, and skill/package parity are documented in `docs/benchmarks.md`.
 
-## Release status and blockers
+## Compatibility retained
 
-See the release notes in `CHANGELOG.md` and the session report. Items that need the maintainer:
+- `rhetorilex`, `python -m rhetorilex`, `import rhetorilex`, and `$rhetorilex` remain aliases during the 0.x series.
+- `RLX-*` IDs, the 0.2 dataset filenames and format/schema IDs, and browser preference keys remain stable. Published 0.2 records retain their original authorship labels for provenance.
+- Keep current product copy and SEO metadata Lugas-only. Put migration details in `docs/migration.md`.
 
-- Create an empty public repository `rezaprama/RhetoriLex` (after the rename) if the session cannot, then run `python scripts/build_redirect_site.py` and push `migration/rhetorilex-pages/` to it with Pages enabled (source: branch `main`, root).
-- PyPI publication of `lugas` (needs a PyPI account/token; not done).
-- Trademark search before commercial use.
+## Remaining work
 
-## Next
-
-1. Fresh held-out set (written blind) to re-estimate guard accuracy; add value-swap and qualifier-drop detection.
-2. Model runs with a small local model (Ollama) and token counts per provider tokenizer.
-3. Human review of Indonesian naturalness on 20–30 real (consented) passages.
-4. Indonesian before/after examples per manuscript section on the site.
-5. Lighthouse: recheck after each site change; collect CrUX when traffic allows.
+- The limited PDKI lookup found a class-9 Lugas mark that includes some downloadable software. It is not trademark clearance; obtain a qualified review before commercial use or paid promotion. See `docs/brand/naming-2026-10.md`.
+- PyPI publication has not been completed.
+- Fresh blind held-out guard evaluation, small/local model benchmarks, and human review of Indonesian naturalness remain planned in `docs/benchmarks.md` and `ROADMAP.md`.

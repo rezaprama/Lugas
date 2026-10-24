@@ -4,7 +4,7 @@ Reviewed: [nothinx/naskah-id](https://github.com/nothinx/naskah-id) at commit `1
 
 ## Capability matrix
 
-| Capability | naskah-id | Lugas v0.2 (RhetoriLex) | Lugas v0.3 | Benefit | Token cost | Risk | Priority / status |
+| Capability | naskah-id | Lugas v0.2 (pre-rename) | Lugas v0.3 | Benefit | Token cost | Risk | Priority / status |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | Explicit job scope (koreksi/sunting/tulis ulang/tulis) | table in SKILL.md | implicit "route the request" | 5-job table incl. translate and summarise | stops over-editing | small (in SKILL.md) | none | P0 / **done** |
 | Concrete Indonesian rules (EYD V, KBBI) | references per topic | none (UI only) | `bahasa-indonesia.md`, loaded only for ID work | real Indonesian output | +5.6 KB, ID tasks only | rules can be over-applied | P0 / **done** |
